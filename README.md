@@ -1,1 +1,1 @@
-# ejercicios_de_programacion
+# Ejercicios de la asignatura de programación de 1º DAM del IESCampanillas
