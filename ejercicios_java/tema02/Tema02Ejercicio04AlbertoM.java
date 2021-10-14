@@ -6,13 +6,13 @@
  */
 public class Tema02Ejercicio04AlbertoM {
   public static void main(String[] args) {
-    int x;
+    int euros;
     
-    x = 5;
+    euros = 5;
     
-    System.out.print(x);
+    System.out.print(euros);
     System.out.print("€ son ");
-    System.out.print(x * 166.386);
+    System.out.print(euros * 166.386);
     System.out.println(" pesetas.");
   }
 }
