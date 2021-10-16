@@ -4,15 +4,15 @@
  *
  * @author Alberto Moreno González
  */
-public class Tema02Ejercicio04AlbertoM {
+public class Tema02Ejercicio05AlbertoM {
   public static void main(String[] args) {
-    int euros;
+    int pesetas;
     
-    euros = 5;
+    pesetas = 1000;
     
-    System.out.print(euros);
-    System.out.print("€ son ");
-    System.out.print(euros * 166.386);
-    System.out.println(" pesetas.");
+    System.out.print(pesetas);
+    System.out.print(" pesetas son ");
+    System.out.printf(.%2f pesetas / 166.386);
+    System.out.println(" euros.");
   }
 }
