@@ -20,7 +20,7 @@ public class Tema02Ejercicio06AlbertoM {
     System.out.println(" euros.");
     System.out.println(" ");
     System.out.print("El precio de la factura (IVA incluido) es de ");
-    System.out.print(bimponible + (bimponible * iva));
+    System.out.printf("%.2f", bimponible + (bimponible * iva));
     System.out.println(" euros.");
   }
 }
