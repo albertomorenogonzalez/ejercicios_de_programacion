@@ -12,12 +12,12 @@ public class Tema03Ejercicio02AlbertoM {
     System.out.println("Por favor, introduzca la cantidad en euros que quiere convertir: ");
     System.out.print("> ");
     number = System.console().readLine();
-    int euros;
-    euros = Integer.parseInt( number );
+    double euros;
+    euros = Double.parseDouble( number );
     
     System.out.println(" ");
     
-    System.out.print(euros);
+    System.out.printf( "%.2f" ,euros);
     System.out.print(" € son ");
     System.out.print(euros * 166.386);
     System.out.println(" pesetas.");
