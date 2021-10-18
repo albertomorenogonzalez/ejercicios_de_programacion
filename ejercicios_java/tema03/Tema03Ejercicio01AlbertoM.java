@@ -6,27 +6,27 @@
  */
 public class Tema03Ejercicio01AlbertoM {
   public static void main(String[] args) {
-    String linea;
+    String number;
     
-    System.out.println("Por favor, introduce un número: ");
+    System.out.println("Por favor, introduzca un número: ");
     System.out.print("> ");
-    linea = System.console().readLine();
-    int primerNumero;
-    primerNumero = Integer.parseInt( linea );
+    number = System.console().readLine();
+    int Numero1;
+    Numero1 = Integer.parseInt( number );
     
     System.out.println(" ");
     
     System.out.println("Introduzca otro para multiplicarlo con el anterior, por favor: ");
     System.out.print("> ");
-    linea = System.console().readLine();
-    int segundoNumero;
-    segundoNumero = Integer.parseInt( linea );
+    number = System.console().readLine();
+    int Numero2;
+    Numero2 = Integer.parseInt( number );
     
     System.out.println(" ");
     
     int total;
     
-    total = (primerNumero * segundoNumero);
+    total = (Numero1 * Numero2);
     
     System.out.print("El resultado es de ");
     System.out.print(total);
