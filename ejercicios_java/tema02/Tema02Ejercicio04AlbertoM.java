@@ -11,7 +11,7 @@ public class Tema02Ejercicio04AlbertoM {
     euros = 5;
     
     System.out.print(euros);
-    System.out.print("€ son ");
+    System.out.print(" € son ");
     System.out.print(euros * 166.386);
     System.out.println(" pesetas.");
   }

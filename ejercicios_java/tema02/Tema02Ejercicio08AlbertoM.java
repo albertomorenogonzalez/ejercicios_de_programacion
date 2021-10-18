@@ -8,7 +8,7 @@
  * nos da error ya que no podemos usar los operadores así comos si fuera un int. 
  * Como todas las cadenas de caracteres en String deben ir entre comillas dobles
  * ponemos una cadena vacía junto al operador de suma precediendo a la concatenación 
- * anterior para almacenarla dentro. LO podemos ver a continuación.
+ * anterior para almacenarla dentro. Lo podemos ver a continuación.
  *
  * @author Alberto Moreno González
  */
