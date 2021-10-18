@@ -1,1 +1,4 @@
-
+# Ocultos archivos .class
+*.class
+# Ocultas copias de seguridad
+*.bak
