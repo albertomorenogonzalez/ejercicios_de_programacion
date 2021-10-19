@@ -8,7 +8,7 @@ public class Tema03Ejercicio07AlbertoM {
   public static void main(String[] args) {
     String number;
     
-    System.out.println("Por favor, introduzca el preecio de la base imponible (precio sin IVA): ");
+    System.out.println("Por favor, introduzca el precio de la base imponible (precio sin IVA): ");
     System.out.print("> ");
     number = System.console().readLine();
     double bimponible;
