@@ -19,7 +19,7 @@ public class Tema03Ejercicio02AlbertoM {
     
     System.out.printf( "%.2f" ,euros);
     System.out.print(" € son ");
-    System.out.print(euros * 166.386);
+    System.out.print((int)(euros * 166.386));
     System.out.println(" pesetas.");
   }
 }

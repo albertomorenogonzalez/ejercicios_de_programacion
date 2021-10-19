@@ -11,12 +11,12 @@ public class Tema03Ejercicio03AlbertoM {
     System.out.println("Por favor, introduzca la cantidad en pesetas que quiere convertir: ");
     System.out.print("> ");
     number = System.console().readLine();
-    double pesetas;
-    pesetas = Double.parseDouble( number );
+    int pesetas;
+    pesetas = Integer.parseInt( number );
     
     System.out.println(" ");
     
-    System.out.printf("%.2f" ,pesetas);
+    System.out.printf("%d" ,pesetas);
     System.out.print(" pesetas son ");
     System.out.printf("%.2f" ,(pesetas / 166.386) );
     System.out.println(" euros.");
