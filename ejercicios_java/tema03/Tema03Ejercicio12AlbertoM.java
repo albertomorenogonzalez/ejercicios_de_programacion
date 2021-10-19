@@ -36,6 +36,8 @@ public class Tema03Ejercicio12AlbertoM {
     System.out.printf("%.2f", notaN);
     System.out.println(".");
     
-    // Nesitaría usar condicionales (aún no los hemos aprendido) para que ne le caso de que aparezcan notas superiores a 10, el programa de un mensaje de error.
+    // Nesitaría usar condicionales (aún no los hemos aprendido) para que en el 
+    // caso de que aparezcan notas superiores a 10, el programa de un mensaje de 
+    // que no puedes llegar a esa nota.
   }
 }
