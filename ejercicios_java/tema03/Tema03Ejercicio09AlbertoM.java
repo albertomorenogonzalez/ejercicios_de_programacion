@@ -30,6 +30,6 @@ public class Tema03Ejercicio09AlbertoM {
    
     System.out.print("El volumen del cono es de ");
     System.out.printf("%.1f" ,(unoentretres * Math.PI * Math.pow(r, 2) * h));
-    System.out.println(" cm.");
+    System.out.println(" cm³.");
   }
 }
