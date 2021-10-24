@@ -36,7 +36,8 @@ public class Tema04Ejercicio01AlbertoM {
         System.out.println("Este día no hay clase.");
         break;
       case "domingo":
-      System.out.println("Este día no hay clase.");     
+        System.out.println("Este día no hay clase."); 
+        break;    
       default:
         System.out.println("Por favor, introduzca un día de la semana.");
     }
