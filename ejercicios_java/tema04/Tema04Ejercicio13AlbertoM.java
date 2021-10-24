@@ -5,7 +5,7 @@
  */
 public class Tema04Ejercicio13AlbertoM {
   public static void main(String[] args) {
-    System.out.println("PROGRAMA QUE QUE ORDENA TRES NÚMEROS INTRODUCIDOS POR TECLADO");
+    System.out.println("PROGRAMA QUE ORDENA TRES NÚMEROS INTRODUCIDOS POR TECLADO");
     System.out.println("--------------------------------------------------------------");
     
     System.out.println("Introduzca un número, por favor: ");
