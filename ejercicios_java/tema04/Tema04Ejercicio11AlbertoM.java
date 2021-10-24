@@ -27,14 +27,20 @@ public class Tema04Ejercicio11AlbertoM {
     
     int hmasmens = (horasmasegundos + minutosasegundos);
     
-    if (minutos == 0 ) {
-      System.out.print("Quedan ");
-      System.out.print(horasasegundos);
-      System.out.println(" segundos para medianoche");
-    } else if ((minutos > 0) && (minutos <=59)) {
+    if ((hora >= 0) && (hora < 24) && (minutos >= 0) && (minutos <=59)) {
+      if (minutos == 0) {
+        if (hora == 0) {
+          System.out.println("Es medianoche.");
+        } else {
+          System.out.print("Quedan ");
+          System.out.print(horasasegundos);
+          System.out.println(" segundos para medianoche");
+        }
+      } else if (minutos > 0) {
         System.out.print("Quedan ");
         System.out.print(hmasmens);
         System.out.println(" segundos para medianoche");
+      } 
     } else {
         System.out.println("Introduzca la hora correctamente.");
     }
