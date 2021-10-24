@@ -7,4 +7,5 @@ Libro utilizado: Aprende Java con ejercicios, de nuestro profesor Luis José Sá
  
  Aquí se muestran los resultados de algunos ejercicios:
  
- ![Tema01Ejercicio05AlbertoM](/Documentos/programacion/ejercicios_de_programacion/images/Tema01Ejercicio05AlbertoM.png "Tema01Ejercicio05AlbertoM"
+ ![Tema01Ejercicio05AlbertoM](/Documentos/programacion/ejercicios_de_programacion/images/Tema01Ejercicio05AlbertoM.png 
+ Tema01Ejercicio05AlbertoM.java
