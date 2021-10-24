@@ -1,0 +1,42 @@
+/**
+ * Escribe un programa que dada una hora determinada (horas y minutos), calcule
+ * los segundos que faltan para llegar a la medianoche.
+ *
+ * @author Alberto Moreno González
+ */
+public class Tema04Ejercicio11AlbertoM {
+  public static void main(String[] args) {
+    System.out.println("PROGRAMA QUE DADA UNA HORA TE DICE CUANTOS SEGUNDOS FALTAN PARA MEDIANOCHE");
+    System.out.println("---------------------------------------------------------------------------");
+    
+    System.out.println("Por favor, introduzca que hora es (sin los minutos y en formato 24h): ");
+    System.out.print("> ");
+    int hora = Integer.parseInt(System.console().readLine());
+    System.out.println(" ");
+    
+    System.out.println("Por favor, introduzca los minutos: ");
+    System.out.print("> ");
+    int minutos = Integer.parseInt(System.console().readLine());
+    System.out.println(" ");
+    
+    int horasasegundos = ((24 - hora) * 3600);
+    
+    int horasmasegundos = ((23 - hora) * 3600);
+    
+    int minutosasegundos = ((60 - minutos) * 60);
+    
+    int hmasmens = (horasmasegundos + minutosasegundos);
+    
+    if (minutos == 0 ) {
+      System.out.print("Quedan ");
+      System.out.print(horasasegundos);
+      System.out.println(" segundos para medianoche");
+    } else if ((minutos > 0) && (minutos <=59)) {
+        System.out.print("Quedan ");
+        System.out.print(hmasmens);
+        System.out.println(" segundos para medianoche");
+    } else {
+        System.out.println("Introduzca la hora correctamente.");
+    }
+  }
+}
