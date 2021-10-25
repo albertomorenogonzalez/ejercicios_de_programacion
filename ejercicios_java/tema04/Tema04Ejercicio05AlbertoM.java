@@ -21,7 +21,11 @@ public class Tema04Ejercicio05AlbertoM {
     System.out.println(" ");
     
     if (a == 0) {
-      System.out.print("La ecuación no tiene solución en R.");
+      if (b == 0) {
+        System.out.print("Sistema Compatible Determinado, la ecuación tiene infinitas soluciones.");
+      } else {
+          System.out.print("La ecuación no tiene solución en R.");
+      }
     } else {
         System.out.print("x es igual a ");
         System.out.printf("%.2f" ,(-b / a));
@@ -29,3 +33,5 @@ public class Tema04Ejercicio05AlbertoM {
     }
   }
 }
+
+
