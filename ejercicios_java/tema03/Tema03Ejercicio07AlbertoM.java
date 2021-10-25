@@ -11,8 +11,8 @@ public class Tema03Ejercicio07AlbertoM {
     System.out.println("Por favor, introduzca el precio de la base imponible (precio sin IVA): ");
     System.out.print("> ");
     number = System.console().readLine();
-    double bimponible;
-    bimponible = Double.parseDouble( number );
+    double baseImponible;
+    baseImponible = Double.parseDouble( number );
     
     double iva;
     
@@ -20,12 +20,12 @@ public class Tema03Ejercicio07AlbertoM {
     
     System.out.println(" ");
     System.out.print("El IVA es de ");
-    System.out.printf("%.2f" ,(bimponible *iva));
+    System.out.printf("%.2f" ,(baseImponible *iva));
     System.out.println(" €.");
     System.out.println(" ");
     
     System.out.print("El precio de la factura (IVA incluido) es de ");
-    System.out.printf("%.2f", bimponible + (bimponible * iva));
+    System.out.printf("%.2f", baseImponible + (baseImponible * iva));
     System.out.println(" €.");
   }
 }

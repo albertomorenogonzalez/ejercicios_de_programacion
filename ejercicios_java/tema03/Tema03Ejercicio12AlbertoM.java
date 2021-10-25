@@ -26,11 +26,11 @@ public class Tema03Ejercicio12AlbertoM {
     
     System.out.println(" ");
     
-    double valornota1;
-    valornota1 = nota1 * 0.4;
+    double valorNota1;
+    valorNota1 = nota1 * 0.4;
     
     double notaN;
-    notaN = ((notaW - valornota1) / 0.6);
+    notaN = ((notaW - valorNota1) / 0.6);
     
     System.out.print("Para sacar la nota que desea, necesitaría sacar en el segundo examen un ");
     System.out.printf("%.2f", notaN);

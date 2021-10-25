@@ -11,16 +11,16 @@ public class Tema03Ejercicio04AlbertoM {
     System.out.println("Por favor, introduzca un número: ");
     System.out.print("> ");
     number = System.console().readLine();
-    double Numero1;
-    Numero1 = Double.parseDouble( number );
+    double numero1;
+    numero1 = Double.parseDouble( number );
     
     System.out.println(" ");
     
     System.out.println("Introduzca otro, por favor: ");
     System.out.print("> ");
     number = System.console().readLine();
-    double Numero2;
-    Numero2 = Double.parseDouble( number );
+    double numero2;
+    numero2 = Double.parseDouble( number );
     
     System.out.println(" ");
     
@@ -30,35 +30,35 @@ public class Tema03Ejercicio04AlbertoM {
     double division;
     
     
-    suma = (Numero1 + Numero2);
-    resta = (Numero1 - Numero2);
-    multiplicacion = ( Numero1 * Numero2);
-    division = (Numero1 / Numero2);
+    suma = (numero1 + numero2);
+    resta = (numero1 - numero2);
+    multiplicacion = ( numero1 * numero2);
+    division = (numero1 / numero2);
     
-    System.out.printf("%.3f" ,Numero1);
+    System.out.printf("%.3f" ,numero1);
     System.out.print(" + ");
-    System.out.printf("%.3f" ,Numero2);
+    System.out.printf("%.3f" ,numero2);
     System.out.print(" = ");
     System.out.printf("%.3f" ,suma);
     System.out.println(" ");
     
-    System.out.printf("%.3f" ,Numero1);
+    System.out.printf("%.3f" ,numero1);
     System.out.print(" - ");
-    System.out.printf("%.3f" ,Numero2);
+    System.out.printf("%.3f" ,numero2);
     System.out.print(" = ");
     System.out.printf("%.3f" ,resta);
     System.out.println(" ");
     
-    System.out.printf("%.3f" ,Numero1);
+    System.out.printf("%.3f" ,numero1);
     System.out.print(" x ");
-    System.out.printf("%.3f" ,Numero2);
+    System.out.printf("%.3f" ,numero2);
     System.out.print(" = ");
     System.out.printf("%.3f" ,multiplicacion);
     System.out.println(" ");
     
-    System.out.printf("%.3f" ,Numero1);
+    System.out.printf("%.3f" ,numero1);
     System.out.print(" / ");
-    System.out.printf("%.3f" ,Numero2);
+    System.out.printf("%.3f" ,numero2);
     System.out.print(" = ");
     System.out.printf("%.3f" ,division);
     System.out.println(" ");

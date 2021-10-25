@@ -11,22 +11,22 @@ public class Tema03Ejercicio01AlbertoM {
     System.out.println("Por favor, introduzca un número: ");
     System.out.print("> ");
     number = System.console().readLine();
-    double Numero1;
-    Numero1 = Double.parseDouble( number );
+    double numero1;
+    numero1 = Double.parseDouble( number );
     
     System.out.println(" ");
     
     System.out.println("Introduzca otro para multiplicarlo con el anterior, por favor: ");
     System.out.print("> ");
     number = System.console().readLine();
-    double Numero2;
-    Numero2 = Double.parseDouble( number );
+    double numero2;
+    numero2 = Double.parseDouble( number );
     
     System.out.println(" ");
     
     double total;
     
-    total = (Numero1 * Numero2);
+    total = (numero1 * numero2);
     
     System.out.print("El resultado es de ");
     System.out.printf("%.2f" ,total);

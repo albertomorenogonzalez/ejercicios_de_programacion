@@ -10,14 +10,14 @@ public class Tema03Ejercicio11AlbertoM {
     System.out.println("Por favor, introduzca la cantidad en Kb que quiere convertir en Mb: ");
     System.out.print("> ");
     number = System.console().readLine();
-    double Kb;
-    Kb = Double.parseDouble( number );
+    double kiloByte;
+    kiloByte = Double.parseDouble( number );
     
     System.out.println(" ");
     
-    System.out.print(Kb);
+    System.out.print(kiloByte);
     System.out.print(" Kb son ");
-    System.out.print(Kb / 1000);
+    System.out.print(kiloByte / 1000);
     System.out.println(" Mb.");
   }
 }

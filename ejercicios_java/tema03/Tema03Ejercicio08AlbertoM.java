@@ -12,12 +12,12 @@ public class Tema03Ejercicio08AlbertoM {
     System.out.println("Por favor, introduzca cuantas horas ha trabajado el empleado esta semana: ");
     System.out.print("> ");
     number = System.console().readLine();
-    int horasdetrabajo;
-    horasdetrabajo = Integer.parseInt( number );
+    int horasDeTrabajo;
+    horasDeTrabajo = Integer.parseInt( number );
     
     System.out.println(" ");
     System.out.print("El empleado debe cobrar ");
-    System.out.print(horasdetrabajo * 12);
+    System.out.print(horasDeTrabajo * 12);
     System.out.println(" € esta semana.");
   }
 }
