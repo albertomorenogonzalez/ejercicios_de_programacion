@@ -14,17 +14,17 @@ public class Tema04Ejercicio04AlbertoM {
     
     System.out.println("Por favor, introduzca cuantas horas ha trabajado el empleado esta semana: ");
     System.out.print("> ");
-    int horasdetrabajo = Integer.parseInt(System.console().readLine());
+    int horasDeTrabajo = Integer.parseInt(System.console().readLine());
     
     System.out.println(" ");
     
-    if ((horasdetrabajo>0) && (horasdetrabajo<=40)) {
+    if ((horasDeTrabajo>0) && (horasDeTrabajo<=40)) {
       System.out.print("El empleado debe cobrar ");
-      System.out.print(horasdetrabajo * 12);
+      System.out.print(horasDeTrabajo * 12);
       System.out.println(" € esta semana.");
-    } else if (horasdetrabajo>40) {
+    } else if (horasDeTrabajo>40) {
         System.out.print("El empleado debe cobrar ");
-        System.out.print((40 * 12) + (horasdetrabajo - 40) * 16);
+        System.out.print((40 * 12) + (horasDeTrabajo - 40) * 16);
         System.out.println(" € esta semana.");
     } else {
         System.out.println("El trabajador no ha podido trabajar este número de horas.");

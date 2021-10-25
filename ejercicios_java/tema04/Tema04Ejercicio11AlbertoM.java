@@ -19,13 +19,13 @@ public class Tema04Ejercicio11AlbertoM {
     int minutos = Integer.parseInt(System.console().readLine());
     System.out.println(" ");
     
-    int horasasegundos = ((24 - hora) * 3600);
+    int horasASegundos = ((24 - hora) * 3600);
     
-    int horasmasegundos = ((23 - hora) * 3600);
+    int horasConMinutosASegundos = ((23 - hora) * 3600);
     
-    int minutosasegundos = ((60 - minutos) * 60);
+    int minutosASegundos = ((60 - minutos) * 60);
     
-    int hmasmens = (horasmasegundos + minutosasegundos);
+    int horasMasMinutosEnS = (horasConMinutosASegundos + minutosASegundos);
     
     if ((hora >= 0) && (hora < 24) && (minutos >= 0) && (minutos <=59)) {
       if (minutos == 0) {
@@ -33,12 +33,12 @@ public class Tema04Ejercicio11AlbertoM {
           System.out.println("Es medianoche.");
         } else {
           System.out.print("Quedan ");
-          System.out.print(horasasegundos);
+          System.out.print(horasASegundos);
           System.out.println(" segundos para medianoche");
         }
       } else if (minutos > 0) {
         System.out.print("Quedan ");
-        System.out.print(hmasmens);
+        System.out.print(horasMasMinutosEnS);
         System.out.println(" segundos para medianoche");
       } 
     } else {

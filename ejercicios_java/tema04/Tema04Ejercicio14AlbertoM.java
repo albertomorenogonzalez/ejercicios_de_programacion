@@ -12,20 +12,20 @@ public class Tema04Ejercicio14AlbertoM {
     
     System.out.println("Introduzca un número, por favor: ");
     System.out.print("> ");
-    int n = Integer.parseInt(System.console().readLine());
+    int numero = Integer.parseInt(System.console().readLine());
     System.out.println(" ");
     
-    int par = (n / 2);
+    int par = (numero / 2);
     
-    int entrecinco = (n / 5);
+    int entreCinco = (numero / 5);
     
-    if ((n % 2) == 0) {
-      if ((n % 5) == 0) {
+    if ((numero % 2) == 0) {
+      if ((numero % 5) == 0) {
         System.out.println("El número es par y divisible entre 5.");
-      } else if ((n % 5 != 0)) {
+      } else if ((numero % 5 != 0)) {
           System.out.println("El número es par.");
       }
-    } else if ((n % 5) == 0) {
+    } else if ((numero % 5) == 0) {
           System.out.println("El número es divisible entre 5.");
     } else {
         System.out.println("El número ni es par ni es divisible entre 5.");

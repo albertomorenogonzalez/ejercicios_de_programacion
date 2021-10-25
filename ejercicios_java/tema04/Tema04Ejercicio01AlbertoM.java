@@ -12,11 +12,11 @@ public class Tema04Ejercicio01AlbertoM {
     
     System.out.println("Por favor, introduzca un día de la semana: ");
     System.out.print("> ");
-    String diasemana = System.console().readLine();
+    String diaSemana = System.console().readLine();
     
     System.out.println(" ");
     
-    switch (diasemana.toLowerCase()) {
+    switch (diaSemana.toLowerCase()) {
       case "lunes":
         System.out.println("Este día toca Programación a primera hora.");
         break;

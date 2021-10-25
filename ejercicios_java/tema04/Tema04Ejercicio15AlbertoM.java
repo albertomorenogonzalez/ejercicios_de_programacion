@@ -15,47 +15,47 @@ public class Tema04Ejercicio15AlbertoM {
     
     System.out.println("Introduzca un caracter, por favor: ");
     System.out.print("> ");
-    String car = System.console().readLine();
+    String caracter = System.console().readLine();
     System.out.println(" ");
     
     System.out.println("Introduzca hacia donde quiere que apunte el vértice de la pirámide, por favor:");
     System.out.println("                            (->, <-, up o down)                               ");
     System.out.print("> ");
-    String dirver = System.console().readLine();
+    String direccionVertice = System.console().readLine();
     System.out.println(" ");
     
-    if ("->".equals(dirver)) {
-      System.out.println(car);
-      System.out.println(car + " " + car);
-      System.out.println(car + " " + car + " " + car);
-      System.out.println(car + " " + car + " " + car + " " + car);
-      System.out.println(car + " " + car + " " + car + " " + car + " " + car);
-      System.out.println(car + " " + car + " " + car + " " + car);
-      System.out.println(car + " " + car + " " + car);
-      System.out.println(car + " " + car);
-      System.out.println(car);
-    } else if ("<-".equals(dirver)) {
-        System.out.println("         " + car);
-        System.out.println("      " + car + " " +  car);
-        System.out.println("    " + car + " " + car + " " + car);
-        System.out.println("  " + car + " " + car + " " + car + " " + car);
-        System.out.println(car + " " + car + " " + car + " " + car + " " + car);
-        System.out.println("  " + car + " " + car + " " + car + " " + car);
-        System.out.println("    " + car + " " + car + " " + car);
-        System.out.println("      " + car + " " +  car);
-        System.out.println("         " + car);
-    } else if ("up".equals(dirver)) {
-        System.out.println("    " + car + "    ");
-        System.out.println("   " + car + car + car + "   ");
-        System.out.println("  " + car + car + car + car + car + "   ");
-        System.out.println(" " + car + car + car + car + car + car + car + " ");
-        System.out.println(car + car + car + car + car + car + car + car + car);
-    } else if ("down".equals(dirver)) {
-        System.out.println(car + car + car + car + car + car + car + car + car);
-        System.out.println(" " + car + car + car + car + car + car + car + " ");
-        System.out.println("  " + car + car + car + car + car + "   ");
-        System.out.println("   " + car + car + car + "   ");
-        System.out.println("    " + car + "    ");
+    if ("->".equals(direccionVertice)) {
+      System.out.println(caracter);
+      System.out.println(caracter + " " + caracter);
+      System.out.println(caracter + " " + caracter + " " + caracter);
+      System.out.println(caracter + " " + caracter + " " + caracter + " " + caracter);
+      System.out.println(caracter + " " + caracter + " " + caracter + " " + caracter + " " + caracter);
+      System.out.println(caracter + " " + caracter + " " + caracter + " " + caracter);
+      System.out.println(caracter + " " + caracter + " " + caracter);
+      System.out.println(caracter + " " + caracter);
+      System.out.println(caracter);
+    } else if ("<-".equals(direccionVertice)) {
+        System.out.println("        " + caracter);
+        System.out.println("      " + caracter + " " +  caracter);
+        System.out.println("    " + caracter + " " + caracter + " " + caracter);
+        System.out.println("  " + caracter + " " + caracter + " " + caracter + " " + caracter);
+        System.out.println(caracter + " " + caracter + " " + caracter + " " + caracter + " " + caracter);
+        System.out.println("  " + caracter + " " + caracter + " " + caracter + " " + caracter);
+        System.out.println("    " + caracter + " " + caracter + " " + caracter);
+        System.out.println("      " + caracter + " " +  caracter);
+        System.out.println("        " + caracter);
+    } else if ("up".equals(direccionVertice)) {
+        System.out.println("    " + caracter + "    ");
+        System.out.println("   " + caracter + caracter + caracter + "   ");
+        System.out.println("  " + caracter + caracter + caracter + caracter + caracter + "   ");
+        System.out.println(" " + caracter + caracter + caracter + caracter + caracter + caracter + caracter + " ");
+        System.out.println(caracter + caracter + caracter + caracter + caracter + caracter + caracter + caracter + caracter);
+    } else if ("down".equals(direccionVertice)) {
+        System.out.println(caracter + caracter + caracter + caracter + caracter + caracter + caracter + caracter + caracter);
+        System.out.println(" " + caracter + caracter + caracter + caracter + caracter + caracter + caracter + " ");
+        System.out.println("  " + caracter + caracter + caracter + caracter + caracter + "   ");
+        System.out.println("   " + caracter + caracter + caracter + "   ");
+        System.out.println("    " + caracter + "    ");
     } else {
         System.out.println("Introduzca correctamente los parámetros, por favor.");
     }

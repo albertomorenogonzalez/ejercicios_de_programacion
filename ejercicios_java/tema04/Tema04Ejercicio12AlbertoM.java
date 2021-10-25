@@ -24,12 +24,12 @@ public class Tema04Ejercicio12AlbertoM {
     System.out.println("(Deberás introducir la respuesta en minúscula)");
     System.out.println(" ");
     System.out.print("> ");
-    String x1 = System.console().readLine();
+    String solucion1 = System.console().readLine();
     System.out.println(" ");
     
     int puntos = 0;
     
-    if ("b".equals(x1)) {
+    if ("b".equals(solucion1)) {
       System.out.println("¡Acertaste! ¡Obtuviste un punto!");
       puntos++;
     } else {  
@@ -47,10 +47,10 @@ public class Tema04Ejercicio12AlbertoM {
     System.out.println("c. Bytecode");
     System.out.println(" ");
     System.out.print("> ");
-    String x2 = System.console().readLine();
+    String solucion2 = System.console().readLine();
     System.out.println(" ");
     
-    if ("b".equals(x2)) {
+    if ("b".equals(solucion2)) {
       System.out.println("¡Acertaste! ¡Obtuviste un punto!");
       puntos++;
     } else {  
@@ -68,10 +68,10 @@ public class Tema04Ejercicio12AlbertoM {
     System.out.println("c. De dos, en una hoja de estilos aparte o en una etiqueta <style> dentro de <head>");
     System.out.println(" ");
     System.out.print("> ");
-    String x3 = System.console().readLine();
+    String solucion3 = System.console().readLine();
     System.out.println(" ");
     
-    if ("b".equals(x3)) {
+    if ("b".equals(solucion3)) {
       System.out.println("¡Acertaste! ¡Obtuviste un punto!");
       puntos++;
     } else {  
@@ -89,10 +89,10 @@ public class Tema04Ejercicio12AlbertoM {
     System.out.println("c. Diseño Esquemático, Diseño en SGBD y Diseño Físico.");
     System.out.println(" ");
     System.out.print("> ");
-    String x4 = System.console().readLine();
+    String solucion4 = System.console().readLine();
     System.out.println(" ");
     
-    if ("a".equals(x4)) {
+    if ("a".equals(solucion4)) {
       System.out.println("¡Acertaste! ¡Obtuviste un punto!");
       puntos++;
     } else {  
@@ -110,10 +110,10 @@ public class Tema04Ejercicio12AlbertoM {
     System.out.println("c. Un coprocesador  dedicado al rpocesamiento de gráficos para aligerar la carga de la CPU al ejecutar videojuegos o aplicaciones 3D");
     System.out.println(" ");
     System.out.print("> ");
-    String x5 = System.console().readLine();
+    String solucion5 = System.console().readLine();
     System.out.println(" ");
     
-    if ("c".equals(x5)) {
+    if ("c".equals(solucion5)) {
       System.out.println("¡Acertaste! ¡Obtuviste un punto!");
       puntos++;
     } else {  
@@ -131,10 +131,10 @@ public class Tema04Ejercicio12AlbertoM {
     System.out.println("c. Condiciones psicosociales, caracteristicas personales.");
     System.out.println(" ");
     System.out.print("> ");
-    String x6 = System.console().readLine();
+    String solucion6 = System.console().readLine();
     System.out.println(" ");
     
-    if ("b".equals(x6)) {
+    if ("b".equals(solucion6)) {
       System.out.println("¡Acertaste! ¡Obtuviste un punto!");
       puntos++;
     } else {  
@@ -152,10 +152,10 @@ public class Tema04Ejercicio12AlbertoM {
     System.out.println("c. Ejecutar un programa dependiendo de sus carcterísticas.");
     System.out.println(" ");
     System.out.print("> ");
-    String x7 = System.console().readLine();
+    String solucion7 = System.console().readLine();
     System.out.println(" ");
     
-    if ("a".equals(x7)) {
+    if ("a".equals(solucion7)) {
       System.out.println("¡Acertaste! ¡Obtuviste un punto!");
       puntos++;
     } else {  
@@ -173,10 +173,10 @@ public class Tema04Ejercicio12AlbertoM {
     System.out.println("c. Requerimientos.");
     System.out.println(" ");
     System.out.print("> ");
-    String x8 = System.console().readLine();
+    String solucion8 = System.console().readLine();
     System.out.println(" ");
     
-    if ("c".equals(x8)) {
+    if ("c".equals(solucion8)) {
       System.out.println("¡Acertaste! ¡Obtuviste un punto!");
       puntos++;
     } else {  
@@ -194,10 +194,10 @@ public class Tema04Ejercicio12AlbertoM {
     System.out.println("c. <body>");
     System.out.println(" ");
     System.out.print("> ");
-    String x9 = System.console().readLine();
+    String solucion9 = System.console().readLine();
     System.out.println(" ");
     
-    if ("a".equals(x9)) {
+    if ("a".equals(solucion9)) {
       System.out.println("¡Acertaste! ¡Obtuviste un punto!");
       puntos++;
     } else {  
@@ -215,10 +215,10 @@ public class Tema04Ejercicio12AlbertoM {
     System.out.println("c. Organización Directa o Aleatoria");
     System.out.println(" ");
     System.out.print("> ");
-    String x10 = System.console().readLine();
+    String solucion10 = System.console().readLine();
     System.out.println(" ");
     
-    if ("b".equals(x10)) {
+    if ("b".equals(solucion10)) {
       System.out.println("¡Acertaste! ¡Obtuviste un punto!");
       puntos++;
     } else {  

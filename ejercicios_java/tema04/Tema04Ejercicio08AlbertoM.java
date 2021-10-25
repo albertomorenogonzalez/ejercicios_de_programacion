@@ -25,9 +25,9 @@ public class Tema04Ejercicio08AlbertoM {
     double nota3 = Double.parseDouble(System.console().readLine());
     System.out.println(" ");
     
-    double sumatorionota123 = (nota1 + nota2 + nota3);
+    double sumatorioNota123 = (nota1 + nota2 + nota3);
     
-    double media = (sumatorionota123 / 3);
+    double media = (sumatorioNota123 / 3);
     
     if ((nota1>=0) && (nota2>=0) && (nota3>=0) && (nota1<=10) && (nota2<=10) && (nota3<=10)) {
       if ((media>=0) && (media<5)) {

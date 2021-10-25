@@ -23,13 +23,13 @@ public class Tema04Ejercicio09AlbertoM {
     double c = Double.parseDouble(System.console().readLine());
     System.out.println(" ");
     
-    double interiorrcuad = ((Math.pow(b, 2)) - (4 * a * c));
+    double interiorRaizCuad = ((Math.pow(b, 2)) - (4 * a * c));
     
-    double solucion1 = ((-b + (Math.sqrt(interiorrcuad))) / (2 * a));
+    double solucion1 = ((-b + (Math.sqrt(interiorRaizCuad))) / (2 * a));
     
-    double solucion2 = ((-b - (Math.sqrt(interiorrcuad))) / (2 * a));
+    double solucion2 = ((-b - (Math.sqrt(interiorRaizCuad))) / (2 * a));
     
-    if (interiorrcuad < 0 ) {
+    if (interiorRaizCuad < 0 ) {
       System.out.print("La ecuación no tiene solución en R.");
     } else if (solucion1 == solucion2) {
         System.out.print("La única solución es ");
