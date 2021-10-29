@@ -51,7 +51,7 @@ public class Tema04Ejercicio18AlbertoM {
             System.out.print("La primera cifra del número introducido es 9.");
           } 
         } else if ((numero < 1000) && (numero > -1000)) {
-            if ((excedenteDosCifras == 100) || (excedenteDosCifras == -100)) {
+            if ((excedenteTresCifras == 100) || (excedenteTresCifras == -100)) {
               System.out.print("La primera cifra del número introducido es 1.");
             } else if ((excedenteTresCifras == 200) || (excedenteTresCifras == -200)) {
               System.out.print("La primera cifra del número introducido es 2.");
@@ -71,7 +71,7 @@ public class Tema04Ejercicio18AlbertoM {
               System.out.print("La primera cifra del número introducido es 9.");
             }
         } else if ((numero < 10000) && (numero > -10000)) {
-            if ((excedenteDosCifras == 1000) || (excedenteDosCifras == -1000)) {
+            if ((excedenteCuatroCifras == 1000) || (excedenteCuatroCifras == -1000)) {
               System.out.print("La primera cifra del número introducido es 1.");
             } else if ((excedenteCuatroCifras == 2000) || (excedenteCuatroCifras == -2000)) {
               System.out.print("La primera cifra del número introducido es 2.");
@@ -91,7 +91,7 @@ public class Tema04Ejercicio18AlbertoM {
               System.out.print("La primera cifra del número introducido es 9.");
             } 
         } else if ((numero < 100000) && (numero > -100000)) {
-            if ((excedenteDosCifras == 10000) || (excedenteDosCifras == -10000)) {
+            if ((excedenteCincoCifras == 10000) || (excedenteCincoCifras == -10000)) {
               System.out.print("La primera cifra del número introducido es 1.");
             } else if ((excedenteCincoCifras == 20000) || (excedenteCincoCifras == -20000)) {
               System.out.print("La primera cifra del número introducido es 2.");
@@ -111,8 +111,8 @@ public class Tema04Ejercicio18AlbertoM {
               System.out.print("La primera cifra del número introducido es 9.");
             } 
         } else {
-            if ((numero >= 100000) || (numero <= 100000)) {
-            System.out.println("El número introducido es demasiado grande.");
+            if ((numero >= 100000) || (numero <= -100000)) {
+              System.out.println("El número introducido es demasiado grande.");
             }
         }
     }
