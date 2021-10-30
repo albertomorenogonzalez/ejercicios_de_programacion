@@ -17,16 +17,42 @@ public class Tema04Ejercicio20AlbertoM {
     
     int restoParCifras = (numero % 11);
     
+    int restoTresCifras = (numero % 100);
+    int excedenteTresCifras = (numero - restoTresCifras);
+    int restoTresCifrasNumeroEntreDiez = (numero % 10);
+    
     if ((numero >= 0) && (numero < 10))  {
       System.out.println("El número introducido solo tiene una cifra.");
     } else {
-        if ((numero < 100) || (numero < 10000)) {
+        if (((numero >= 10) && (numero < 100)) || ((numero >= 1000) && (numero < 10000))) {
           if (restoParCifras == 0) {
             System.out.print("El número introducido es capicúa.");
           } else {
               System.out.print("El número introducido no es capicúa.");
           }
-        }
+        } else if (numero < 1000) {
+            if ((excedenteTresCifras == 100) && (restoTresCifrasNumeroEntreDiez == 1)) {
+              System.out.print("El número introducido es capicúa.");
+            } else if ((excedenteTresCifras == 200) && (restoTresCifrasNumeroEntreDiez  == 2)) {
+                System.out.print("El número introducido es capicúa.");
+            } else if ((excedenteTresCifras == 300) && (restoTresCifrasNumeroEntreDiez  == 3)) {
+                System.out.print("El número introducido es capicúa.");
+            } else if ((excedenteTresCifras == 400) && (restoTresCifrasNumeroEntreDiez  == 4)) {
+                System.out.print("El número introducido es capicúa.");
+            } else if ((excedenteTresCifras == 500) && (restoTresCifrasNumeroEntreDiez  == 5)) {
+                System.out.print("El número introducido es capicúa.");
+            } else if ((excedenteTresCifras == 600) && (restoTresCifrasNumeroEntreDiez  == 6)) {
+                System.out.print("El número introducido es capicúa.");
+            } else if ((excedenteTresCifras == 700) && (restoTresCifrasNumeroEntreDiez  == 7)) {
+                System.out.print("El número introducido es capicúa.");
+            } else if ((excedenteTresCifras == 800) && (restoTresCifrasNumeroEntreDiez  == 8)) {
+                System.out.print("El número introducido es capicúa.");
+            } else if ((excedenteTresCifras == 900) && (restoTresCifrasNumeroEntreDiez  == 9)) {
+                System.out.print("El número introducido es capicúa.");
+            } else {
+                System.out.print("El número introducido no es capicúa.");
+            }
+        } 
     }
   }
 }
