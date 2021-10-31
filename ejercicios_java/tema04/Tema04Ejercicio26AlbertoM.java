@@ -41,9 +41,12 @@ public class Tema04Ejercicio26AlbertoM {
     int entradaIndJueves = (numeroEntradas % 2);
     double precioEntradaJueves = ((double)numeroEntradasPareja * 11);
     double descuentoTarjeta = (precioEntrada * 0.10);
+    double descuentoTarjetaMiercoles = (precioEntradaMiercoles * 0.10);
+    double descuentoTarjetaJueves = (precioEntradaJueves * 0.10);
     double precioDescontado = (precioEntrada - descuentoTarjeta);
-    double precioDescontadoJueves = (precioEntradaJueves - descuentoTarjeta);
-    double precioDescontadoJuevesInd = ((precioEntradaJueves + 8) - descuentoTarjeta);
+    double precioDescontadoMiercoles = (precioEntradaMiercoles - descuentoTarjetaMiercoles);
+    double precioDescontadoJueves = (precioEntradaJueves - descuentoTarjetaJueves);
+    double precioDescontadoJuevesInd = ((precioEntradaJueves + 8) - ((precioEntradaJueves + 8) * 0.10));
         
     switch (diaSemana) { 
       case "lunes":
@@ -85,12 +88,12 @@ public class Tema04Ejercicio26AlbertoM {
         System.out.println(" ");
         
         System.out.printf("%-20s           %2d\n","Entradas Individuales:" ,numeroEntradas);
-        System.out.println("Precio por entrada individual:  8.00 €");
+        System.out.println("Precio por entrada individual:  5.00 €");
         System.out.printf("%-20s           %.2f %-1s\n","Total:" ,precioEntradaMiercoles ,"€");
         
         if ("s".equals(tarjeta)) {
-          System.out.printf("%-20s            %.2f %-1s\n","Descuento:" ,descuentoTarjeta ,"€");
-          System.out.printf("%-20s           %.2f %-1s\n","A pagar" ,precioDescontado ,"€");
+          System.out.printf("%-20s            %.2f %-1s\n","Descuento:" ,descuentoTarjetaMiercoles ,"€");
+          System.out.printf("%-20s           %.2f %-1s\n","A pagar" ,precioDescontadoMiercoles ,"€");
         } else if ("n".equals(tarjeta)) {
             System.out.printf("%-20s            %.2f %-1s\n","Descuento:" ,0.00 ,"€");
             System.out.printf("%-20s           %.2f %-1s\n","A pagar" ,precioEntradaMiercoles ,"€");
@@ -110,7 +113,7 @@ public class Tema04Ejercicio26AlbertoM {
           System.out.println("Precio por entrada individual:  8.00 €");
           System.out.printf("%-20s           %.2f %-1s\n","Total:" ,(precioEntradaJueves + 8)   ,"€");
           if ("s".equals(tarjeta)) {
-            System.out.printf("%-20s            %.2f %-1s\n","Descuento:" ,descuentoTarjeta ,"€");
+            System.out.printf("%-20s            %.2f %-1s\n","Descuento:" ,((precioEntradaJueves + 8) * 0.10) ,"€");
             System.out.printf("%-20s           %.2f %-1s\n","A pagar" ,precioDescontadoJuevesInd ,"€");
           } else if ("n".equals(tarjeta)) {
               System.out.printf("%-20s            %.2f %-1s\n","Descuento:" ,0.00 ,"€");
@@ -119,7 +122,7 @@ public class Tema04Ejercicio26AlbertoM {
         } else {
             System.out.printf("%-20s           %.2f %-1s\n","Total:" ,precioEntradaJueves   ,"€");
             if ("s".equals(tarjeta)) {
-            System.out.printf("%-20s            %.2f %-1s\n","Descuento:" ,descuentoTarjeta ,"€");
+            System.out.printf("%-20s            %.2f %-1s\n","Descuento:" ,descuentoTarjetaJueves ,"€");
             System.out.printf("%-20s           %.2f %-1s\n","A pagar" ,precioDescontadoJueves ,"€");
             } else if ("n".equals(tarjeta)) {
               System.out.printf("%-20s            %.2f %-1s\n","Descuento:" ,0.00 ,"€");
