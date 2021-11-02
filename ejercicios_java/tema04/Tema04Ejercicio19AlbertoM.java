@@ -12,7 +12,7 @@ public class Tema04Ejercicio19AlbertoM {
     
     System.out.println("Introduzca un número, por favor: ");
     System.out.print("> ");
-    int numero = Integer.parseInt(System.console().readLine());
+    long numero = Long.parseLong(System.console().readLine());
     System.out.println(" ");
     
     if ((numero < 10) && (numero > -10)) {
