@@ -15,7 +15,7 @@ public class Tema05Ejercicio07AlbertoM {
     
     int intento = 0;
     
-    while (intento <= 4) {
+    while (intento < 4) {
       System.out.println("Introduzca el PIN: ");
       System.out.print("> ");
       int pin = Integer.parseInt(System.console().readLine());
@@ -28,6 +28,10 @@ public class Tema05Ejercicio07AlbertoM {
           System.out.println("Lo siento, esa no es la combinación.");
           System.out.println(" ");
           intento ++;
+      }
+      
+      if (intento == 4) {
+        System.out.println("Se ha quedado sin intentos.");
       }
     }
   }
