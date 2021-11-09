@@ -12,7 +12,6 @@ public class Tema05Ejercicio10AlbertoM {
     System.out.println("-------------------------------------------------------------------------------------------");
     System.out.println(" ");
     
-    
     System.out.println("Introduzca un número, por favor: ");
     System.out.println(" ");
     System.out.println("Para dejar de introducir números, introduzca un número negativo.");
