@@ -27,14 +27,16 @@ public class Tema05Ejercicio10AlbertoM {
       numero = Double.parseDouble(System.console().readLine());
       System.out.println(" ");
       
-      if (numero > 0) {
+      if (numero >= 0) {
         sumatorio = numero + sumatorio;
         System.out.println("Introduzca otro número, por favor: ");
+      } else {
+          double media = (sumatorio / numeroSumandos);
+    
+          System.out.println("La media entre los números introducidos es de " + media);
       }
     }
     
-    double media = (sumatorio / numeroSumandos);
     
-    System.out.print(media);
   }
 }
