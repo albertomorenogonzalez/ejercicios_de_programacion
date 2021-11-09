@@ -33,10 +33,8 @@ public class Tema05Ejercicio10AlbertoM {
       } else {
           double media = (sumatorio / numeroSumandos);
     
-          System.out.println("La media entre los números introducidos es de " + media);
+          System.out.println("La media entre los números introducidos es de " + media + ".");
       }
     }
-    
-    
   }
 }
