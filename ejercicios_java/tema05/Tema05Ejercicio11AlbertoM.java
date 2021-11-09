@@ -28,7 +28,5 @@ public class Tema05Ejercicio11AlbertoM {
       contador++;
       numeroPotenciado++;
     }
-    
-    
   }
 }
