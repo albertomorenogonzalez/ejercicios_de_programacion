@@ -23,9 +23,10 @@ public class Tema05Ejercicio07AlbertoM {
       
       if (pin == 4325) {
         System.out.println("La caja fuerte se ha abierto satisfactoriamente.");
-        intento += 5;
+        break;
       } else {
           System.out.println("Lo siento, esa no es la combinación.");
+          System.out.println(" ");
           System.out.println(" ");
           intento ++;
       }

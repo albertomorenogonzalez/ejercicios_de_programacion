@@ -22,11 +22,11 @@ public class Tema05Ejercicio16AlbertoM {
       divisible = (numero % entreNumero);
       
       if (divisible == 0) {
-        entreNumero += numero;
         System.out.println("El número no es primo.");
+        break;
       } else {
-          entreNumero += numero;
           System.out.println("El número es primo.");
+          break;
       }
     }
     
