@@ -29,8 +29,10 @@ public class Tema05Ejercicio17AlbertoM {
           sumaGuardada = (sumaGuardada + sumando);
         
           sumando++;
-      }
-        System.out.println("El resultado es " + sumaGuardada + ".");
+        }
+        
+      System.out.println("El resultado es " + sumaGuardada + ".");
+      
       } 
     }
   }
