@@ -26,9 +26,15 @@ public class Tema05Ejercicio07AlbertoM {
         break;
       } else {
           System.out.println("Lo siento, esa no es la combinación.");
+          intento++;
+          
+          if (intento != 4) {
+            System.out.println("Le quedan " + (4 - intento) + " intentos.");
+          }
+          
           System.out.println(" ");
           System.out.println(" ");
-          intento ++;
+          
       }
       
       if (intento == 4) {
