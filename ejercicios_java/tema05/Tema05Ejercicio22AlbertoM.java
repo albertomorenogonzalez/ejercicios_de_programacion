@@ -11,17 +11,20 @@ public class Tema05Ejercicio22AlbertoM {
     
     int divisible = 0;
     
+    System.out.print("2 ");
+    
     for (int numero = 2; numero < 100; numero++) {
       
       for (int divisor = 2; divisor < numero; divisor++) {
         divisible = (numero % divisor);
         
+        if (divisible == 0) {
+          break;
+        } else {
+            System.out.print(numero + " ");
+            break;
+        }
       }
-      
-      
-        if (divisible != 0) {
-          System.out.print(numero + " ");
-        } 
     }
     
     System.out.println("100");
