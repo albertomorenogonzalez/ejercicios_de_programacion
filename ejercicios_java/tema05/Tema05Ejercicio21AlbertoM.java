@@ -8,8 +8,8 @@
  */
 public class Tema05Ejercicio21AlbertoM {
   public static void main(String[] args) {
-    System.out.println("PROGRAMA QUE CALCULA LA MEDIA DE UN CONJUNTO DE NÚMEROS POSITIVOS INTRODUCIDOS POR TECLADO");
-    System.out.println("-------------------------------------------------------------------------------------------");
+    System.out.println("PROGRAMA QUE TE DICE CUANTOS NUMEROS HAS INTRODUCIDO, CALCULA LA MEDIA DE LOS IMPARES Y DICE CUAL ES EL MAYOR DE LOS PARES");
+    System.out.println("---------------------------------------------------------------------------------------------------------------------------");
     System.out.println(" ");
     
     System.out.println("Introduzca un número, por favor: ");
