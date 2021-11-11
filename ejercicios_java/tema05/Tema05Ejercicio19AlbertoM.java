@@ -21,13 +21,25 @@ public class Tema05Ejercicio19AlbertoM {
     String caracter = System.console().readLine();
     System.out.println(" ");
     
-    String espacio = " ";
+    int linea = 1;
+    int numCaracteres = 1;
+    int espacios = altura - 1;
     
-    int numEspacio = 0;
-    
-    for (int numCaracter = 1; numCaracter < altura; numCaracter++) {
-      System.out.print(espacio);
-      System.out.println(caracter);
+    while (linea <= altura) {
+      
+      for (int numEspacios = 1; numEspacios <= espacios; numEspacios++) {
+        System.out.print(" "); 
+      }
+      
+      for (int longLinea = 1; longLinea <= numCaracteres; longLinea++) {
+        System.out.print(caracter);
+      }
+      
+      System.out.println(" ");
+      
+      linea++;
+      numCaracteres += 2;
+      espacios--;
     }
   }
 }
