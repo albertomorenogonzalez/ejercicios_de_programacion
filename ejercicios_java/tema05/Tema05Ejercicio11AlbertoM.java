@@ -6,8 +6,8 @@
  */
 public class Tema05Ejercicio11AlbertoM {
   public static void main(String[] args) {
-    System.out.println("PROGRAMA QUE CALCULA EL CUADRADO Y EL CUBO DE CINCO NÚMEROS INTRODUCIDOS POR TECLADO");
-    System.out.println("-------------------------------------------------------------------------------------");
+    System.out.println("PROGRAMA QUE CALCULA EL CUADRADO Y EL CUBO DE CINCO NÚMEROS A PARTIR DE UNO INTRODUCIDO POR TECLADO");
+    System.out.println("----------------------------------------------------------------------------------------------------");
     System.out.println(" ");
     
     System.out.println("Introduzca un número, por favor: ");
@@ -17,16 +17,14 @@ public class Tema05Ejercicio11AlbertoM {
     
     int contador = 1;
     
-    int numeroPotenciado = 1;
-    
     while (contador <= 5) {
-      double numeroAlCuadrado = Math.pow(numeroPotenciado, 2);
-      double numeroAlCubo = Math.pow(numeroPotenciado, 3);
+      double numeroAlCuadrado = Math.pow(numero, 2);
+      double numeroAlCubo = Math.pow(numero, 3);
       
-      System.out.printf("%3d   %3.0f   %3.0f\n" ,numeroPotenciado ,numeroAlCuadrado ,numeroAlCubo);
+      System.out.printf("%3.0f   %3.0f   %3.0f\n" ,numero ,numeroAlCuadrado ,numeroAlCubo);
       
       contador++;
-      numeroPotenciado++;
+      numero++;
     }
   }
 }
