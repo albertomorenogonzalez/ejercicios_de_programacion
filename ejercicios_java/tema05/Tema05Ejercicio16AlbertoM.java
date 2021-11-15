@@ -16,22 +16,18 @@ public class Tema05Ejercicio16AlbertoM {
     int numero = Integer.parseInt(System.console().readLine());
     System.out.println(" ");
     
-    int divisible = 0;
-    
-    for (int entreNumero = 2; entreNumero < numero; entreNumero++) {
-      divisible = (numero % entreNumero);
-      
-      if (divisible == 0) {
-        System.out.println("El número no es primo.");
-        break;
-      } else {
-          System.out.println("El número es primo.");
-          break;
-      }
-    }
+    int entreNumero= 0;
     
     if ((numero == 1) || (numero == 2)) {
       System.out.println("El número es primo.");
+    } else {
+      for (entreNumero = 2; ((entreNumero < numero) && ((numero % entreNumero) != 0)); entreNumero++) { }
+     
+      if (entreNumero == numero) {
+        System.out.println("El número es primo.");
+      } else {
+        System.out.println("El número no es primo.");
+      }
     }
   }
 }

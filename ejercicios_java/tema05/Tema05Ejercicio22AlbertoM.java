@@ -9,22 +9,15 @@ public class Tema05Ejercicio22AlbertoM {
     System.out.println("----------------------------------------------------------------------------");
     System.out.println(" ");
     
-    int divisible = 0;
-    
-    System.out.print("2 ");
+    int entreNumero = 0;
     
     for (int numero = 2; numero < 100; numero++) {
       
-      for (int divisor = 2; divisor < numero; divisor++) {
-        divisible = (numero % divisor);
-        
-        if (divisible == 0) {
-          break;
-        } else {
-            System.out.print(numero + " ");
-            break;
-        }
-      }
+      for (entreNumero = 2; ((entreNumero < numero) && ((numero % entreNumero) != 0)); entreNumero++) { }
+     
+      if (entreNumero == numero) {
+        System.out.print(numero + " ");
+      } 
     }
     
     System.out.println("100");
