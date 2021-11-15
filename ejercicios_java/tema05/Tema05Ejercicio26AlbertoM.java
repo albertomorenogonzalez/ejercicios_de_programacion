@@ -21,7 +21,17 @@ public class Tema05Ejercicio26AlbertoM {
     int digito = Integer.parseInt(System.console().readLine());
     System.out.println(" ");
     
+    System.out.print("El número ocupa la posición número ");
     
-    System.out.println("El número ocupa la posición número " );
+    for (int contador = 1; numero > 0; contador++) {
+      long comprobarDigito = (numero % 10);
+      
+      if (comprobarDigito == digito) {
+        System.out.print(contador + " "); 
+      } 
+      
+      numero /= 10; 
+    }
   }
-}
+} 
+
