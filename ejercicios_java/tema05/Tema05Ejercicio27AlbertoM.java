@@ -10,17 +10,15 @@ public class Tema05Ejercicio27AlbertoM {
     System.out.println("---------------------------------------------------------------------------");
     System.out.println(" ");
     
-    System.out.println("Introduzca un número, por favor: ");
+    System.out.println("Introduzca un número positivo, por favor: ");
     System.out.print("> ");
     int numero = Integer.parseInt(System.console().readLine());
     System.out.println(" ");
     
-    int entreNumero = 0;
-    
     System.out.print("1 ");
       
-    for (entreNumero = 2; ((entreNumero < numero) && ((entreNumero % 3) == 0)); entreNumero++) { 
-      System.out.print(entreNumero + " ");
+    for (int multiplosTres = 3; multiplosTres < numero; multiplosTres += 3) {
+      System.out.print(multiplosTres + " ");
     }
     
     System.out.print(numero + " ");
