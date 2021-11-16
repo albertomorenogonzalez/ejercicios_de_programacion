@@ -43,61 +43,67 @@ public class Tema05Ejercicio30AlbertoM {
       hora2 = Integer.parseInt(System.console().readLine());
       System.out.println(" ");
       
-      switch (dia1.toLowerCase()) {
-        case "lunes":
-          numDia1 = 1;
-          break;
-        case "martes":
-          numDia1 = 2;
-          break;
-        case "miércoles":
-          numDia1 = 3;
-          break;
-        case "jueves":
-          numDia1 = 4;
-          break;
-        case "viernes":
-          numDia1 = 5;
-          break;
-        case "sábado":
-          numDia1 = 6;
-          break;
-        case "domingo":
-          numDia1 = 7;  
-          break;  
-        default:
-          System.out.println(" ");
-          System.out.println("Introduzca los datos de nuevo correctamente, por favor:");
-          System.out.println(" ");
-          System.out.println(" ");
-      } 
+      if ((dia1 == dia2) || (numDia1 > numDia2) || (((hora1 < 0) || (hora1 >= 24)) || ((hora2 < 0) || (hora2 >= 24)))) {
+        System.out.println(" ");
+        System.out.println("Introduzca los datos de nuevo correctamente, por favor:");
+        System.out.println(" ");
+        System.out.println(" ");
+      } else {
+        switch (dia1.toLowerCase()) {
+          case "lunes":
+            numDia1 = 1;
+            break;
+          case "martes":
+            numDia1 = 2;
+            break;
+          case "miércoles":
+            numDia1 = 3;
+            break;
+          case "jueves":
+            numDia1 = 4;
+            break;
+          case "viernes":
+            numDia1 = 5;
+            break;
+          case "sábado":
+            numDia1 = 6;
+            break;
+          case "domingo":
+            numDia1 = 7;  
+            break;  
+          default:
+            System.out.println(" ");
+            System.out.println("Introduzca los datos de nuevo correctamente, por favor:");
+            System.out.println(" ");
+            System.out.println(" ");
+          } 
       
-      switch (dia2.toLowerCase()) {
-        case "martes":
-          numDia2 = 2;
-          break;
-        case "miércoles":
-          numDia2 = 3;
-          break;
-        case "jueves":
-          numDia2 = 4;
-          break;
-        case "viernes":
-          numDia2 = 5;
-          break;
-        case "sábado":
-          numDia2 = 6;
-          break;
-        case "domingo":
-          numDia2 = 7;  
-          break;  
-        default:
-          System.out.println(" ");
-          System.out.println("Introduzca los datos de nuevo correctamente, por favor:");
-          System.out.println(" ");
-          System.out.println(" ");
-      } 
-      
+        switch (dia2.toLowerCase()) {
+          case "martes":
+            numDia2 = 2;
+            break;
+          case "miércoles":
+            numDia2 = 3;
+            break;
+          case "jueves":
+            numDia2 = 4;
+            break;
+          case "viernes":
+            numDia2 = 5;
+            break;
+          case "sábado":
+            numDia2 = 6;
+            break;
+          case "domingo":
+            numDia2 = 7;  
+            break;  
+          default:
+            System.out.println(" ");
+            System.out.println("Introduzca los datos de nuevo correctamente, por favor:");
+            System.out.println(" ");
+            System.out.println(" ");
+        } 
+      }
     }
     
     int horasRestantesDia = (24 - hora1);
@@ -108,6 +114,8 @@ public class Tema05Ejercicio30AlbertoM {
     
     int horasTotales = (horasRestantesDia + diasEnHorasTranscurridos + hora2);
     
-    System.out.println("Entre las " + hora1 + ":00 del " + dia1 + " y las " + hora2 + ":00 del " + dia2 + " han transcurrido " + horasTotales + " horas.");
+    if ((dia1 != dia2) || (numDia1 > numDia2) || (((hora1 >= 0) || (hora1 < 24)) || ((hora2 >= 0) || (hora2 < 24)))) {
+      System.out.println("Entre las " + hora1 + ":00 del " + dia1 + " y las " + hora2 + ":00 del " + dia2 + " han transcurrido " + horasTotales + " horas.");
+    }
   }
 }
