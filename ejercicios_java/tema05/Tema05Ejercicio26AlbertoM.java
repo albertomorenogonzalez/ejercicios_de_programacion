@@ -21,16 +21,34 @@ public class Tema05Ejercicio26AlbertoM {
     int digito = Integer.parseInt(System.console().readLine());
     System.out.println(" ");
     
-    System.out.print("El número ocupa la posición número ");
+    System.out.print("El número " + digito + " ocupa la posición/las posiciones número: ");
     
-    for (int contador = 1; numero > 0; contador++) {
-      long comprobarDigito = (numero % 10);
+    int comprobarDigito = 1;
+    
+    int posicion = 0;
+    
+    int darLaVuelta = 0;
+    
+    numero = ((numero * 10) + 1);
+    
+    while (numero > 0) {
+      darLaVuelta = ((darLaVuelta * 10) + ((int)numero % 10));
       
-      if (comprobarDigito == digito) {
-        System.out.print(contador + " "); 
-      } 
+      numero /= 10;
+    }
+    
+    while (darLaVuelta > 0) {
+      if (posicion > 0) {
+        if (comprobarDigito == digito) {
+          System.out.print(posicion + " ");
+        }
+      }
       
-      numero /= 10; 
+      comprobarDigito = (darLaVuelta % 10);
+      
+      darLaVuelta = (darLaVuelta / 10);
+      
+      posicion++;
     }
   }
 } 
