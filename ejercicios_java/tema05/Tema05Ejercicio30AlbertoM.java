@@ -72,10 +72,7 @@ public class Tema05Ejercicio30AlbertoM {
             numDia1 = 7;  
             break;  
           default:
-            System.out.println(" ");
-            System.out.println("Introduzca los datos de nuevo correctamente, por favor:");
-            System.out.println(" ");
-            System.out.println(" ");
+            numDia1 = 0; 
           } 
       
         switch (dia2.toLowerCase()) {
@@ -98,10 +95,7 @@ public class Tema05Ejercicio30AlbertoM {
             numDia2 = 7;  
             break;  
           default:
-            System.out.println(" ");
-            System.out.println("Introduzca los datos de nuevo correctamente, por favor:");
-            System.out.println(" ");
-            System.out.println(" ");
+            numDia2 = 0;
         } 
       }
     }
@@ -114,8 +108,6 @@ public class Tema05Ejercicio30AlbertoM {
     
     int horasTotales = (horasRestantesDia + diasEnHorasTranscurridos + hora2);
     
-    if ((dia1 != dia2) || (numDia1 > numDia2) || (((hora1 >= 0) || (hora1 < 24)) || ((hora2 >= 0) || (hora2 < 24)))) {
-      System.out.println("Entre las " + hora1 + ":00 del " + dia1 + " y las " + hora2 + ":00 del " + dia2 + " han transcurrido " + horasTotales + " horas.");
-    }
+    System.out.println("Entre las " + hora1 + ":00 del " + dia1 + " y las " + hora2 + ":00 del " + dia2 + " han transcurrido " + horasTotales + " horas.");
   }
 }
