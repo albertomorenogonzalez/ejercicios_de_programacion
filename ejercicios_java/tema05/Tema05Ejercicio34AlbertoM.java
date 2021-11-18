@@ -44,6 +44,10 @@ public class Tema05Ejercicio34AlbertoM {
       numero2 /= 10;
     }
     
+    int darLaVueltaImpar1 = darLaVuelta1;
+    
+    int darLaVueltaImpar2 = darLaVuelta2;
+    
     while ((darLaVuelta1 > 0) && (darLaVuelta2 > 0)) {
       if ((darLaVuelta1 % 2) == 0) {
         System.out.print(darLaVuelta1 % 10);
@@ -58,26 +62,15 @@ public class Tema05Ejercicio34AlbertoM {
     
     System.out.println(" ");
     
-    System.out.print(darLaVuelta1);
-    System.out.print(darLaVuelta2);
-    
-    double restaurarDarLaVuelta = Math.pow(10, contador);
-    
-    //darLaVuelta1 = (((double)darLaVuelta1) * restaurarDarLaVuelta);
-    
-    //darLaVuelta2 = (((double)darLaVuelta2) * restaurarDarLaVuelta);
-    
-    System.out.println(" ");
-    
-    while ((darLaVuelta1 > 0) && (darLaVuelta2 > 0)) {
-      if ((darLaVuelta1 % 2) != 0) {
-        System.out.print(darLaVuelta1 % 10);
-      } else if ((darLaVuelta2 % 2) != 0) {
-        System.out.print(darLaVuelta2 % 10);
+    while ((darLaVueltaImpar1 > 0) && (darLaVueltaImpar2 > 0)) {
+      if ((darLaVueltaImpar1 % 2) != 0) {
+        System.out.print(darLaVueltaImpar1% 10);
+      } else if ((darLaVueltaImpar2 % 2) != 0) {
+        System.out.print(darLaVueltaImpar2 % 10);
       }
       
-      darLaVuelta1 /= 10;
-      darLaVuelta2 /= 10;
+      darLaVueltaImpar1 /= 10;
+      darLaVueltaImpar2 /= 10;
     }
   }
 } 
