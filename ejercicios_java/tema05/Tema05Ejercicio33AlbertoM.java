@@ -25,8 +25,8 @@ public class Tema05Ejercicio33AlbertoM {
             System.out.print("*");
           } else {
             System.out.print(" ");
-          }
-        }
+          } // ir
+        } // for
         System.out.println(" ");
       } else if (linea == altura) {
           for (int longLinea = 1; longLinea <= (altura + (altura - 3)); longLinea++) {
@@ -34,9 +34,9 @@ public class Tema05Ejercicio33AlbertoM {
               System.out.print(" ");
             } else {
               System.out.print("*");
-            } 
-          }
-      }
-    }
+            } // if
+          } // for
+      } // if
+    } // for
   }
 }
