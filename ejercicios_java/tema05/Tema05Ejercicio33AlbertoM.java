@@ -18,26 +18,24 @@ public class Tema05Ejercicio33AlbertoM {
     System.out.println(" ");
     System.out.println(" ");
     
-    for (int caracteres = 1; caracteres <= altura; caracteres++) {
-      if (caracteres < altura) {
-      for (int longLinea = 1; longLinea <= (altura + (altura / 2)); longLinea++) {
-        if ((longLinea == 1)  || (longLinea == (altura + (altura / 2)))){
-          System.out.print("*");
-        } else {
-          System.out.print(" ");
+    for (int linea = 1; linea <= altura; linea++) {
+      if (linea < altura) {
+        for (int longLinea = 1; longLinea <= (altura + (altura - 3)); longLinea++) {
+          if ((longLinea == 1)  || (longLinea == (altura + (altura - 3)))){
+            System.out.print("*");
+          } else {
+            System.out.print(" ");
+          }
         }
-      }
         System.out.println(" ");
-      } else if (caracteres == altura) {
-        System.out.print(" ");
-      }
-    }
-    
-    for (int carHorizontal = 0; carHorizontal < (altura - 2); carHorizontal++) {
-      if (carHorizontal < (altura - 1)) {
-        System.out.print("* ");
-      } else if (carHorizontal == (altura - 1)) {
-        System.out.print("*");
+      } else if (linea == altura) {
+          for (int longLinea = 1; longLinea <= (altura + (altura - 3)); longLinea++) {
+            if (((longLinea % 2) != 0) || (longLinea == altura + (altura - 3))) {
+              System.out.print(" ");
+            } else {
+              System.out.print("*");
+            } 
+          }
       }
     }
   }
