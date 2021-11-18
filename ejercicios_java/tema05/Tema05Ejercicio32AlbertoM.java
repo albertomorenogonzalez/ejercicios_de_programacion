@@ -17,15 +17,13 @@ public class Tema05Ejercicio32AlbertoM {
     long numero = Long.parseLong(System.console().readLine());
     System.out.println(" ");
     
-    int comprobarDigitoPar = 1;
-    
-    int digitoPar = comprobarDigitoPar % 2;
-    
-    int posicion = 0;
-    
     int darLaVuelta = 0;
     
     numero = ((numero * 10) + 1);
+    
+    int sumatorio = 0;
+    
+    System.out.print("Los dígitos pares del número son: ");
     
     while (numero > 0) {
       darLaVuelta = ((darLaVuelta * 10) + ((int)numero % 10));
@@ -34,17 +32,17 @@ public class Tema05Ejercicio32AlbertoM {
     }
     
     while (darLaVuelta > 0) {
-      if (posicion > 0) {
-        if (digitoPar == 0) {
-          System.out.print(digitoPar + " ");
-        }
+      if ((darLaVuelta % 2) == 0) {
+        System.out.print((darLaVuelta % 10) + " ");
+        
+        sumatorio = (sumatorio + (darLaVuelta % 10));
       }
       
-      comprobarDigitoPar = (darLaVuelta % 10);
-      
-      darLaVuelta = (darLaVuelta / 10);
-      
-      posicion++;
+      darLaVuelta /= 10;
     }
+    
+    System.out.println(" ");
+    
+    System.out.print("La suma de todos esos dígitos es " + sumatorio);
   }
 } 
