@@ -25,12 +25,12 @@ public class Tema05Ejercicio33AlbertoM {
             System.out.print("*");
           } else {
             System.out.print(" ");
-          } // ir
+          } // if
         } // for
         System.out.println(" ");
       } else if (linea == altura) {
           for (int longLinea = 1; longLinea <= (altura + (altura - 3)); longLinea++) {
-            if (((longLinea % 2) != 0) || (longLinea == altura + (altura - 3))) {
+            if (((longLinea % 2) != 0) || (longLinea == (altura + (altura - 3)))) {
               System.out.print(" ");
             } else {
               System.out.print("*");
