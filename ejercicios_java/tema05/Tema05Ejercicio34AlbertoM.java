@@ -26,50 +26,65 @@ public class Tema05Ejercicio34AlbertoM {
     long numero2 = Long.parseLong(System.console().readLine());
     System.out.println(" ");
     
-    int darLaVuelta1 = 0;
+    long darLaVuelta1 = 0;
     
-    int darLaVuelta2 = 0;
+    long darLaVuelta2 = 0;
     
     numero1 = ((numero1 * 10) + 1);
     
     numero2 = ((numero2 * 10) + 1);
     
-    int contador = 0;
-    
-    while ((numero1 > 0) && (numero2 > 0)) {
-      darLaVuelta1 = ((darLaVuelta1 * 10) + ((int)numero1 % 10));
-      darLaVuelta2 = ((darLaVuelta2 * 10) + ((int)numero2 % 10));
+    while (numero1 > 0) {
+      darLaVuelta1 = ((darLaVuelta1 * 10) + (numero1 % 10));
       
       numero1 /= 10;
+    }
+    
+    while (numero2 > 0) {
+      darLaVuelta2 = ((darLaVuelta2 * 10) + (numero2 % 10));
+      
       numero2 /= 10;
     }
     
-    int darLaVueltaImpar1 = darLaVuelta1;
+    long darLaVueltaImpar1 = darLaVuelta1;
     
-    int darLaVueltaImpar2 = darLaVuelta2;
+    long darLaVueltaImpar2 = darLaVuelta2;
     
-    while ((darLaVuelta1 > 0) && (darLaVuelta2 > 0)) {
+    System.out.print("El número formado por los dígitos pares es ");
+    
+    while (darLaVuelta1 > 0) {
       if ((darLaVuelta1 % 2) == 0) {
         System.out.print(darLaVuelta1 % 10);
-      } else if ((darLaVuelta2 % 2) == 0) {
+      } 
+      
+      darLaVuelta1 /= 10;
+    }
+    
+    while (darLaVuelta2 > 0) {
+      if ((darLaVuelta2 % 2) == 0) {
         System.out.print(darLaVuelta2 % 10);
       }
       
-      darLaVuelta1 /= 10;
       darLaVuelta2 /= 10;
-      contador++;
     }
     
     System.out.println(" ");
     
-    while ((darLaVueltaImpar1 > 0) && (darLaVueltaImpar2 > 0)) {
-      if ((darLaVueltaImpar1 % 2) != 0) {
-        System.out.print(darLaVueltaImpar1% 10);
-      } else if ((darLaVueltaImpar2 % 2) != 0) {
+    System.out.print("El número formado por los dígitos impares es ");
+    
+    while (darLaVueltaImpar1 > 0) {
+      if (((darLaVueltaImpar1 % 2) != 0) && (darLaVueltaImpar1 > 1)) {
+        System.out.print(darLaVueltaImpar1 % 10);
+      } 
+      
+      darLaVueltaImpar1 /= 10;
+    }
+    
+    while (darLaVueltaImpar2 > 0) {
+      if (((darLaVueltaImpar2 % 2) != 0) && (darLaVueltaImpar2 > 1)) {
         System.out.print(darLaVueltaImpar2 % 10);
       }
       
-      darLaVueltaImpar1 /= 10;
       darLaVueltaImpar2 /= 10;
     }
   }
