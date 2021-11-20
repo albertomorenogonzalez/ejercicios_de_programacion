@@ -11,18 +11,18 @@ public class Tema05Ejercicio38AlbertoM {
     System.out.println("------------------------------------");
     System.out.println(" ");
     
-    System.out.println("Introduzca la altura de la x, por favor (número impar): ");
+    System.out.println("Introduzca la altura del reloj de arena, por favor (número impar): ");
     
     int altura = 0;
     
-    while ((altura % 2) == 0) {
+    while (((altura % 2) == 0) || (altura < 3)) {
       System.out.print("> ");
       altura = Integer.parseInt(System.console().readLine());
       System.out.println(" ");
       System.out.println(" ");
       
-      if ((altura % 2) == 0) {
-        System.out.println("Introduzca correctamente la altura de la x, por favor (número impar): ");
+      if (((altura % 2) == 0) || (altura < 3)) {
+        System.out.println("Introduzca correctamente la altura del reloj de arena, por favor (número impar): ");
       }
     }
     
