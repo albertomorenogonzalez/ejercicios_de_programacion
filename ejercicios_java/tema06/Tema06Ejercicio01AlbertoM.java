@@ -6,6 +6,10 @@
  */
 public class Tema06Ejercicio01AlbertoM { 
   public static void main(String[] args) {
+    System.out.println("PROGRAMA QUE MUESTRA EL RESULTADO DE TRES DADOS Y LUEGO LOS SUMA");
+    System.out.println("-----------------------------------------------------------------");
+    System.out.println(" ");
+
     int dado1 = ((int)(Math.random()*6) + 1);
     System.out.println("Primer dado: " + dado1);
 
