@@ -33,11 +33,16 @@ public class Tema05Ejercicio34AlbertoM {
     numero1 = ((numero1 * 10) + 1);
     
     numero2 = ((numero2 * 10) + 1);
+
+    int longitud = 0;
+    int longitudImp = 0;
     
     while (numero1 > 0) {
       darLaVuelta1 = ((darLaVuelta1 * 10) + (numero1 % 10));
       
       numero1 /= 10;
+      longitud++;
+      longitudImp++;
     }
     
     while (numero2 > 0) {
@@ -52,40 +57,36 @@ public class Tema05Ejercicio34AlbertoM {
     
     System.out.print("El número formado por los dígitos pares es ");
     
-    while (darLaVuelta1 > 0) {
+    while (longitud > 0) {
       if ((darLaVuelta1 % 2) == 0) {
         System.out.print(darLaVuelta1 % 10);
       } 
       
-      darLaVuelta1 /= 10;
-    }
-    
-    while (darLaVuelta2 > 0) {
       if ((darLaVuelta2 % 2) == 0) {
         System.out.print(darLaVuelta2 % 10);
       }
-      
+
+      darLaVuelta1 /= 10;
       darLaVuelta2 /= 10;
+      longitud--;
     }
     
     System.out.println(" ");
     
     System.out.print("El número formado por los dígitos impares es ");
     
-    while (darLaVueltaImpar1 > 0) {
+    while (longitudImp > 0) {
       if (((darLaVueltaImpar1 % 2) != 0) && (darLaVueltaImpar1 > 1)) {
         System.out.print(darLaVueltaImpar1 % 10);
       } 
       
-      darLaVueltaImpar1 /= 10;
-    }
-    
-    while (darLaVueltaImpar2 > 0) {
       if (((darLaVueltaImpar2 % 2) != 0) && (darLaVueltaImpar2 > 1)) {
         System.out.print(darLaVueltaImpar2 % 10);
       }
       
+      darLaVueltaImpar1 /= 10;
       darLaVueltaImpar2 /= 10;
+      longitudImp--;
     }
   }
 } 
