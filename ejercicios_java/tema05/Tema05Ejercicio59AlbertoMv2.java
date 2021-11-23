@@ -24,29 +24,70 @@ public class Tema05Ejercicio59AlbertoMv2 {
     int numCaracteres = 1;
     int espacios = altura - 1;
     
-    for (int numEspacios = 1; numEspacios <= espacios; numEspacios++) {
-      System.out.print(" "); 
-    }
-
-    System.out.println("*");
-
     while (linea <= (altura - 3)) {
       
       for (int numEspacios = 1; numEspacios <= espacios; numEspacios++) {
-        System.out.print(" "); 
+        int coposNieve = ((int)(Math.random() * 30));
+        switch (coposNieve) {
+          case 0:
+            System.out.print("\033[97m.");
+            break;
+          default:
+            System.out.print(" "); 
+            break;
+        }
       }
       
       for (int longLinea = 1; longLinea <= numCaracteres; longLinea++) {
         if (linea == (altura - 3)) {
-          System.out.print("*");
+          System.out.print("\033[32m-");
+        } else if (linea == 1) {
+          System.out.print("\033[33m✯");
         } else {
           if (longLinea == 1) {
-            System.out.print("/");
+            System.out.print("\033[32m/");
           } else if (longLinea == numCaracteres) {
-            System.out.print("\\");
+            System.out.print("\033[32m\\");
           } else {
-            System.out.print(" ");
+            int bolasNavidad = ((int)(Math.random() * 35));
+            switch (bolasNavidad) {
+              case 0:
+                System.out.print("\033[91m◍");
+                break;
+              case 1:
+                System.out.print("\033[92m◍");
+                break;
+              case 2:
+                System.out.print("\033[93m◍");
+                break;
+              case 3:
+                System.out.print("\033[94m◍");
+                break;
+              case 4:
+                System.out.print("\033[95m◍");
+                break;
+              case 5:
+                System.out.print("\033[96m◍");
+                break;
+              case 6:
+                System.out.print("\033[97m◍");
+                break;
+              default:
+                System.out.print(" ");
+            }
           }
+        }
+      }
+      
+      for (int numEspacios = 1; numEspacios <= espacios; numEspacios++) {
+        int coposNieve = ((int)(Math.random() * 30));
+        switch (coposNieve) {
+          case 0:
+            System.out.print("\033[97m.");
+            break;
+          default:
+            System.out.print(" "); 
+            break;
         }
       }
 
@@ -63,7 +104,7 @@ public class Tema05Ejercicio59AlbertoMv2 {
       for (int numEspacios = 1; numEspacios <= espacios; numEspacios++) {
         System.out.print(" "); 
       }
-      System.out.println("#");
+      System.out.println("\033[31m#");
     }
   }
 }
