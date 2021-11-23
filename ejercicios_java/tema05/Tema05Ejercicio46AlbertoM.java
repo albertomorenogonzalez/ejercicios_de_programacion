@@ -15,7 +15,7 @@ public class Tema05Ejercicio46AlbertoM {
     int anchura = 0;
     int altura = 0;
 
-    while (altura < 2) {
+    while ((altura < 2) || (anchura < 2)) {
       System.out.println("Introduzca la anchura del rectángulo, por favor (mínimo 2): ");
       System.out.print("> ");
       anchura = Integer.parseInt(System.console().readLine());
@@ -25,6 +25,11 @@ public class Tema05Ejercicio46AlbertoM {
       System.out.print("> ");
       altura = Integer.parseInt(System.console().readLine());
       System.out.println(" ");
+
+      if ((altura < 2) || (anchura < 2)) {
+        System.out.println("Introduzca correctamente los datos");
+        System.out.println(" ");
+      }
     }
     
     int linea = 1;
