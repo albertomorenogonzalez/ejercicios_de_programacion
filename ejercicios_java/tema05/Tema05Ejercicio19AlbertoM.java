@@ -11,10 +11,14 @@ public class Tema05Ejercicio19AlbertoM {
     System.out.println("---------------------------------------------");
     System.out.println(" ");
     
-    System.out.println("Introduzca la altura de la pirámide, por favor: ");
-    System.out.print("> ");
-    int altura = Integer.parseInt(System.console().readLine());
-    System.out.println(" ");
+    int altura = 0;
+
+    while (altura <= 0) {
+      System.out.println("Introduzca la altura de la pirámide, por favor (número mayor que 0): ");
+      System.out.print("> ");
+      altura = Integer.parseInt(System.console().readLine());
+      System.out.println(" ");
+    }
     
     System.out.println("Introduzca el carácter del que quiere hacer la pirámide, por favor:");
     System.out.print("> ");
@@ -24,7 +28,7 @@ public class Tema05Ejercicio19AlbertoM {
     int linea = 1;
     int numCaracteres = 1;
     int espacios = altura - 1;
-    
+
     while (linea <= altura) {
       
       for (int numEspacios = 1; numEspacios <= espacios; numEspacios++) {
