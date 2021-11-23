@@ -10,25 +10,21 @@ public class Tema06Ejercicio07AlbertoM {
     System.out.println("---------");
     System.out.println(" ");
     
-    for (int contador = 1; contador <= 15; contador++) {
-      if (contador < 15) {
+    for (int contador = 1; contador < 15; contador++) {
         System.out.printf("%-8s%2d   " ,"Partido" ,contador);
-      } else if (contador == 15) {
-        System.out.printf("%-9s%2d  " ,"Pleno al" ,contador);
-      }
 
       for (int columna = 1; columna <=3; columna++) {
         int apuesta = ((int)(Math.random() * 3));
 
         switch (apuesta) {
           case 0:
-            System.out.printf("%d " ,1);
+            System.out.printf(" %d □ □ " ,1);
             break;
           case 1:
-            System.out.printf("X ");
+            System.out.printf(" □ X □ ");
             break;
           case 2:
-            System.out.printf("%d " ,2);
+            System.out.printf(" □ □ %d " ,2);
             break;
           default:
 
@@ -36,6 +32,38 @@ public class Tema06Ejercicio07AlbertoM {
       }
 
       System.out.println(" ");
+    }
+
+    System.out.println(" ");
+
+    for (int contadorP15 = 1; contadorP15 <= 2; contadorP15++) {
+      int plenoAlQuince = ((int)(Math.random() * 4));
+      String muchosGoles = " ";
+
+      switch (plenoAlQuince) {
+        case 0:
+          muchosGoles = String.valueOf(plenoAlQuince);
+          break;
+        case 1:
+          muchosGoles = String.valueOf(plenoAlQuince);
+          break;
+        case 2:
+          muchosGoles = String.valueOf(plenoAlQuince);
+          break;
+        case 3:
+          muchosGoles = "M";
+          break;
+        default:
+        
+      }
+
+      if (contadorP15 < 2) {
+        System.out.printf("%-12s   %-6s " ,"Pleno al 15" ,"Equipo1");
+        System.out.print(muchosGoles);
+      } else if (contadorP15 == 2) {
+        System.out.printf("  %-6s " ,"Equipo2");
+        System.out.print(muchosGoles);
+      }
     }
   }
 }
