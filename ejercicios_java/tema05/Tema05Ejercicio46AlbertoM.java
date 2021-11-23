@@ -1,60 +1,51 @@
 /**
- * Escribe un programa que cambie un dígito dentro de un número dando la
- * posición y el valor nuevo. Las posiciones se cuentan de izquierda a derecha
- * empezando por el 1. Se recomienda usar long en lugar de int ya que el
- * primero admite números más largos. Suponemos que el usuario introduce
- * correctamente los datos.
+ * Realiza un programa que pinte por pantalla un rectángulo hueco hecho con
+ * asteriscos. Se debe pedir al usuario la anchura y la altura. Hay que comprobar
+ * que tanto la anchura como la altura sean mayores o iguales que 2, en caso
+ * contrario se debe mostrar un mensaje de error.
  *
  * @author Alberto Moreno González
  */
-public class Tema05Ejercicio45AlbertoM {
+public class Tema05Ejercicio46AlbertoM {
   public static void main(String[] args) {
-    System.out.println("PROGRAMA QUE Cambia UN DÍGITO DENTRO DE UN NÚMERO");
-    System.out.println("--------------------------------------------------");
-    System.out.println(" ");
-    
-    System.out.println("Introduzca un número entero positivo, por favor: ");
-    System.out.print("> ");
-    long numero = Long.parseLong(System.console().readLine());
-    System.out.println(" ");
-    
-    System.out.println("Introduzca la posición donde quiere insertar el número: ");
-    System.out.print("> ");
-    long longitud = Long.parseLong(System.console().readLine());
-    System.out.println(" ");
-    
-    System.out.println("Introduzca el nuevo dígito que quiere insertar: ");
-    System.out.print("> ");
-    long digito = Long.parseLong(System.console().readLine());
+    System.out.println("PROGRAMA QUE PINTA POR PANTALLA UN RECTÁNGULO DE ASTERÍSCOS");
+    System.out.println("------------------------------------------------------------");
     System.out.println(" ");
 
-    long darLaVuelta = 0;
-    
-    numero = ((numero * 10) + 1);
+    int anchura = 0;
+    int altura = 0;
 
-    while (numero > 0) {
-      darLaVuelta = ((darLaVuelta * 10) + (numero % 10));
+    while (altura < 2) {
+      System.out.println("Introduzca la anchura del rectángulo, por favor (mínimo 2): ");
+      System.out.print("> ");
+      anchura = Integer.parseInt(System.console().readLine());
+      System.out.println(" ");
+
+      System.out.println("Introduzca ahora la altura del rectángulo, por favor (mínimo 2):");
+      System.out.print("> ");
+      altura = Integer.parseInt(System.console().readLine());
+      System.out.println(" ");
+    }
+    
+    int linea = 1;
+    
+    while (linea <= altura) {
       
-      numero /= 10;
-    }
-
-    System.out.print("El número resultante es ");
-
-    while (longitud > 1) {
-      System.out.print(darLaVuelta % 10);
-
-      darLaVuelta /= 10;
-      longitud--;
-    }
-
-    System.out.print(digito);
-
-    if (longitud == 1) {
-      while (darLaVuelta > 100) {
-        darLaVuelta /= 10;
-        
-        System.out.print(darLaVuelta % 10);
+      for (int longLinea = 1; longLinea <= anchura; longLinea++) {
+        if ((linea == 1) || (linea == altura)) {
+          System.out.print("* ");
+        } else {
+            if ((longLinea == 1) || (longLinea == anchura)) {
+              System.out.print("* ");
+            } else {
+              System.out.print("  ");
+            }
+        }
       }
+      
+      System.out.println(" ");
+      
+      linea++;
     }
   }
 } 
