@@ -9,7 +9,7 @@
  */
 public class Tema05Ejercicio45AlbertoM {
   public static void main(String[] args) {
-    System.out.println("PROGRAMA QUE CAMBIA UN DÍGITO DENTRO DE UN NÚMERO");
+    System.out.println("PROGRAMA QUE Cambia UN DÍGITO DENTRO DE UN NÚMERO");
     System.out.println("--------------------------------------------------");
     System.out.println(" ");
     
