@@ -12,18 +12,18 @@ public class Tema06Ejercicio06AlbertoM {
     System.out.println(" ");
     
     int numeroMaquina = ((int)(Math.random() * 101));
+    int numeroUsuario = -1;
 
     int intento = 0;
     
-    while (intento < 5) {
+    while ((numeroUsuario != numeroMaquina) && (intento < 5)) {
       System.out.println("Introduzca un número (del 1 al 100): ");
       System.out.print("> ");
-      int numeroUsuario = Integer.parseInt(System.console().readLine());
+      numeroUsuario = Integer.parseInt(System.console().readLine());
       System.out.println(" ");
       
       if (numeroUsuario == numeroMaquina) {
         System.out.println("Ha adivinado el número. ¡Enhorabuena!");
-        break;
       } else {
           System.out.println("Fallaste.");
           intento++;
