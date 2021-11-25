@@ -13,23 +13,23 @@ public class Tema05Ejercicio07AlbertoM {
     System.out.println("------------------------");
     System.out.println(" ");
     
-    int intento = 0;
+    int pin = 0;
+    int intento = 4;
     
-    while (intento < 4) {
+    while ((pin != 4325) && (intento > 0)) {
       System.out.println("Introduzca el PIN: ");
       System.out.print("> ");
-      int pin = Integer.parseInt(System.console().readLine());
+      pin = Integer.parseInt(System.console().readLine());
       System.out.println(" ");
       
       if (pin == 4325) {
         System.out.println("La caja fuerte se ha abierto satisfactoriamente.");
-        break;
       } else {
           System.out.println("Lo siento, esa no es la combinación.");
-          intento++;
+          intento--;
           
-          if (intento != 4) {
-            System.out.println("Le quedan " + (4 - intento) + " intentos.");
+          if (intento != 0) {
+            System.out.println("Le quedan " + (intento) + " intentos.");
           }
           
           System.out.println(" ");
@@ -37,7 +37,7 @@ public class Tema05Ejercicio07AlbertoM {
           
       }
       
-      if (intento == 4) {
+      if (intento == 0) {
         System.out.println("Se ha quedado sin intentos.");
       }
     }
