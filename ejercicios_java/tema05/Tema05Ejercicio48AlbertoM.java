@@ -18,34 +18,46 @@ public class Tema05Ejercicio48AlbertoM {
     System.out.println(" ");
     
     long numeroRestaurado = 0;
+    boolean digito;
+
+    System.out.print("Digitos que aparecen: ");
 
     for (int digitosQueAparecen = 0; digitosQueAparecen < 10; digitosQueAparecen++) {
+      digito = false;
       numeroRestaurado = numero;
 
       while (numeroRestaurado > 0) {
         if ((numeroRestaurado % 10) == digitosQueAparecen) {
-          System.out.print(digitosQueAparecen + " ");
+          digito = true;
         }
         
         numeroRestaurado /= 10;
+      }
+
+      if (digito) {
+        System.out.print(digitosQueAparecen + " ");
       }
     }
 
     System.out.println(" ");
 
+    System.out.print("Dígitos que no aparecen: ");
+
     for (int digitosQueNoAparecen = 0; digitosQueNoAparecen < 10; digitosQueNoAparecen++) {
+      digito = false;
       numeroRestaurado = numero;
 
       while (numeroRestaurado > 0) {
-        if ((numeroRestaurado % 10) != digitosQueNoAparecen) {
-          System.out.print(digitosQueNoAparecen + " ");
-          
+        if ((numeroRestaurado % 10) == digitosQueNoAparecen) {
+          digito = true;
         }
-
+        
         numeroRestaurado /= 10;
       }
-      
-      
+
+      if (!digito) {
+        System.out.print(digitosQueNoAparecen + " ");
+      }
     }
   }
 }
