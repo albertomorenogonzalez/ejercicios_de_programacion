@@ -52,13 +52,13 @@ public class Tema06Ejercicio14AlbertoM {
             }
           } else if (respuesta.equals("mayor")) {
             if (numeroMaquina > topeMinimo) {
-              topeMinimo = numeroMaquina;
+              topeMinimo = (numeroMaquina + 1);
             }
 
 
           }
 
-          numeroMaquina = ((int)(Math.random() * topeMaximo - topeMinimo) + topeMinimo);
+          numeroMaquina = ((int)(Math.random() * (topeMaximo - topeMinimo)) + topeMinimo);
         }
       } 
       
