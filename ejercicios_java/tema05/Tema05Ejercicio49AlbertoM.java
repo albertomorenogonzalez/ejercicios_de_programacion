@@ -37,7 +37,9 @@ public class Tema05Ejercicio49AlbertoM {
 
         contadorNumeros++;
         sumatorio = (sumatorio + (int)numero);
-        numMenor = numero;
+        if (contadorNumeros == 1) {
+          numMenor = numero;
+        }
 
         if (numero > numMayor) {
           numMayor = numero;
