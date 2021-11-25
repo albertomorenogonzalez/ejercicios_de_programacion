@@ -56,8 +56,7 @@ public class Tema06Ejercicio15AlbertoM {
         } 
 
         if ((contadorCompases == 1) && (parteCompas == 3)) {
-          System.out.print(notaTonica + " ");
-          System.out.print("|");
+          System.out.print(notaTonica + " |");
         } else {
           System.out.print(nota + " ");
         }
