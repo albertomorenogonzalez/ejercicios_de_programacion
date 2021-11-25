@@ -26,6 +26,21 @@ public class Tema05Ejercicio48AlbertoM {
         if ((numeroRestaurado % 10) == digitosQueAparecen) {
           System.out.print(digitosQueAparecen + " ");
         }
+        
+        numeroRestaurado /= 10;
+      }
+    }
+
+    System.out.println(" ");
+
+    for (int digitosQueNoAparecen = 0; digitosQueNoAparecen < 10; digitosQueNoAparecen++) {
+      numeroRestaurado = numero;
+
+      while (numeroRestaurado > 0) {
+        if ((numeroRestaurado % 10) != digitosQueNoAparecen) {
+          System.out.print(digitosQueNoAparecen + " ");
+          
+        }
 
         numeroRestaurado /= 10;
       }
@@ -33,4 +48,4 @@ public class Tema05Ejercicio48AlbertoM {
       
     }
   }
-} 
+}
