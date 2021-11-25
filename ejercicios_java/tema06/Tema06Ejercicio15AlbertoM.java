@@ -17,7 +17,7 @@ public class Tema06Ejercicio15AlbertoM {
     System.out.println("----------------------------------------");
     System.out.println(" ");
 
-    int compases = ((int)(Math.random() * 7));
+    int compases = ((int)(Math.random() * 7) + 1);
 
     String notaTonica = " ";
 
@@ -51,13 +51,13 @@ public class Tema06Ejercicio15AlbertoM {
 
         }
 
-        if (parteCompas == 0) {
+        if ((contadorCompases == compases) && (parteCompas == 0)) {
           notaTonica = nota;
-        }
+        } 
 
-        if ((contadorCompases == compases) && (parteCompas == 3)) {
-          System.out.print(notaTonica);
-          System.out.print(" |");
+        if ((contadorCompases == 1) && (parteCompas == 3)) {
+          System.out.print(notaTonica + " ");
+          System.out.print("|");
         } else {
           System.out.print(nota + " ");
         }
