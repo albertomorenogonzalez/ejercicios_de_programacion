@@ -41,7 +41,6 @@ public class Tema06Ejercicio16AlbertoM {
           case 4:
             figura = "🍋";
             break;
-          
           default:
 
         }

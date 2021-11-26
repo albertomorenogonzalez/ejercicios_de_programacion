@@ -17,7 +17,6 @@ public class Tema06Ejercicio17AlbertoM {
 
     int anchura = 0;
     int altura = 0;
-    int numPez = ((int)(Math.random() * (4 * (altura / 4))));
 
     System.out.println("Introduzca la anchura del rectángulo, por favor (mínimo 4): ");
     System.out.print("> ");
