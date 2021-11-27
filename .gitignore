@@ -1,4 +1,9 @@
 # Ocultos archivos .class
 *.class
+
 # Ocultas copias de seguridad
 *.bak
+
+# Oculta carpeta .vscode
+
+*.vscode/
