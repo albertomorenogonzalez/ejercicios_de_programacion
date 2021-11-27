@@ -9,21 +9,21 @@
  *
  * @author Alberto Moreno Gonzalez
  */
-public class Tema06Ejercicio17AlbertoM { 
+public class Tema06Ejercicio18AlbertoM { 
   public static void main(String[] args) {
-    System.out.println("PROGRAMA QUE PINTA POR PANTALLA UNA PECERA CON UN PEZ DENTRO");
-    System.out.println("-------------------------------------------------------------");
+    System.out.println("PROGRAMA QUE PINTA POR PANTALLA UN RECTÁNGULO DE ASTERÍSCOS");
+    System.out.println("------------------------------------------------------------");
     System.out.println(" ");
 
     int anchura = 0;
     int altura = 0;
 
-    System.out.println("Introduzca la anchura de la pecera, por favor (mínimo 4): ");
+    System.out.println("Introduzca la anchura del rectángulo, por favor (mínimo 4): ");
     System.out.print("> ");
     anchura = Integer.parseInt(System.console().readLine());
     System.out.println(" ");
 
-    System.out.println("Introduzca ahora la altura de la pecera, por favor (mínimo 4):");
+    System.out.println("Introduzca ahora la altura del rectángulo, por favor (mínimo 4):");
     System.out.print("> ");
     altura = Integer.parseInt(System.console().readLine());
     System.out.println(" ");
