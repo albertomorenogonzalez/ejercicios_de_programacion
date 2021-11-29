@@ -28,10 +28,10 @@ public class Tema05Ejercicio52AlbertoM {
     if (restaurarNumero < 10) {
       System.out.printf("%-20s%d" ,"El número resultante es " ,restaurarNumero);
     } else {
-      long CifraALaDerecha = (restaurarNumero % ((int)Math.pow(10 ,(contadorCifras - 1))));
-      long CifrasALaIzquierda = (restaurarNumero / ((int)Math.pow(10 ,(contadorCifras - 1))));
+      long cifraALaDerecha = (restaurarNumero % ((int)Math.pow(10 ,(contadorCifras - 1))));
+      long cifrasALaIzquierda = (restaurarNumero / ((int)Math.pow(10 ,(contadorCifras - 1))));
 
-      System.out.printf("%-20s%d%d" ,"El número resultante es " ,CifraALaDerecha ,CifrasALaIzquierda);
+      System.out.printf("%-20s%d%d" ,"El número resultante es " ,cifraALaDerecha ,cifrasALaIzquierda);
     }
   }
 }
