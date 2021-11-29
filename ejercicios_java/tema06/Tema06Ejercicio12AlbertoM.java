@@ -9,7 +9,7 @@ public class Tema06Ejercicio12AlbertoM {
   public static void main(String[] args) {
 
     for (int numCaracteres = 0; numCaracteres >= 0; numCaracteres++) {
-      int caracteres = ((int)(Math.random() * 126) + 32);
+      int caracteres = ((int)(Math.random() * 159) + 32);
 
       System.out.print((char)caracteres);
     }
