@@ -25,7 +25,7 @@ public class Tema06Ejercicio22AlbertoM {
     for (int numEspaciosCabeza = 1; numEspaciosCabeza <= 12; numEspaciosCabeza++) {
       System.out.print(" "); 
     }
-    
+
     System.out.println("@");
 
     int linea = 1;
@@ -42,4 +42,4 @@ public class Tema06Ejercicio22AlbertoM {
       linea++;
     }
   }
-}    
+} 
