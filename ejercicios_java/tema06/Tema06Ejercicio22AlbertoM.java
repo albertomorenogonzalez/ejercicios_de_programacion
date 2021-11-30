@@ -12,7 +12,7 @@
  */
 public class Tema06Ejercicio22AlbertoM { 
   public static void main(String[] args) {
-    System.out.println("PROGRAMA QUE POR PANTALLA UNA SERPIENTE DE SERPENTEO ALEATORIO");
+    System.out.println("PROGRAMA QUE PINTA POR PANTALLA UNA SERPIENTE DE SERPENTEO ALEATORIO");
     System.out.println("---------------------------------------------------------------");
     System.out.println(" ");
 
