@@ -5,5 +5,4 @@
 *.bak
 
 # Oculta carpeta .vscode
-
 *.vscode/
