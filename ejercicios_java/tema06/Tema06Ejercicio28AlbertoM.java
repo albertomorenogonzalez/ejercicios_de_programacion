@@ -27,13 +27,13 @@ public class Tema06Ejercicio28AlbertoM {
 
     while (linea <= altura) {
       if (linea == 1) {
-        System.out.println("*    *   ****   *        **** ");
+        System.out.println("*    *   ****   *        **** "); // parte de arriba de las letras
       } else if (linea == ((altura / 2) + 1)) {
-        System.out.println("******  *    *  *       ******");
+        System.out.println("******  *    *  *       ******"); // parte de la mitad de las letras
       } else if (linea == altura) {
-        System.out.println("*    *   ****   ******  *    *");
+        System.out.println("*    *   ****   ******  *    *"); // base de las letras
       } else {
-        System.out.println("*    *  *    *  *       *    *");
+        System.out.println("*    *  *    *  *       *    *"); // resto de la letra
       }
 
       linea++;
