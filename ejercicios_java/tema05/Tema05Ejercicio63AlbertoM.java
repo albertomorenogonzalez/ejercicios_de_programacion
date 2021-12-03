@@ -86,7 +86,7 @@ public class Tema05Ejercicio63AlbertoM {
             System.out.print("*");
           }
 
-          for (int numEspacios = 1; numEspacios <= (espacios + 1); numEspacios++) { // espacios posteriores a la pirámide
+          for (int numEspacios = 1; numEspacios <= (espacios + 1); numEspacios++) { // espacios posteriores a la pirámide + espacio de un caracter de separación con la otra pirámide
             System.out.print(" "); 
           }
 
@@ -107,6 +107,38 @@ public class Tema05Ejercicio63AlbertoM {
 
         linea++;
         numCaracteres2 += 2;
+        espacios2--;
+      } // while
+    } else { // si las dos alturas son iguales
+      while (linea <= altura1) { 
+        // Primra pirámide
+        for (int numEspacios = 1; numEspacios <= espacios; numEspacios++) { // espacios antes de la pirámide
+          System.out.print(" "); 
+        }
+        
+        for (int longLinea = 1; longLinea <= numCaracteres; longLinea++) { // pisos pirámide
+          System.out.print("*");
+        }
+
+        for (int numEspacios = 1; numEspacios <= (espacios + 1); numEspacios++) { // espacios posteriores a la pirámide + espacio de un caracter de separación con la otra pirámide
+          System.out.print(" "); 
+        }
+
+        // Segunda pirámide
+        for (int numEspacios = 1; numEspacios <= espacios2; numEspacios++) { // espacios antes de la pirámide
+          System.out.print(" "); 
+        }
+        
+        for (int longLinea = 1; longLinea <= numCaracteres2; longLinea++) { // pisos pirámide
+          System.out.print("*");
+        }
+        
+        System.out.println(" "); // salto de línea
+        
+        linea++;
+        numCaracteres += 2;
+        numCaracteres2 += 2;
+        espacios--;
         espacios2--;
       } // while
     } // if
