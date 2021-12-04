@@ -22,7 +22,7 @@ public class Tema07ArraysUnidEjercicio09AlbertoM {
 
     System.out.println(" ");
 
-    for (indice = 0; indice < 8; indice--) {
+    for (indice = 0; indice < 8; indice++) {
       if ((numero[indice] % 2) == 0) {
         System.out.print(numero[indice] + "-Par  ");
       } else {
