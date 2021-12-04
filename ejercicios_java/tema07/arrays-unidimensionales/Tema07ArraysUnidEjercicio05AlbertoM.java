@@ -35,7 +35,7 @@ public class Tema07ArraysUnidEjercicio05AlbertoM {
 
     System.out.println(" ");
 
-    for (indice = 0; indice <= 9; indice++) {
+    for (indice = 0; indice < 10; indice++) {
       if (numero[indice] == numMayor) {
         System.out.print(numero[indice] + "-Máximo  ");
       } else if (numero[indice] == numMenor) {
