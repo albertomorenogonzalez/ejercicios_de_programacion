@@ -31,7 +31,7 @@ public class Tema05Ejercicio66AlbertoM {
         if (linea < ((altura/2) + 1)) {
           for (int numEspacios = 1; numEspacios < espacios; numEspacios++) {
             System.out.print(" "); 
-          }
+          } 
 
           espacios++;
         // el número de espacios previos a la figura disminuye después de haber pintado la punta de la flecha
@@ -41,13 +41,13 @@ public class Tema05Ejercicio66AlbertoM {
           }
 
           espacios--;
-        }
+        } // if
 
         // caracteres de la flecha pintados
         System.out.println("*    *");
         
         linea++;
-      }
-    }
+      } // while
+    } // if
   }
 }
