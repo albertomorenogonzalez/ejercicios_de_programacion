@@ -26,7 +26,9 @@ public class Tema06Ejercicio32AlbertoM {
 
     int metro = 1;
 
+    // el programa irá imprimiendo metros (líneas) hasta llegar a la longitud deseada
     while (metro <= longitud) {
+      // definimos la aparicion del primer metro, luego la aleatoriedad de los siguientes
       if (metro == 1) {
         System.out.print("      ");
       } else {
@@ -35,10 +37,12 @@ public class Tema06Ejercicio32AlbertoM {
         for (int espaciosSendero = 1; espaciosSendero <= numEspacios; espaciosSendero++) {
           System.out.print(" "); 
         }
-      }
+      } // if
 
+      // pintamos el borde derecho del metro
       System.out.print("|");
 
+      // pintamos el interior del metro, con los posibles obstáculos
       for (int interiorSendero = 0; interiorSendero < 4; interiorSendero++) {
         int probObstaculo = ((int)(Math.random() * 4));
         String obstaculo = " ";
@@ -51,14 +55,15 @@ public class Tema06Ejercicio32AlbertoM {
             break;
           default:
             obstaculo = " ";
-        }
+        } // switch
 
         System.out.print(obstaculo);
-      }
+      } // for
 
+      // pintamos el borde izquierdo del metro
       System.out.println("|");
 
       metro++;
-    }
+    } // while
   }
 } 
