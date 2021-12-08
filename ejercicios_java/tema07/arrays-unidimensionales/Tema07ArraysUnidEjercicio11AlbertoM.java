@@ -29,6 +29,8 @@ public class Tema07ArraysUnidEjercicio11AlbertoM {
     int indice3 = 0;
     int contadorNoPrimos = 0;
 
+    System.out.println("Introduzca 10 números:");
+
     for (indice = 0; indice < 10; indice++) {
       System.out.print("> ");
       numero[indice] = Integer.parseInt(System.console().readLine());
@@ -49,39 +51,30 @@ public class Tema07ArraysUnidEjercicio11AlbertoM {
     System.out.println(" ");
     System.out.println(" ");
 
-    System.out.print("Índice| ");
+    System.out.printf("%-6s %-1s   %-5s\n" ,"Índice" ,"|" ,"Valor");
 
     for (indice = 0; indice < 10; indice++) {
-      System.out.printf("%d%-1s" ,indice ," | ");
+      System.out.println("--------------------");
+      System.out.printf("%6d %-1s %10d\n" ,indice ,"|" ,numero[indice]);
     }
 
-    System.out.println(" ");
-
-    System.out.print("Valor | ");
-
-    for (indice = 0; indice < 10; indice++) {
-      System.out.printf("%d%-1s" ,numero[indice] ," | ");
-    }
+    System.out.println("--------------------");
 
     System.out.println(" ");
     System.out.println(" ");
 
-    System.out.print("Índice| ");
-
-    for (indice = 0; indice < 10; indice++) {
-      System.out.printf("%d%-1s" ,indice ," | ");
-    }
-
-    System.out.println(" ");
-
-    System.out.print("Valor | ");
+    System.out.printf("%-6s %-1s   %-5s\n" ,"Índice" ,"|" ,"Valor");
 
     for (indice2 = 0; indice2 < contadorPrimos; indice2++) {
-      System.out.print(numeroPrimo[indice2] + " | ");
+      System.out.println("--------------------");
+      System.out.printf("%6d %-1s %10d\n" ,indice2 ,"|" ,numeroPrimo[indice2]);
     }
 
-    for (indice3 = 0; indice3 < contadorNoPrimos; indice3++) {
-      System.out.print(numeroNoPrimo[indice3] + " | ");
+    for (indice3 = contadorPrimos; indice3 < (contadorNoPrimos + contadorPrimos); indice3++) {
+      System.out.println("--------------------");
+      System.out.printf("%6d %-1s %10d\n" ,indice3 ,"|" ,numeroNoPrimo[indice3 - contadorNoPrimos]);
     }
+
+    System.out.println("--------------------");
   }
 }
