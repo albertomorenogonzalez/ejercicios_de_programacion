@@ -27,12 +27,16 @@ public class Tema05Ejercicio69AlbertoM {
     int numCaracteres = 6;
     int espacios = altura - 1;
 
+    // el programa irá pintando lineas hasta formar la altura introducida por teclado
     while (linea <= altura) {
-      
+      // se pintan los espacios que sean necesarios para formar los escalones de la pirámide
       for (int numEspacios = 1; numEspacios <= espacios; numEspacios++) {
         System.out.print(" "); 
       }
       
+      // se pitan los caracteres de la pirámide 
+      // el número de caracteres de la primera línea es 6, después de eso en cada línea habrá dos caracteres más, uno por la izquierda y otro por la derecha
+      // en las líneas pares, los caracteres centrales no se pintan. Los caracteres antes del hueco coinciden con el número de línea en el que se encuentran. Cada hueco tiene uatro espacios.
       for (int longLinea = 1; longLinea <= numCaracteres; longLinea++) {
         if ((linea % 2 == 0) && ((longLinea > linea) && (longLinea < (linea + 5)))) {
           System.out.print(" ");
