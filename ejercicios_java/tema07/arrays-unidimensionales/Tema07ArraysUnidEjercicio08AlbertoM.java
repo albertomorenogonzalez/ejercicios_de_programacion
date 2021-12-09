@@ -8,7 +8,7 @@
  */
 public class Tema07ArraysUnidEjercicio08AlbertoM { 
   public static void main(String[] args) {
-    System.out.println("PROGRAMA QUE PIDE LA TEMPERATURA MEDIA QUE HA HECHO EN CADA MEZ EN UN AÑO Y MUESTRA EL DIAGRAMA DE BARRAS");
+    System.out.println("PROGRAMA QUE PIDE LA TEMPERATURA MEDIA QUE HA HECHO EN CADA MES EN UN AÑO Y MUESTRA EL DIAGRAMA DE BARRAS");
     System.out.println("----------------------------------------------------------------------------------------------------------");
     System.out.println(" ");
 
@@ -69,7 +69,7 @@ public class Tema07ArraysUnidEjercicio08AlbertoM {
     System.out.println(" ");
 
     for (indice = 0; indice < 12; indice++) {
-      System.out.print("|");
+      System.out.printf("%-10s%-1s" ,nombreMes[indice] ,"|");
 
       for (int caracteresTemperatura = 0; caracteresTemperatura < temperaturaMes[indice]; caracteresTemperatura++) {
         System.out.print("*");
@@ -78,6 +78,6 @@ public class Tema07ArraysUnidEjercicio08AlbertoM {
       System.out.println(" ");
     }
 
-    System.out.print("----------------------------------------------------------------------------------");
+    System.out.print("          -------------------------------------------------------------------");
   }
 }
