@@ -52,6 +52,58 @@ public class Tema07ArraysUnidEjercicio15AlbertoM {
 
     System.out.println("└─────────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────┘");
 
+    System.out.println(" ");
 
+    int numComensales = 1;
+    
+    int comprobadorMesaLibre = 0;
+
+    while ((numComensales > 0) && (comprobadorMesaLibre < 10)) {
+      System.out.println("¿Cuántos son? (Introduzca -1 para salir del programa):");
+      System.out.print("> ");
+      numComensales = Integer.parseInt(System.console().readLine());
+      System.out.println(" ");
+
+      for (comprobadorMesaLibre = 0; ((comprobadorMesaLibre < 10) && (numComensales + numero[comprobadorMesaLibre] > 4)); comprobadorMesaLibre++) { }
+
+      if (numComensales > 4) {
+        System.out.println("Lo siento, no admitimos grupos de " + numComensales + ", haga grupos de 4 personas como máximo e intente de nuevo.");
+        System.out.println(" ");
+      } else if (comprobadorMesaLibre == 10) {
+        System.out.println("Lo siento, en estos momentos no queda sitio.");
+      } else if (numComensales == -1) {
+        System.out.println("Gracias. Hasta pronto.");
+      } else {
+        System.out.println("Por favor, siéntense en la mesa número " + (comprobadorMesaLibre + 1));
+
+        numero[comprobadorMesaLibre] = (numero[comprobadorMesaLibre] + numComensales);
+
+        System.out.println(" ");
+
+        System.out.println("┌─────────┬───┬───┬───┬───┬───┬───┬───┬───┬───┬────┐");
+        System.out.print("|Mesa nº  |");
+    
+        for (indice = 0; indice < 10; indice++) {
+          System.out.printf(" %d %-1s" ,(indice + 1) ,"|");
+        }
+    
+        System.out.println(" ");
+    
+        System.out.println("├─────────┼───┼───┼───┼───┼───┼───┼───┼───┼───┼────┤");
+        System.out.print("|Ocupación|");
+    
+        for (indice = 0; indice < 10; indice++) {
+          if (indice != 9) {
+            System.out.printf(" %d %-1s" ,numero[indice] ,"|");
+          } else {
+            System.out.printf("  %d %-1s" ,numero[indice] ,"|");
+          }
+        }
+    
+        System.out.println(" ");
+    
+        System.out.println("└─────────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────┘");
+      } // if
+    } // while
   }
 }
