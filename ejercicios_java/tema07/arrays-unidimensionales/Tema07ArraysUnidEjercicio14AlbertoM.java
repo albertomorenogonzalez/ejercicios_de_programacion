@@ -36,7 +36,9 @@ public class Tema07ArraysUnidEjercicio14AlbertoM {
 
       boolean palabraEsColor = false;
 
+      // con este bucle for se comprueba si la palabra recién introducida coincide con algunos de los colores que tenemos en el array anterior.
       for (comprobadorColores = 0; ((comprobadorColores < 9) && (!palabraEsColor)); comprobadorColores++) { 
+        // si es así, la palabra se guardará en un array aparte, palabraEsColor se hará verdadero y el bucle finalizará
         if (palabra[indice].equals(colores[comprobadorColores])) {
           palabraEsColor = true;
           coloresResultado[indice2] = palabra[indice];
@@ -45,6 +47,7 @@ public class Tema07ArraysUnidEjercicio14AlbertoM {
         } 
       }
 
+      // si la palabra introducida no es ninguno de los colores del array, se guardará en otro array distinto
       if (!palabraEsColor) {
         restoResultado[indice3] = palabra[indice];
         indice3++;
@@ -84,7 +87,7 @@ public class Tema07ArraysUnidEjercicio14AlbertoM {
     System.out.print("|Índice |");
 
     for (indice = 0; indice < 8; indice++) {
-      System.out.printf("   %d   %-1s" ,(indice) ,"|");
+      System.out.printf("   %d   %-1s" ,indice ,"|");
     }
 
     System.out.println(" ");
@@ -92,10 +95,12 @@ public class Tema07ArraysUnidEjercicio14AlbertoM {
     System.out.println("├───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┤");
     System.out.print("|Palabra|");
 
+    //primero se imprime el array de las palabras que son colores
     for (indice = 0; indice < contadorColores; indice++) {
       System.out.printf("%-7s%-1s" ,coloresResultado[indice] ,"|");
     }
 
+    //luego se imprime el array de las palabras que no son colores
     for (indice = 0; indice < contadorResto; indice++) {
       System.out.printf("%-7s%-1s" ,restoResultado[indice] ,"|");
     }
