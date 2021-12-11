@@ -18,8 +18,7 @@ public class Tema07ArraysUnidEjercicio14AlbertoM {
 
     String[] colores = {"verde", "rojo", "azul", "amarillo", "naranja", "rosa", "negro", "blanco", "morado"};
 
-    int comprobadorColores;
-    boolean palabraEsColor;
+    int comprobadorColores = 0;
     String[] coloresResultado = new String [8];
     String[] restoResultado = new String [8];
 
@@ -32,36 +31,77 @@ public class Tema07ArraysUnidEjercicio14AlbertoM {
     System.out.println("Introduzca 8 palabras:");
 
     for (indice = 0; indice < 8; indice++) {
-      palabraEsColor = false;
-
       System.out.print("> ");
       palabra[indice] = (System.console().readLine().toLowerCase());
 
-      for (comprobadorColores = 0; ((comprobadorColores < 8) && (palabraEsColor != true)); comprobadorColores++) { 
+      boolean palabraEsColor = false;
+
+      for (comprobadorColores = 0; ((comprobadorColores < 9) && (!palabraEsColor)); comprobadorColores++) { 
         if (palabra[indice].equals(colores[comprobadorColores])) {
           palabraEsColor = true;
-        }
+          coloresResultado[indice2] = palabra[indice];
+          indice2++;
+          contadorColores++;
+        } 
       }
 
-      if ((comprobadorColores == 8) && (palabraEsColor = false)) {
+      if (!palabraEsColor) {
         restoResultado[indice3] = palabra[indice];
         indice3++;
         contadorResto++;
-      } else if (palabraEsColor = true) {
-        coloresResultado[indice2] = palabra[indice];
-        indice2++;
-        contadorColores++;
-      }
-    } 
+      } 
+    }
 
     System.out.println(" ");
 
-    for (indice2 = 0; indice2 < contadorColores; indice2++) {
-      System.out.println(coloresResultado[indice2]);
+    System.out.println("Array original:");
+
+    System.out.println("┌───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┐");
+    System.out.print("|Índice |");
+
+    for (indice = 0; indice < 8; indice++) {
+      System.out.printf("   %d   %-1s" ,(indice) ,"|");
     }
 
-    for (indice3 = 0; indice3 < contadorResto; indice3++) {
-      System.out.println(restoResultado[indice3]);
+    System.out.println(" ");
+
+    System.out.println("├───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┤");
+    System.out.print("|Palabra|");
+
+    for (indice = 0; indice < 8; indice++) {
+      System.out.printf("%-7s%-1s" ,palabra[indice] ,"|");
     }
+
+    System.out.println(" ");
+
+    System.out.println("└───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘");
+
+    System.out.println(" ");
+
+    System.out.println("Resultado:");
+
+    System.out.println("┌───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┐");
+    System.out.print("|Índice |");
+
+    for (indice = 0; indice < 8; indice++) {
+      System.out.printf("   %d   %-1s" ,(indice) ,"|");
+    }
+
+    System.out.println(" ");
+
+    System.out.println("├───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┤");
+    System.out.print("|Palabra|");
+
+    for (indice = 0; indice < contadorColores; indice++) {
+      System.out.printf("%-7s%-1s" ,coloresResultado[indice] ,"|");
+    }
+
+    for (indice = 0; indice < contadorResto; indice++) {
+      System.out.printf("%-7s%-1s" ,restoResultado[indice] ,"|");
+    }
+
+    System.out.println(" ");
+
+    System.out.println("└───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘");
   }
 }
