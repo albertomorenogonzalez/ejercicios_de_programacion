@@ -59,54 +59,54 @@ public class Tema07ArraysUnidEjercicio14AlbertoM {
 
     System.out.println("Array original:");
 
-    System.out.println("┌───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┐");
+    System.out.println("┌───────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐");
     System.out.print("|Índice |");
 
     for (indice = 0; indice < 8; indice++) {
-      System.out.printf("   %d   %-1s" ,(indice) ,"|");
+      System.out.printf("   %d    %-1s" ,(indice) ,"|");
     }
 
     System.out.println(" ");
 
-    System.out.println("├───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┤");
+    System.out.println("├───────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤");
     System.out.print("|Palabra|");
 
     for (indice = 0; indice < 8; indice++) {
-      System.out.printf("%-7s%-1s" ,palabra[indice] ,"|");
+      System.out.printf("%-8s%-1s" ,palabra[indice] ,"|");
     }
 
     System.out.println(" ");
 
-    System.out.println("└───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘");
+    System.out.println("└───────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┘");
 
     System.out.println(" ");
 
     System.out.println("Resultado:");
 
-    System.out.println("┌───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┬───────┐");
+    System.out.println("┌───────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐");
     System.out.print("|Índice |");
 
     for (indice = 0; indice < 8; indice++) {
-      System.out.printf("   %d   %-1s" ,indice ,"|");
+      System.out.printf("   %d    %-1s" ,indice ,"|");
     }
 
     System.out.println(" ");
 
-    System.out.println("├───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┼───────┤");
+    System.out.println("├───────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤");
     System.out.print("|Palabra|");
 
     //primero se imprime el array de las palabras que son colores
     for (indice = 0; indice < contadorColores; indice++) {
-      System.out.printf("%-7s%-1s" ,coloresResultado[indice] ,"|");
+      System.out.printf("%-8s%-1s" ,coloresResultado[indice] ,"|");
     }
 
     //luego se imprime el array de las palabras que no son colores
     for (indice = 0; indice < contadorResto; indice++) {
-      System.out.printf("%-7s%-1s" ,restoResultado[indice] ,"|");
+      System.out.printf("%-8s%-1s" ,restoResultado[indice] ,"|");
     }
 
     System.out.println(" ");
 
-    System.out.println("└───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘");
+    System.out.println("└───────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┴────────┘");
   }
 }
