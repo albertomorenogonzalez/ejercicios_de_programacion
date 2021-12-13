@@ -64,7 +64,14 @@ public class Tema07ArraysUnidEjercicio15AlbertoM {
       numComensales = Integer.parseInt(System.console().readLine());
       System.out.println(" ");
 
-      for (comprobadorMesaLibre = 0; ((comprobadorMesaLibre < 10) && (numComensales + numero[comprobadorMesaLibre] > 4)); comprobadorMesaLibre++) { }
+      // con este bucle se comprueba si hay alguna mesa con 0 comensales
+      for (comprobadorMesaLibre = 0; ((comprobadorMesaLibre < 10) && (numero[comprobadorMesaLibre] != 0)); comprobadorMesaLibre++) { }
+
+      // si comprobadorMesaLibre llega a 10 significa que no hay mesas de 0 comensales
+      // el programa buscará si es posible sentar el número de comensales introducido en una mesa donde haya hueco (hasta 4 comensales)
+      if (comprobadorMesaLibre == 10) {
+        for (comprobadorMesaLibre = 0; ((comprobadorMesaLibre < 10) && (numComensales + numero[comprobadorMesaLibre] > 4)); comprobadorMesaLibre++) { }
+      }
 
       if (numComensales > 4) {
         System.out.println("Lo siento, no admitimos grupos de " + numComensales + ", haga grupos de 4 personas como máximo e intente de nuevo.");
