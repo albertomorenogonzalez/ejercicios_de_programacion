@@ -52,14 +52,14 @@ public class Tema07ArraysBidEjercicio06AlbertoM {
           numMayor = num[indiceFila] [indiceColumna]; //si el siguiente número generado es mayor que el número que era el máximo hasta ahora el nuevo número será el máximo
         } else if (num[indiceFila] [indiceColumna] < numMenor) {
           numMenor = num[indiceFila] [indiceColumna]; //si el siguiente número generado es menor que el que hasta ahora el mínimo el nuevo nuevo pasará a ser el mínimo
-        }  
+        } //if
 
         //¿por qué calculo así el menor? según se vayan introduciendo números el mínimo irá cambiando. El primer número generado cuando no se ha generado ningún otro es el primer mínimo,
         //por eso lo declaro como tal cuando el contador (numNumeros) está a 0. Si el siguiente número generado es menor, el número mínimo cambiará, así hasta llegar al sexagésimo número
 
         numNumeros++;
-      }
-    }
+      } //for
+    } //for
 
     //se muestran los resultados
     System.out.println("┌───────────┬───────────┬───────────┬───────────┬───────────┬───────────┬───────────┬───────────┬───────────┬───────────┬───────────┐");
@@ -80,7 +80,7 @@ public class Tema07ArraysBidEjercicio06AlbertoM {
         System.out.printf("   %4d    %-1s" ,num[indiceFila] [indiceColumna] ,"|");
       }
       System.out.println(" ");
-    }
+    } //for
 
     System.out.println("└───────────┴───────────┴───────────┴───────────┴───────────┴───────────┴───────────┴───────────┴───────────┴───────────┴───────────┘");
 
