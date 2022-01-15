@@ -33,7 +33,7 @@ public class Tema07ArraysBidEjercicio07AlbertoM {
     while ((posicionMinaX == posicionTesoroX) && (posicionMinaY == posicionTesoroY)) {
       posicionMinaX = ((int)(Math.random() * 5));
       posicionMinaY = ((int)(Math.random() * 4));
-    }
+    } // while ((posicionMinaX == posicionTesoroX) && (posicionMinaY == posicionTesoroY))
 
     //definimos un array unidimensional que completaremos con los diferentes estados del juego: ganar, estar cerca de la mina, encontrar la mina, quedarse sin intentos y perder, 
     //para que se muestren en tal casa.
@@ -52,7 +52,7 @@ public class Tema07ArraysBidEjercicio07AlbertoM {
       for (indiceColumna = 0; indiceColumna < 5; indiceColumna++) {
         cuadricula[indiceFila] [indiceColumna] = " ";
         System.out.print(" " + cuadricula[indiceFila] [indiceColumna] + " |");
-      } 
+      } //for (indiceColumna = 0; indiceColumna < 5; indiceColumna++)
 
       System.out.println(" ");
 
@@ -60,8 +60,8 @@ public class Tema07ArraysBidEjercicio07AlbertoM {
         System.out.println("  ├───┼───┼───┼───┼───┤");
       } else {
         System.out.println("  └───┴───┴───┴───┴───┘");
-      }
-    }
+      } //if
+    } //for (indiceFila = 0; indiceFila < 4; indiceFila++)
 
     System.out.print("    ");
 
@@ -83,7 +83,7 @@ public class Tema07ArraysBidEjercicio07AlbertoM {
         System.out.println("Tienes " + intentos + " intentos.");
       } else {
         System.out.println("Te queda solo " + intentos + " intento.");
-      }
+      } //if
 
       System.out.println(" ");
 
@@ -116,10 +116,10 @@ public class Tema07ArraysBidEjercicio07AlbertoM {
             numEstado = 0; //con este número posteriormente se mostrará el mensaje de que el jugador ha encontrado la mina.
           } else {
             cuadricula[coordenadaY] [coordenadaX] = "x"; //si la posición consultada por el usuario no es ni la de la mina ni la del tesoro pasará de estar vacía a "x".
-          }
+          } //if
 
           System.out.print(" " + cuadricula[indiceFila] [indiceColumna] + " |");
-        } 
+        } //for (indiceColumna = 0; indiceColumna < 5; indiceColumna++)
 
         System.out.println(" ");        
         
@@ -127,8 +127,8 @@ public class Tema07ArraysBidEjercicio07AlbertoM {
           System.out.println("  ├───┼───┼───┼───┼───┤");
         } else {
           System.out.println("  └───┴───┴───┴───┴───┘");
-        }
-      } 
+        } //if
+      } //for (indiceColumna = 0; indiceColumna < 5; indiceColumna++)
 
       System.out.print("    ");
 
@@ -151,17 +151,17 @@ public class Tema07ArraysBidEjercicio07AlbertoM {
         //si el jugador ha consultado una posición que se encuentra a una casilla de la mina 
         //(la resta entre la coordenada introducida y la posición de la mina en la fila/columna está entre -1 y 1, ambos incluidos) 
         //se mostrará el correspondiente mensaje.
-      } 
+      } //if
 
       System.out.println(" ");
 
       intentos--;
-    }
+    } //while ((!finDelJuego) && (intentos > 0))
 
     //si el jugador se ha quedado sin intentos antes de encontrar el tesoro o la mina se mostrará el correspodinte mensaje y el mensaje de la derrota.
     if ((intentos == 0) && (!finDelJuego)) {
       System.out.println(estado[3]);
       System.out.println(estado[4]);
-    }
+    } //if 
   }
 }
