@@ -50,7 +50,7 @@ public class Tema07ArraysBidEjercicio07AlbertoM {
       System.out.print(indiceFila + " |");
 
       for (indiceColumna = 0; indiceColumna < 5; indiceColumna++) {
-        cuadricula[indiceFila] [indiceColumna] = " ";
+        cuadricula[indiceFila] [indiceColumna] = " "; //se definen las posiciones del array como espacios vacíos
         System.out.print(" " + cuadricula[indiceFila] [indiceColumna] + " |");
       } //for (indiceColumna = 0; indiceColumna < 5; indiceColumna++)
 
