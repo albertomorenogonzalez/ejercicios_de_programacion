@@ -16,8 +16,8 @@ public class Tema07ArraysBidEjercicio08AlbertoM {
     String[] [] tablero = new String [8] [8]; //definimos el array bidimensional que contendrá todas las posiciones posibles del tablero.
     int indiceFila = 0;
     int filaAlfil = 0; //esta variable la usaremos más tarde para indicar en que fila ha puesto el usuario el alfil.
-    int columnaAlfil = 0; //esta variable la usaremos más tarde para indicar en que columna ha puesto el usuario el alfil.
     int indiceColumna = 0; 
+    int columnaAlfil = 0; //esta variable la usaremos más tarde para indicar en que columna ha puesto el usuario el alfil.
     int coordenadaLateral = 8; //variable para indicar el número de la fila según la nomenclatura del tablero de ajedrez.
     String[] columnas = {"a", "b", "c", "d", "e", "f", "g", "h"}; ////variable para indicar la letra de la columna según la nomenclatura del tablero de ajedrez.
 
