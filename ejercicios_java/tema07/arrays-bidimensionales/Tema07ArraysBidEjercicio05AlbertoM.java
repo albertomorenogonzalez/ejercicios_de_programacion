@@ -21,10 +21,11 @@ public class Tema07ArraysBidEjercicio05AlbertoM {
 
     for (indiceFila = 0; indiceFila < 6; indiceFila++) {
       for (indiceColumna = 0; indiceColumna < 10; indiceColumna++) {
-        num[indiceFila] [indiceColumna]= ((int)(Math.random() * 1001)); //cada posición del array se genera de forma aleatoria
+        num[indiceFila] [indiceColumna] = ((int)(Math.random() * 1001)); //cada posición del array se genera de forma aleatoria
 
         if (numNumeros == 0) {
           numMenor = num[indiceFila] [indiceColumna]; //el primer número será siempre tomado en cuenta como el menor de primera hora (también sería el máximo ya que no hay ningún otro número)
+          numMayor = num[indiceFila] [indiceColumna]; //el primer número cuando no hay más números es tanto el menor como el mayor
         } else if (num[indiceFila] [indiceColumna] > numMayor) {
           numMayor = num[indiceFila] [indiceColumna]; //si el siguiente número generado es mayor que el número que era el máximo hasta ahora el nuevo número será el máximo
         } else if (num[indiceFila] [indiceColumna] < numMenor) {
