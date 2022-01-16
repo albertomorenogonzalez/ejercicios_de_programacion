@@ -35,11 +35,7 @@ public class Tema07ArraysBidEjercicio11AlbertoM {
           diagonal[indiceColumna] = matriz[indiceFila] [indiceColumna];
         } //if
 
-        if (indiceColumna < 10) {
           System.out.printf(" %3d %-1s" ,matriz[indiceFila] [indiceColumna] ,"|");
-        } else {
-          System.out.printf("  %3d %-1s" ,matriz[indiceFila] [indiceColumna] ,"|");
-        } //if
       } //for (indiceColumna = 0; indiceColumna < 10; indiceColumna++)
 
       System.out.println(" ");
@@ -66,7 +62,7 @@ public class Tema07ArraysBidEjercicio11AlbertoM {
         numMayor = diagonal[indice]; //si el siguiente número generado es mayor que el número que era el máximo hasta ahora el nuevo número será el máximo
       } else if (diagonal[indice] < numMenor) {
         numMenor = diagonal[indice]; //si el siguiente número generado es menor que el que hasta ahora el mínimo el nuevo nuevo pasará a ser el mínimo
-      }
+      } //if
 
       //¿por qué calculo así el menor? según se vayan introduciendo números el mínimo irá cambiando. El primer número generado cuando no se ha generado ningún otro es el primer mínimo,
       //por eso lo declaro como tal cuando el contador (indice) está a 0. Si el siguiente número generado es menor, el número mínimo cambiará, así hasta llegar al décimo número
@@ -78,6 +74,6 @@ public class Tema07ArraysBidEjercicio11AlbertoM {
 
     System.out.println("El número mínimo es " + numMenor);
     System.out.println("El número máximo es " + numMayor);
-    System.out.println("La media de los números de la diagonal es " + (sumatorio / 10));
+    System.out.println("La media de los números de la diagonal es " + (sumatorio / 10)); 
   }
 }
