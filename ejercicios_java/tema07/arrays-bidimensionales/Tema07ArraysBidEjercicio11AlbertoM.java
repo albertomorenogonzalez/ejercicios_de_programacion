@@ -21,7 +21,7 @@ public class Tema07ArraysBidEjercicio11AlbertoM {
     int numMayor = 0; //inicializamos la variable que contendrá al número que sea el mínimo.
     int sumatorio = 0; //en esta variable se irá sumando cada valor de la diagonal para calcular la media a posteriori.
 
-    //mostramos el array original y asignamos sus valores.
+    //mostramos el array bidimensional y asignamos sus valores.
     System.out.println("      0     1     2     3     4     5     6     7     8     9");
     System.out.println("   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐");
 
@@ -50,6 +50,7 @@ public class Tema07ArraysBidEjercicio11AlbertoM {
     System.out.println(" ");
     System.out.println(" ");
 
+    //mostramos los números de la diagonal, calculamos el mínimo, el máximo y la media y también lo mostramos
     System.out.println("Los números de la diagonal que va de la esquina superior izquierda a la esquina inferior derecha son:");
 
     for (int indice = 0; indice < 10; indice++) {
