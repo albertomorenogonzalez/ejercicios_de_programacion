@@ -49,4 +49,24 @@ public class funcionesTema801 {
       return false;
     }
   } //public static boolean esCapicua(long numero)
+
+  /**
+   * La función comprueba si el número es o no primo
+   *
+   * @param numero número que se va a comprobar si es o no primo
+   * @return si el número es primo o no 
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static boolean esPrimo(int numero) {
+    int entreNumero= 0;
+
+    for (entreNumero = 2; ((entreNumero < numero) && ((numero % entreNumero) != 0)); entreNumero++) { }
+
+    if ((entreNumero == numero) || (numero == 1) || (numero == 2)) {
+      return true;
+    } else {
+      return false;
+    }
+  } //public static boolean esPrimo(int numero)
 }
