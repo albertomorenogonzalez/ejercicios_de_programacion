@@ -43,7 +43,7 @@ public class funcionesTema801 {
    * @author Alberto Moreno Gonzalez
    */
   public static boolean esCapicua(long numero) {
-    if (funcionesTema801.voltea(numero) == numero) {
+    if (funciones.funcionesTema801.voltea(numero) == numero) {
       return true;
     } else {
       return false;
@@ -69,4 +69,21 @@ public class funcionesTema801 {
       return false;
     }
   } //public static boolean esPrimo(int numero)
+
+  /**
+   * La función devuelve el menor número primo que es mayor al número que
+   * se pasa como parámetro.
+   *
+   * @param numero número que se va a comprobar si es o no primo, y a partir del que se van a buscar nuevos primos
+   * @return el primer número primo mayor que el número introducido
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static int siguientePrimo(int numero) {
+    do {
+      numero++;
+    } while(!funciones.funcionesTema801.esPrimo(numero));
+
+    return numero;
+  } //public static int siguientePrimo(int numero)
 }
