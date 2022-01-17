@@ -122,13 +122,13 @@ public class funcionesTema801 {
   /**
    * La función cuenta el número de dígitos de un número entero
    *
-   * @param base 
+   * @param numeroDigitos variable que contará el número de dígitos 
    * @return número de digitos del número
    * 
    * @author Alberto Moreno Gonzalez
    */
   public static int digitos(long numero) {
-    int numeroDigitos = 0; //variable que contará el número de dígitos 
+    int numeroDigitos = 0;
     
     //cada vez que el bucle de una iteración el número de dígitos aumentará el número introducido se dividirá entre diez, así hasta que llegue a 0
     while (numero > 0) { 
@@ -139,4 +139,31 @@ public class funcionesTema801 {
     
     return numeroDigitos;
   } //public static int digitos(long numero)
+
+
+  /**
+   * La función devuelve el dígito que está en la posición n de un número entero.
+   * Se empieza contando por el 0 y de izquierda a derecha.
+   *
+   * @param numero número introducido sobre el que se va a calcular
+   * @param posicion posicion de la que se quiere saber el número
+   * @return número de digitos del número
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static int digitoN(long numero, int posicion) {
+    int darLaVuelta = (funciones.funcionesTema801.voltea(numero));
+
+    int digito = 0;
+
+    while (darLaVuelta > 0) {
+      
+      
+      darLaVuelta = (darLaVuelta / 10);
+      
+      posicion++;
+    }
+
+    return digito;
+  } //public static int digitoN(long numero)
 }
