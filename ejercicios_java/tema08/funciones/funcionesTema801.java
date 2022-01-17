@@ -23,7 +23,7 @@ public class funcionesTema801 {
    * @author Alberto Moreno Gonzalez
    */
   public static int voltea(long numero) {
-    int darLaVuelta = 0;
+    int darLaVuelta = 0; //en esta variable 
     
     while (numero > 0) {
       darLaVuelta = ((darLaVuelta * 10) + ((int)numero % 10));
