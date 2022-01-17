@@ -1,7 +1,7 @@
 package funciones;
 
 /**
- * Funciones de los ejercicios del tema 8
+ * Funciones de los ejercicios del tema 8 (1-14)
  *
  * Crea una biblioteca de funciones matemáticas que contenga las siguientes
  * funciones. Recuerda que puedes usar unas dentro de otras si es necesario.
@@ -43,7 +43,7 @@ public class funcionesTema801 {
    * @author Alberto Moreno Gonzalez
    */
   public static boolean esCapicua(long numero) {
-    if (funciones.funcionesTema801.voltea(numero) == numero) {
+    if (funcionesTema801.voltea(numero) == numero) {
       return true;
     } else {
       return false;
