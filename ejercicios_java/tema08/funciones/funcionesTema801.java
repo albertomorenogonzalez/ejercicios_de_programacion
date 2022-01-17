@@ -53,6 +53,7 @@ public class funcionesTema801 {
     }
   } //public static boolean esCapicua(long numero)
 
+
   /**
    * La función comprueba si el número es o no primo
    *
@@ -77,6 +78,7 @@ public class funcionesTema801 {
     }
   } //public static boolean esPrimo(int numero)
 
+
   /**
    * La función devuelve el menor número primo que es mayor al número que
    * se pasa como parámetro.
@@ -94,6 +96,7 @@ public class funcionesTema801 {
 
     return numero;
   } //public static int siguientePrimo(int numero)
+
 
   /**
    * La función, dada una base y un exponente devuelve la potencia.
@@ -114,4 +117,26 @@ public class funcionesTema801 {
 
     return resultado;
   } //public static int potencia(int base, int exponente)
+
+
+  /**
+   * La función cuenta el número de dígitos de un número entero
+   *
+   * @param base 
+   * @return número de digitos del número
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static int digitos(long numero) {
+    int numeroDigitos = 0; //variable que contará el número de dígitos 
+    
+    //cada vez que el bucle de una iteración el número de dígitos aumentará el número introducido se dividirá entre diez, así hasta que llegue a 0
+    while (numero > 0) { 
+        numeroDigitos++;
+        
+        numero /= 10;
+    } //while (numero > 0)
+    
+    return numeroDigitos;
+  } //public static int digitos(long numero)
 }
