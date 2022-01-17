@@ -11,8 +11,8 @@ public class Tema08Ejercicio05AlbertoM {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
 
-    System.out.println("PROGRAMA QUE PIDE UNA BASE Y UN EXPONENTE Y QUE CALCULE LA POTENCIA");
-    System.out.println("--------------------------------------------------------------------");
+    System.out.println("PROGRAMA QUE DICE CUANTOS DÍGITOS TIENE EL NÚMERO ENTERO QUE SE INTRODUZCA");
+    System.out.println("---------------------------------------------------------------------------");
     System.out.println(" ");
     
     System.out.println("Introduzca un número: ");
