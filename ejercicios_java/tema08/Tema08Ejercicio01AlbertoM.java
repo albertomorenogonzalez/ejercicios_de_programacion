@@ -20,7 +20,7 @@ public class Tema08Ejercicio01AlbertoM {
     long numero = Long.parseLong(s.nextLine());
     System.out.println(" ");
 
-    if (funcionesTema801.esCapicua(numero)) {
+    if (funciones.funcionesTema801.esCapicua(numero)) {
       System.out.println(numero + " es capicúa");
     } else {
       System.out.println(numero + " no es capicúa");
