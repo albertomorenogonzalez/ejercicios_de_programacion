@@ -86,4 +86,23 @@ public class funcionesTema801 {
 
     return numero;
   } //public static int siguientePrimo(int numero)
+
+  /**
+   * La función, dada una base y un exponente devuelve la potencia.
+   *
+   * @param base base de la potencia
+   * @param exponnte exponente de la potencia
+   * @return potencia
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static int potencia(int base, int exponente) {
+    int resultado = 1;
+    
+    for (int numVecesMultiplica = 0; numVecesMultiplica < exponente; numVecesMultiplica++) {
+      resultado = (base * resultado);
+    }
+
+    return resultado;
+  } //public static int potencia(int base, int exponente)
 }
