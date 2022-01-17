@@ -8,7 +8,7 @@
  * 
  * 14/12/2021
  */
-public class Ex14amg04 {
+public class Ex14amg0204 {
   public static void main(String[] args) {
     System.out.println("PROGRAMA QUE GENERA DE FORMA ALEATORIA EL MENÚ DEL DÍA DE UN RESTAURANTE VEGETARIANO");
     System.out.println("-------------------------------------------------------------------------------------");

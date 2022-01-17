@@ -13,7 +13,7 @@
  * 
  * 04/11/2021
  */
-public class Ex14amg3 {
+public class Ex14amg0103 {
   public static void main(String[] args) {
     System.out.println("PROGRAMA CAPAZ DE ELABORAR PRESUPUESTOS");
     System.out.println("----------------------------------------");

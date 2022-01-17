@@ -12,7 +12,7 @@
  * 
  * 14/12/2021
  */
-public class Ex14amg01 {
+public class Ex14amg0201 {
   public static void main(String[] args) {
     System.out.println("PROGRAMA QUE PINTA UN BARCO PARA AYUDAR A CRUZAR EL RÍO");
     System.out.println("--------------------------------------------------------");

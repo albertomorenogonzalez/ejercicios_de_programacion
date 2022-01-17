@@ -11,7 +11,7 @@
  * 
  * 04/11/2021
  */
-public class Ex14amg2 {
+public class Ex14amg0102 {
   public static void main(String[] args) {
     System.out.println("PROGRAMA QUE CALCULA EL NÚMERO DE LATIDOS DEL CORAZÓN DE UNA PERSONA DURANTE EL TRANSCURSO DE VARIOS AñOS");
     System.out.println("----------------------------------------------------------------------------------------------------------");

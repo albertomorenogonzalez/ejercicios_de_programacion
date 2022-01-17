@@ -8,7 +8,7 @@
  * 
  * 14/12/2021
  */
-public class Ex14amg02 {
+public class Ex14amg0202 {
   public static void main(String[] args) {
     System.out.println("PROGRAMA QUE RELLENA UN ARRAY DE 20 ELEMENTOS CON NÚMEROS ALATORIOS ENTRE 1 Y 999 Y AL QUE LUEGO PUEDES APLICARLE UN FILTRO");
     System.out.println("----------------------------------------------------------------------------------------------------------------------------");

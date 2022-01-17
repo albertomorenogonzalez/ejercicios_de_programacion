@@ -12,7 +12,7 @@
  * 
  * 04/11/2021
  */
-public class Ex14amg4 {
+public class Ex14amg0104 {
   public static void main(String[] args) {
     System.out.println("PROGRAMA QUE CALCULA Y MUESTRA POR PANTALLA EL NÚMERO DE VUELTAS QUE DA LA TIERRA EN 400 AñOS");
     System.out.println("----------------------------------------------------------------------------------------------");

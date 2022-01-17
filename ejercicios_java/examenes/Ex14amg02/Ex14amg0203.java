@@ -7,7 +7,7 @@
  * 
  * 14/12/2021
  */
-public class Ex14amg03 {
+public class Ex14amg0203 {
   public static void main(String[] args) {
     System.out.println("PROGRAMA QUE RELLENA UN RECTÁNGULO DE TRIÁNGULOS RECTÁNGULOS");
     System.out.println("-------------------------------------------------------------");

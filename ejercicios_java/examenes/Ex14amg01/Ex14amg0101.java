@@ -10,7 +10,7 @@
  * 
  * 04/11/2021
  */
-public class Ex14amg1 {
+public class Ex14amg0101 {
   public static void main(String[] args) {
     System.out.println("PROGRAMA QUE TRADUCE CADA UNO DE LOS NUMEROS DE UN PIN DE 4 DIGITOS A PALABRAS");
     System.out.println("-------------------------------------------------------------------------------");
