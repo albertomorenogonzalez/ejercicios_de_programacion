@@ -211,4 +211,20 @@ public class funcionesTema801 {
 
     return posicion;
   } //public static int posicionDeDigito(long numero, int digito)
+
+
+  /**
+   * La función le quita a un número n dígitos por detrás (por la
+   * derecha).
+   *
+   * @param numero número introducido sobre el que se va a calcular
+   * @param numDigitos número de dígitos pedido por pantalla 
+   * @return primera posición del dígito consultado
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static int quitaPorDetras(long numero, int numDigitos) {
+    //para quitar cifras a un número por la derecha dividimos a ese número entre diez elevado al número de dígitos introducido
+    return (int)numero / (funciones.funcionesTema801.potencia(10, numDigitos));
+  } 
 }
