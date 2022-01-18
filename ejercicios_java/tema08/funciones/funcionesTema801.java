@@ -155,12 +155,14 @@ public class funcionesTema801 {
     //se voltea el número para operar sobre él. Así el primer resto de ese número entre 10 será la primera cifra del número introducido
     int darLaVuelta = (funciones.funcionesTema801.voltea(numero)); 
 
-    int digito = (darLaVuelta % 10); //se inicializa la variable dígito para guardando ahí el primer dígito del número (posición 0)
+    //se inicializa la variable dígito para guardando ahí el resto de la división de darLaVuelta entre 10, que corresponde al primer dígito del número (posición 0).
+    int digito = (darLaVuelta % 10); 
 
     //el bucle se repetirá hasta que el valor de comprobarPosicion sea igual a posicion.
     //darLaVuelta irá disminuyendo en cada iteración, ya que en cada una el número se divide entre 10.
-    //el resto de esa división corresponde al dígito de una posición determinada.
     //cuando el bucle pare el dígito que se quiere consultar será el que devuelva la función.
+    //si se ha consultado la primera posición el bucle no empezará,
+    //si se ha consultado otra, el bucle iniciará y no parará hasta que comprobarPosicion sea igual a posicion.
     for (int comprobarPosicion = 0; comprobarPosicion < posicion; comprobarPosicion++) {
       darLaVuelta = (darLaVuelta / 10);
       
@@ -186,10 +188,11 @@ public class funcionesTema801 {
     int darLaVuelta = (funciones.funcionesTema801.voltea(numero)); 
 
     //declaramos las funciones posicion y comprobarDigito. Seguidamente usaremos un bucle que no pare hasta que comprobarDigito sea igual al dígito introducido
-    //o si darLaVuelta es igual a 0. En cada iteración darLaVuelta se dividirá entre 10, el resto de esa división será comprobarDigito (si es igual digito el bucle terminará)
-    //y posición aumentará en 1.
+    //o si darLaVuelta es igual a 0. En cada iteración darLaVuelta se dividirá entre 10, el resto de esa división será comprobarDigito (si es igual al digito el bucle terminará, 
+    //y si la posición es igual a 0, ni siquiera empezará) y posición aumentará en 1.
     int posicion = 0;
 
+    //se inicializa la variable dígito para guardando ahí el resto de la división de darLaVuelta entre 10, que corresponde al primer dígito del número (posición 0).
     int comprobarDigito = (darLaVuelta % 10);
 
     while ((comprobarDigito != digito) && (darLaVuelta > 0)) {
