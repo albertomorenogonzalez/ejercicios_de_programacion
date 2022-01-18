@@ -147,7 +147,7 @@ public class funcionesTema801 {
    *
    * @param numero número introducido sobre el que se va a calcular
    * @param posicion posicion de la que se quiere saber el número
-   * @return número de digitos del número
+   * @return dígito de la posición consultada
    * 
    * @author Alberto Moreno Gonzalez
    */
@@ -155,7 +155,7 @@ public class funcionesTema801 {
     //se voltea el número para operar sobre él. Así el primer resto de ese número entre 10 será la primera cifra del número introducido
     int darLaVuelta = (funciones.funcionesTema801.voltea(numero)); 
 
-    int digito = 0; //se inicializa la variable dígito para guardar ahí el dígito de la posición
+    int digito = (darLaVuelta % 10); //se inicializa la variable dígito para guardando ahí el primer dígito del número (posición 0)
 
     //el bucle se repetirá hasta que el valor de comprobarPosicion sea igual a posicion.
     //darLaVuelta irá disminuyendo en cada iteración, ya que en cada una el número se divide entre 10.
@@ -169,4 +169,43 @@ public class funcionesTema801 {
 
     return digito;
   } //public static int digitoN(long numero)
+
+
+  /**
+   * La función da la posición de la primera ocurrencia de un dígito
+   * dentro de un número entero. Si no se encuentra, devuelve -1.
+   *
+   * @param numero número introducido sobre el que se va a calcular
+   * @param digito digito del que se quiere saber la posición
+   * @return primera posición del dígito consultado
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static int posicionDeDigito(long numero, int digito) {
+    //se voltea el número para operar sobre él. Así el primer resto de ese número entre 10 será la primera cifra del número introducido.
+    int darLaVuelta = (funciones.funcionesTema801.voltea(numero)); 
+
+    //declaramos las funciones posicion y comprobarDigito. Seguidamente usaremos un bucle que no pare hasta que comprobarDigito sea igual al dígito introducido
+    //o si darLaVuelta es igual a 0. En cada iteración darLaVuelta se dividirá entre 10, el resto de esa división será comprobarDigito (si es igual digito el bucle terminará)
+    //y posición aumentará en 1.
+    int posicion = 0;
+
+    int comprobarDigito = (darLaVuelta % 10);
+
+    while ((comprobarDigito != digito) && (darLaVuelta > 0)) {
+      darLaVuelta = (darLaVuelta / 10);
+
+      comprobarDigito = (darLaVuelta % 10);
+
+      posicion++;
+    } //while
+
+    //si después de un número de iteraciones darLaVuelta llega a ser 0 (el dígito introducido no ha sido encontrado en el número)
+    //la función tendrá que devolver un -1.
+    if (darLaVuelta == 0) {
+      posicion = -1;
+    }
+
+    return posicion;
+  } //public static int posicionDeDigito(long numero, int digito)
 }
