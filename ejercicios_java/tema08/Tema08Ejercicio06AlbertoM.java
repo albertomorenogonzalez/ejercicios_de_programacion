@@ -20,11 +20,11 @@ public class Tema08Ejercicio06AlbertoM {
     long numero = Long.parseLong(s.nextLine());
     System.out.println(" ");
 
-    System.out.println("Introduzca la posición de la que quiere ver el dígito: ");
+    System.out.println("Introduzca la posición de la que quiere ver el dígito (la primera posición es la número 0 y va de izquierda a derecha): ");
     System.out.print("> ");
     int posicion = Integer.parseInt(s.nextLine());
     System.out.println(" ");
     
-    System.out.println(funciones.funcionesTema801.digitoN(numero, posicion));
+    System.out.println("El dígito en la posición número " + posicion + " es el " + funciones.funcionesTema801.digitoN(numero, posicion));
   }
 }
