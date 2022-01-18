@@ -152,16 +152,19 @@ public class funcionesTema801 {
    * @author Alberto Moreno Gonzalez
    */
   public static int digitoN(long numero, int posicion) {
-    int darLaVuelta = (funciones.funcionesTema801.voltea(numero));
+    //se voltea el número para operar sobre él. Así el primer resto de ese número entre 10 será la primera cifra del número introducido
+    int darLaVuelta = (funciones.funcionesTema801.voltea(numero)); 
 
-    int digito = 0;
+    int digito = 0; //se inicializa la variable dígito para guardar ahí el dígito de la posición
 
-    while (darLaVuelta > 0) {
-      
-      
+    //el bucle se repetirá hasta que el valor de comprobarPosicion sea igual a posicion.
+    //darLaVuelta irá disminuyendo en cada iteración, ya que en cada una el número se divide entre 10.
+    //el resto de esa división corresponde al dígito de una posición determinada.
+    //cuando el bucle pare el dígito que se quiere consultar será el que devuelva la función.
+    for (int comprobarPosicion = 0; comprobarPosicion < posicion; comprobarPosicion++) {
       darLaVuelta = (darLaVuelta / 10);
       
-      posicion++;
+      digito = (darLaVuelta % 10);
     }
 
     return digito;
