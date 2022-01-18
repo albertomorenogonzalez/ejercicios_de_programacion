@@ -27,6 +27,6 @@ public class Tema08Ejercicio08AlbertoM {
     int digito = Integer.parseInt(s.nextLine());
     System.out.println(" ");
     
-    System.out.print("La primera posición que ocupa el dígito " + digito + " es la " + funciones.funcionesTema801.posicionDeDigito(numero, digito));
+    System.out.print("La primera posición en el número que ocupa el dígito " + digito + " es la " + funciones.funcionesTema801.posicionDeDigito(numero, digito));
   }
 }
