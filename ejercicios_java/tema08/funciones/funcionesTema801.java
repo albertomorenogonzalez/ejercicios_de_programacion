@@ -226,5 +226,26 @@ public class funcionesTema801 {
   public static int quitaPorDetras(long numero, int numDigitos) {
     //para quitar cifras a un número por la derecha dividimos a ese número entre diez elevado al número de dígitos introducido
     return (int)numero / (funciones.funcionesTema801.potencia(10, numDigitos));
-  } 
+  }
+  
+  
+  /**
+   * La función le quita a un número n dígitos por delante (por la
+   * izquierda).
+   *
+   * @param numero número introducido sobre el que se va a calcular
+   * @param numDigitos número de dígitos pedido por pantalla 
+   * @return primera posición del dígito consultado
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static int quitaPorDelante(long numero, int numDigitos) {
+    int darLaVuelta = (funciones.funcionesTema801.voltea(numero)); //primero damos la vuelta el número introducido
+
+    //ese número volteado lo dividimos entre diez elevado al número de dígitos introducido
+    int numeroNuevoVolteado = (int)darLaVuelta / (funciones.funcionesTema801.potencia(10, numDigitos)); 
+
+    //le damos la vuelta al número del resultado anterior y ya tenemos el resultado de la función
+    return (funciones.funcionesTema801.voltea(numeroNuevoVolteado)); 
+  } //public static int quitaPorDelante(long numero, int numDigitos)
 }
