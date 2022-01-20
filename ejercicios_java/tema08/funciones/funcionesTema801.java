@@ -314,5 +314,22 @@ public class funcionesTema801 {
     } //while (posicionTrozo <= posicionFinal)
 
     return trozo; 
-  } //public static long trozoDeNumero(long numero, int posicionInicial, int posicionFinal) {
+  } //public static long trozoDeNumero(long numero, int posicionInicial, int posicionFinal) 
+
+
+  /**
+   * La función pega dos números para formar uno.
+   *
+   * @param numero1 primer número introducido sobre el que se va a calcular
+   * @param numero2 segundo número introducido sobre el que se va a calcular
+   * @return nuevo número formado por la unión de numero1 y numero2
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static long juntaNumeros(long numero1, long numero2) {
+    //para juntar dos números utilizamos la función pegaPorDelante, cogiendo el segundo número introducido como el primero 
+    //(al que multiplicaremos por 10^número de dígitos del primer número introducido)
+    //y haciendo un casting al primer número introducido para sumárselo
+    return (funciones.funcionesTema801.pegaPorDelante(numero2, (int)numero1));
+  } //public static long juntaNumeros(long numero1, long numero2)
 }
