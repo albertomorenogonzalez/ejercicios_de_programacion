@@ -255,11 +255,33 @@ public class funcionesTema801 {
    *
    * @param numero número introducido sobre el que se va a calcular
    * @param digito dígito que se le va a añadir al número anterior por detrás
-   * @return nuevo número formado por la unión del primer número y del segundo número
+   * @return nuevo número formado por la unión del número y el dígito
    * 
    * @author Alberto Moreno Gonzalez
    */
   public static long pegaPorDetras(long numero, int digito) {
     return numero * 10 + digito; //el número introducido se multiplica por diez y se le suma el dígito
   } 
+
+
+  /**
+   * La función añade un dígito a un número por delante.
+   *
+   * @param numero número introducido sobre el que se va a calcular
+   * @param digito dígito que se le va a añadir al número anterior por delante
+   * @return nuevo número formado por la unión del dígito y el número
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static long pegaPorDelante(long numero, int digito) {
+    //para cumplir su objetivo la función multiplicará el dígito por 10 elevado al número de dígitos del número introducido
+    //a este numero obtenido se le sumará el número introducido, consiguiendo "pegar" el dígito delante del número
+    int potenciaDeDiez = (funciones.funcionesTema801.digitos(numero));
+
+    long sumando1 = digito * (funciones.funcionesTema801.potencia(10, potenciaDeDiez));
+
+    long nuevoNumero = sumando1 + numero;
+
+    return nuevoNumero; 
+  } //public static long pegaPorDelante(long numero, int digito)
 }
