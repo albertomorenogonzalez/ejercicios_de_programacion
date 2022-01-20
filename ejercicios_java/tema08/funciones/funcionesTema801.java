@@ -284,4 +284,35 @@ public class funcionesTema801 {
 
     return nuevoNumero; 
   } //public static long pegaPorDelante(long numero, int digito)
+
+
+  /**
+   * La función toma como parámetros las posiciones inicial y final
+   * dentro de un número y devuelve el trozo correspondiente.
+   *
+   * @param numero número introducido sobre el que se va a calcular
+   * @param posicionInicial posición inicial del trozo que se quiere mostrar pr pantalla
+   * @param posicionFinal posición final del trozo que se quiere mostrar pr pantalla
+   * @return trozo del número introducido delimitado por las dos posiciones introducidas
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static long trozoDeNumero(long numero, int posicionInicial, int posicionFinal) {
+    long trozo = 0; //declramos la variable donde se guardará el trzo indicado
+    //usaremos la variable posición trozo para buscar las posiciones de los números que se encontrarán en el trozo.
+    //iniciará en la posición inical e irá aumentando en 1 en cada interación del bucle, así hasta llegar a la posición final
+    int posicionTrozo = posicionInicial; 
+
+    while (posicionTrozo <= posicionFinal) {
+      //el programa buscará el dígito de la posición correspondiente 
+      int digito = (funciones.funcionesTema801.digitoN(numero, posicionTrozo));
+
+      //lo que hubiese dentro de la variable trozo se multiplicará por 10 y se le sumará el dígito recién encontrado
+      trozo = trozo * 10 + digito; 
+
+      posicionTrozo++;
+    } //while (posicionTrozo <= posicionFinal)
+
+    return trozo; 
+  } //public static long trozoDeNumero(long numero, int posicionInicial, int posicionFinal) {
 }
