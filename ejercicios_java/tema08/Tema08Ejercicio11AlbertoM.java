@@ -22,9 +22,9 @@ public class Tema08Ejercicio11AlbertoM {
 
     System.out.println("Introduzca el dígito que quiere añadir: ");
     System.out.print("> ");
-    int numDigitos = Integer.parseInt(s.nextLine());
+    int digito = Integer.parseInt(s.nextLine());
     System.out.println(" ");
     
-    System.out.print("El nuevo número es " + funciones.funcionesTema801.pegaPorDetras(numero, numDigitos));
+    System.out.print("El nuevo número es " + funciones.funcionesTema801.pegaPorDetras(numero, digito));
   }
 }
