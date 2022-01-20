@@ -1,5 +1,4 @@
 import funciones.funcionesTema801;
-import java.util.Scanner;
 
 /**
  * Muestra los números capicúa que hay entre 1 y 99999.
@@ -8,8 +7,6 @@ import java.util.Scanner;
  */
 public class Tema08Ejercicio16AlbertoM { 
   public static void main(String[] args) {
-    Scanner s = new Scanner(System.in);
-
     System.out.println("PROGRAMA QUE MUESTRA LOS NÚMEROS CAPICÚA QUE HAY ENTRE EL 1 Y EL 99999");
     System.out.println("-----------------------------------------------------------------------");
     System.out.println(" ");

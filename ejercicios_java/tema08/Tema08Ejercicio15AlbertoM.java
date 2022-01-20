@@ -1,5 +1,4 @@
 import funciones.funcionesTema801;
-import java.util.Scanner;
 
 /**
  * Muestra los números primos que hay entre 1 y 1000.
@@ -8,8 +7,6 @@ import java.util.Scanner;
  */
 public class Tema08Ejercicio15AlbertoM { 
   public static void main(String[] args) {
-    Scanner s = new Scanner(System.in);
-
     System.out.println("PROGRAMA QUE MUESTRA LOS NÚMEROS PRIMOS QUE HAY ENTRE EL 1 Y EL 1000");
     System.out.println("---------------------------------------------------------------------");
     System.out.println(" ");
