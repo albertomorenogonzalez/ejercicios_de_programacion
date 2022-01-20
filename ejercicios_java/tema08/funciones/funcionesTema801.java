@@ -235,7 +235,7 @@ public class funcionesTema801 {
    *
    * @param numero número introducido sobre el que se va a calcular
    * @param numDigitos número de dígitos pedido por pantalla 
-   * @return primera posición del dígito consultado
+   * @return dígito de la posición consultada
    * 
    * @author Alberto Moreno Gonzalez
    */
@@ -248,4 +248,18 @@ public class funcionesTema801 {
     //le damos la vuelta al número del resultado anterior y ya tenemos el resultado de la función
     return (funciones.funcionesTema801.voltea(numeroNuevoVolteado)); 
   } //public static int quitaPorDelante(long numero, int numDigitos)
+
+
+  /**
+   * La función añade un dígito a un número por detrás.
+   *
+   * @param numero número introducido sobre el que se va a calcular
+   * @param digito dígito que se le va a añadir al número anterior por detrás
+   * @return nuevo número formado por la unión del primer número y del segundo número
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static long pegaPorDetras(long numero, int digito) {
+    return numero * 10 + digito; //el número introducido se multiplica por diez y se le suma el dígito
+  } 
 }
