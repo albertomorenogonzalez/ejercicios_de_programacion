@@ -103,7 +103,7 @@ public class funcionesTema801 {
    *
    * @param base base de la potencia
    * @param exponente exponente de la potencia
-   * @return potencia
+   * @return resultado de la potencia
    * 
    * @author Alberto Moreno Gonzalez
    */
