@@ -24,6 +24,6 @@ public class Tema08Ejercicio14AlbertoM {
     long numero2 = Integer.parseInt(s.nextLine());
     System.out.println(" ");
   
-    System.out.print(funciones.funcionesTema801.pegaPorDelante(numero2, (int)numero1));
+    System.out.print("El nuevo número es " + funciones.funcionesTema801.pegaPorDelante(numero2, (int)numero1));
   }
 }
