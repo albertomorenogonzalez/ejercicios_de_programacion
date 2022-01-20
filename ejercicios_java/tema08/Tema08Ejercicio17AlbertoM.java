@@ -38,6 +38,6 @@ public class Tema08Ejercicio17AlbertoM {
       posicion++;
     }
 
-    System.out.println(numeroDe); //mostramos los resultados
+    System.out.println(numeroDe + " en decimal"); //mostramos los resultados
   }
 }
