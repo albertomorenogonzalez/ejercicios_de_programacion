@@ -3,7 +3,6 @@ import java.util.Scanner; //importamos la clase Scanner
 
 /**
  * Escribe un programa que pase de decimal a binario.
-
  *
  * @author Alberto Moreno Gonzalez
  */
@@ -23,22 +22,22 @@ public class Tema08Ejercicio18AlbertoM {
 
     System.out.print(numeroDe + " en decimal es igual a ");
 
+    //definimos primero al número binario como String para añadir al mismo cero y unos sin inconvenientes
     String numeroBi = "";
-    int i = 0;
 
-    while (funciones.funcionesTema801.potencia(2, i) <= numeroDe) {
-      i++;
+    //en cada iteración del bucle numeroDe (el número decimal introducido), irá reduciendose a la mitad sucesivamente.
+    //el bucle continuará hasta que numeroDe llegue a 0. El resto de la división de numeroDe entre 2 será el valor 
+    //añadido a la variable numeroBi. Se le añade por delante ya que el primer dígito del número binario corresponde 
+    //a la última división que se realice en el bucle, el segundo dígito con la penúltima división...
+    while (numeroDe > 0) {
+      String digito = String.valueOf(numeroDe % 2);
+
+      numeroBi = digito + numeroBi;
+
+      numeroDe /= 2;
     }
 
-    for (int j = i; j > 0; j--) {
-      int constNumDe = funciones.funcionesTema801.potencia(2, i);
-      if (constNumDe + funciones.funcionesTema801.potencia(2, j) <= numeroDe) {
-        numeroBi = numeroBi + "1";
-      } else {
-        numeroBi = numeroBi + "0";
-      }
-    }
-
-    System.out.println(numeroBi);
+    //mostramos los resultados
+    System.out.println(Long.valueOf(numeroBi));
   }
 }
