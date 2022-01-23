@@ -29,15 +29,113 @@ public class Tema08Ejercicio19AlbertoM {
     System.out.println("10 - Hexadecimal a Decimal");
     System.out.println("11 - Hexadecimal a Binario");
     System.out.println("12 - Hexadecimal a Octal");
-
     System.out.println(" ");
-
-    System.out.println("Introduzca un número: ");
     System.out.print("> ");
-    long numero = Long.parseLong(s.nextLine());
+    int tipoConversion = Integer.parseInt(s.nextLine());
     System.out.println(" ");
 
-    
+    System.out.print("Introduzca un número");
+
+    switch (tipoConversion) {
+      case 1:
+        System.out.println(" decimal:");
+        System.out.print("> ");
+        long numero = Long.parseLong(s.nextLine());
+        System.out.println(" ");
+
+        System.out.println("El número decimal " + numero + " es igual a " + decimalABinario(numero) + " en el sistema binario");
+        break;
+      case 2:
+        System.out.println(" decimal:");
+        System.out.print("> ");
+        numero = Long.parseLong(s.nextLine());
+        System.out.println(" ");
+
+        System.out.println("El número decimal " + numero + " es igual a " + decimalAOctal(numero) + " en el sistema octal");
+        break; 
+      case 3:
+        System.out.println(" decimal:");
+        System.out.print("> ");
+        numero = Long.parseLong(s.nextLine());
+        System.out.println(" ");
+
+        System.out.println("El número decimal " + numero + " es igual a " + decimalAHexadecimal(numero) + " en el sistema hexadecimal");
+        break; 
+      case 4:
+        System.out.println(" binario:");
+        System.out.print("> ");
+        numero = Long.parseLong(s.nextLine());
+        System.out.println(" ");
+
+        System.out.println("El número binario " + numero + " es igual a " + binarioADecimal(numero) + " en el sistema decimal");
+        break; 
+      case 5:
+        System.out.println(" binario:");
+        System.out.print("> ");
+        numero = Long.parseLong(s.nextLine());
+        System.out.println(" ");
+
+        System.out.println("El número binario " + numero + " es igual a " + binarioAOctal(numero) + " en el sistema octal");
+        break; 
+      case 6:
+        System.out.println(" binario:");
+        System.out.print("> ");
+        numero = Long.parseLong(s.nextLine());
+        System.out.println(" ");
+
+        System.out.println("El número binario " + numero + " es igual a " + binarioAHexadecimal(numero) + " en el sistema hexadecimal");
+        break; 
+      case 7:
+        System.out.println(" octal:");
+        System.out.print("> ");
+        numero = Long.parseLong(s.nextLine());
+        System.out.println(" ");
+
+        System.out.println("El número octal " + numero + " es igual a " + octalADecimal(numero) + " en el sistema decimal");
+        break; 
+      case 8:
+        System.out.println(" octal:");
+        System.out.print("> ");
+        numero = Long.parseLong(s.nextLine());
+        System.out.println(" ");
+
+        System.out.println("El número octal " + numero + " es igual a " + octalABinario(numero) + " en el sistema binario");
+        break; 
+      case 9:
+        System.out.println(" octal:");
+        System.out.print("> ");
+        numero = Long.parseLong(s.nextLine());
+        System.out.println(" ");
+
+        System.out.println("El número octal " + numero + " es igual a " + octalAHexadecimal(numero) + " en el sistema hexadecimal");
+        break;
+      case 10:
+        System.out.println(" hexadecimal:");
+        System.out.print("> ");
+        String numeroHex = s.nextLine();
+        System.out.println(" ");
+
+        System.out.println("El número hexadecimal " + numeroHex + " es igual a " + hexadecimalADecimal(numeroHex) + " en el sistema decimal");
+        break;
+      case 11:
+        System.out.println(" hexadecimal:");
+        System.out.print("> ");
+        numeroHex = s.nextLine();
+        System.out.println(" ");
+
+        System.out.println("El número hexadecimal " + numeroHex + " es igual a " + hexadecimalABinario(numeroHex) + " en el sistema binario");
+        break;
+      case 12:
+        System.out.println(" hexadecimal:");
+        System.out.print("> ");
+        numeroHex = s.nextLine();
+        System.out.println(" ");
+
+        System.out.println("El número hexadecimal " + numeroHex + " es igual a " + hexadecimalAOctal(numeroHex) + " en el sistema octal");
+        break;
+      default:
+        System.out.println("Debió introducir el número de forma incorrecta. Por favor, reinicie el programa");
+    }
   }
 
 
@@ -68,6 +166,75 @@ public class Tema08Ejercicio19AlbertoM {
 
     return numeroDe;
   } //public static long binarioADecimal(long numero)
+
+
+  /**
+   * La función pasa un número de binario a octal
+   *
+   * @param numeroBi número binario 
+   * @return número octal
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static long binarioAOctal(long numeroBi) {
+    String numeroOc = "";
+
+    while (numeroBi > 0) {
+      String digitoNumeroOc = String.valueOf(binarioADecimal(numeroBi % 1000));
+
+      numeroOc = digitoNumeroOc + numeroOc;
+
+      numeroBi /= 1000;
+    } //while (numeroBi > 0)
+
+    return Long.valueOf(numeroOc);
+  } //public static long binarioAOctal(long numero)
+
+
+  /**
+   * La función pasa un número de binario a hexadecimal
+   *
+   * @param numeroBi número binario 
+   * @return número octal
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static String binarioAHexadecimal(long numeroBi) {
+    String numeroHex = "";
+
+    while (numeroBi > 0) {
+      String digitoNumeroHex = String.valueOf(binarioADecimal(numeroBi % 10000));
+
+      switch (digitoNumeroHex) {
+        case "10":
+          digitoNumeroHex = "A";
+          break;
+        case "11":
+          digitoNumeroHex = "B";
+          break;
+        case "12":
+          digitoNumeroHex = "C";
+          break;
+        case "13":
+          digitoNumeroHex = "D";
+          break;
+        case "14":
+          digitoNumeroHex = "E";
+          break;
+        case "15":
+          digitoNumeroHex = "F";
+          break;
+        default:
+
+      } //switch (digitoNumeroHex)
+
+      numeroHex = digitoNumeroHex + numeroHex;
+
+      numeroBi /= 10000;
+    } //while (numeroBi > 0)
+
+    return numeroHex;
+  } //public static String binarioAHexadecimal(long numeroBi)
 
 
   /**
@@ -107,14 +274,172 @@ public class Tema08Ejercicio19AlbertoM {
    */
   public static long decimalAOctal(long numeroDe) {
     long numeroBi = decimalABinario(numeroDe);
-    String numeroOc = "";
 
-    for (int i = 0; i < funciones.funcionesTema801.digitos(numeroBi); i++) {
-      for (int j = 0; j < 3; j++) {
-        numeroOc = numeroOc + binarioADecimal(numeroBi);
-      }
-    }
-
-    return ;
+    return binarioAOctal(numeroBi);
   } //public static long DecimalAOctal(long numeroDe)
+
+
+  /**
+   * La función pasa un número de decimal a hexadecimal
+   *
+   * @param numeroDe número decimal 
+   * @return número hexadecimal
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static String decimalAHexadecimal(long numeroDe) {
+    long numeroBi = decimalABinario(numeroDe);
+
+    return binarioAHexadecimal(numeroBi);
+  } //public static long DecimalAHexadecimal(long numeroDe)
+
+
+  /**
+   * La función pasa un número de octal a binario
+   *
+   * @param numeroOc número octal 
+   * @return número binario
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static long octalABinario(long numeroOc) {
+    if (numeroOc == 0) {
+      return 0;
+    } else {
+      String numeroBi = "";
+
+      while (numeroOc > 0) {
+        String digitoABi = String.valueOf(decimalABinario(numeroOc % 10));
+
+        if (funciones.funcionesTema801.digitos(Long.valueOf(digitoABi)) == 1) {
+          digitoABi = "00" + digitoABi;
+        } else if (funciones.funcionesTema801.digitos(Long.valueOf(digitoABi)) == 2) {
+          digitoABi = "0" + digitoABi;
+        } //if (funciones.funcionesTema801.digitos(Long.valueOf(digitoABi)) == 1)
+
+        numeroBi = numeroBi + digitoABi;
+
+        numeroOc /= 10;
+      } //while (numeroOc > 0)
+
+      return Long.valueOf(numeroBi);
+    } //if (numeroOc == 0)
+  } //public static long octalABinario(long numeroOc)
+
+
+  /**
+   * La función pasa un número de octal a decimal
+   *
+   * @param numeroOc número octal 
+   * @return número decimal
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static long octalADecimal(long numeroOc) {
+    long numeroBi = octalABinario(numeroOc);
+
+    return binarioADecimal(numeroBi);
+  } //public static long octalADecimal(long numeroOc)
+
+
+  /**
+   * La función pasa un número de octal a hexadecimal
+   *
+   * @param numeroOc número octal 
+   * @return número hexadecimal
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static String octalAHexadecimal(long numeroOc) {
+    long numeroBi = octalABinario(numeroOc);
+
+    return binarioAHexadecimal(numeroBi);
+  } //public static String octalAHexadecimal(long numeroOc)
+
+
+  /**
+   * La función pasa un número de hexadecimal a binario
+   *
+   * @param numeroHex número hexadecimal 
+   * @return número binario
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static long hexadecimalABinario(String numeroHex) {
+    if (numeroHex.equals("0")) {
+      return 0;
+    } else {
+      String numeroBi = "";
+      String digitoABi = "";
+
+      for (int i = 0; i < numeroHex.length(); i++) {
+        switch(numeroHex.charAt(i)) {
+          case 'A':
+            digitoABi = "10";
+            break;
+          case 'B':
+            digitoABi = "11";
+            break;
+          case 'C':
+            digitoABi = "12";
+            break;
+          case 'D':
+            digitoABi = "13";
+            break;
+          case 'E':
+            digitoABi = "14";
+            break;
+          case 'F':
+            digitoABi = "15";
+            break;
+          default:
+            digitoABi = String.valueOf(numeroHex.charAt(i)); 
+        } //switch(numeroHex.charAt(i))
+
+        String digitoBi = String.valueOf(decimalABinario(Long.valueOf(digitoABi)));
+
+        if (funciones.funcionesTema801.digitos(Long.valueOf(digitoBi)) == 1) {
+          digitoBi = "000" + digitoBi;
+        } else if (funciones.funcionesTema801.digitos(Long.valueOf(digitoBi)) == 2) {
+          digitoBi = "00" + digitoBi;
+        } else if (funciones.funcionesTema801.digitos(Long.valueOf(digitoBi)) == 3) {
+          digitoBi = "0" + digitoBi;
+        } //if (funciones.funcionesTema801.digitos(Long.valueOf(digitoBi)) == 1)
+
+        numeroBi = numeroBi + digitoBi;
+      } //for (int i = 0; i < numeroHex.length(); i++)
+
+      return Long.valueOf(numeroBi);
+    } //if (numeroHex.equals("0"))
+  } //public static long hexadecimalABinario(String numeroHex)
+
+
+  /**
+   * La función pasa un número de hexadecimal a decimal
+   *
+   * @param numeroHex número hexadecimal 
+   * @return número decimal
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static long hexadecimalADecimal(String numeroHex) {
+    long numeroBi = hexadecimalABinario(numeroHex);
+
+    return binarioADecimal(numeroBi);
+  } //public static long hexadecimalADecimal(String numeroHex)
+
+
+  /**
+   * La función pasa un número de hexadecimal a octal
+   *
+   * @param numeroHex número hexadecimal 
+   * @return número octal
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static long hexadecimalAOctal(String numeroHex) {
+    long numeroBi = hexadecimalABinario(numeroHex);
+
+    return binarioAOctal(numeroBi);
+  } //public static long hexadecimalAOctal(String numeroHex)
 }
