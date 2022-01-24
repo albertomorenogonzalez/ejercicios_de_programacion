@@ -211,9 +211,9 @@ public class funcionesTema802 {
 
     //en cada caso se mostrará el mensaje correspondiente
     if (i < array.length) {
-      System.out.println(numero + " se encuentra dentro del array");
+      System.out.println("El " + numero + " se encuentra dentro del array");
     } else {
-      System.out.println(numero + " no se encuentra dentro del array");
+      System.out.println("El " + numero + " no se encuentra dentro del array");
     } //if (numero == array[i])
 
     return "";
@@ -221,14 +221,15 @@ public class funcionesTema802 {
 
 
   /**
-   * La función dice si un número está o no dentro de un array
+   * La función busca un número en el array y devuelve la posición (el índice)
+   * en la que se encuentra
    *
-   * @param array array de donde se quiere comprobar el número
-   * @return si el número está o no en el array
+   * @param array array de donde se quiere comprobar la posición del número
+   * @return pocición del número en el array
    * 
    * @author Alberto Moreno Gonzalez
    */
-  public static String estaEnArrayInt(int[] array, long numero) {
+  public static String posicionEnArray(int[] array, long numero) {
     int i; //definimos el indice para usarlo fuera del bucle
 
     //con este bucle comprobamos si el número se encuentra en el array
@@ -237,10 +238,11 @@ public class funcionesTema802 {
     for (i = 0; ((i < array.length) && (numero != array[i])); i++) { }
 
     //en cada caso se mostrará el mensaje correspondiente
+    //en caso de que el número se encuentre se mostrará la posición
     if (i < array.length) {
-      System.out.println(numero + " se encuentra dentro del array");
+      System.out.println("El " + numero + " se encuentra en la posición " + i + " dentro del array");
     } else {
-      System.out.println(numero + " no se encuentra dentro del array");
+      System.out.println("El " + numero + " no se encuentra dentro del array");
     } //if (numero == array[i])
 
     return "";
