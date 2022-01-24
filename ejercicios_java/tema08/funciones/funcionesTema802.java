@@ -122,12 +122,10 @@ public class funcionesTema802 {
 
 
   /**
-   * La función devuelve el mínimo del array que se pasa como parámetro.
+   * La función devuelve el mínimo del array que se pasa como parámetro.
    *
-   * @param tamaño tamaño del array
-   * @param maximo límite mayor del intervalo
-   * @param minimo límite menor del intervalo
-   * @return array de tamaño n de números aleatorios entre minimo y maximo
+   * @param array array del que se quiere ver cual es el número mínimo
+   * @return número mínimo
    * 
    * @author Alberto Moreno Gonzalez
    */
@@ -146,5 +144,31 @@ public class funcionesTema802 {
     //por eso lo declaro como tal cuando el contador (i) está a 0. Si el siguiente número generado es menor, el número mínimo cambiará, así hasta llegar al último número
 
     return numMenor;
-  } //public static int[] generaArrayInt(int tamaño, int maximo, int minimo)
+  } //public static long minimoArrayInt(int[] array)
+
+
+  /**
+   * La función devuelve el máximo del array que se pasa como parámetro.
+   *
+   * @param array array del que se quiere ver cual es el número máximo
+   * @return número máximo
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static long maximoArrayInt(int[] array) {
+    long numMayor = 0; //se define la variable numMayor para guardar ahí el número mayor
+
+    for (int i = 0; i < array.length; i++) {
+      if (i == 0) {
+        numMayor = array[i]; //el primer número será siempre tomado en cuenta como el mayor de primera hora
+      } else if (array[i] > numMayor) {
+        numMayor = array[i]; //si el siguiente número generado es mayor que el que hasta ahora el máximo el nuevo nuevo pasará a ser el máximo
+      } //if (i == 0)
+    } //for (int i = 0; i < array.length; i++)
+
+    //¿por qué calculo así el mayor? según se vayan introduciendo números el máximo irá cambiando. El primer número generado cuando no se ha generado ningún otro es el primer máximo,
+    //por eso lo declaro como tal cuando el contador (i) está a 0. Si el siguiente número generado es mayor, el número máximo cambiará, así hasta llegar al último número.
+
+    return numMayor;
+  } //public static long maximoArrayInt(int[] array)
 }
