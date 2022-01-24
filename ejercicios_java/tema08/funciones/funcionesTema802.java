@@ -119,4 +119,32 @@ public class funcionesTema802 {
 
     return array;
   } //public static int[] generaArrayInt(int tamaño, int maximo, int minimo)
+
+
+  /**
+   * La función devuelve el mínimo del array que se pasa como parámetro.
+   *
+   * @param tamaño tamaño del array
+   * @param maximo límite mayor del intervalo
+   * @param minimo límite menor del intervalo
+   * @return array de tamaño n de números aleatorios entre minimo y maximo
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static long minimoArrayInt(int[] array) {
+    long numMenor = 0; //se define la variable numMenor para guardar ahí el número menor
+
+    for (int i = 0; i < array.length; i++) {
+      if (i == 0) {
+        numMenor = array[i]; //el primer número será siempre tomado en cuenta como el menor de primera hora
+      } else if (array[i] < numMenor) {
+        numMenor = array[i]; //si el siguiente número generado es menor que el que hasta ahora el mínimo el nuevo nuevo pasará a ser el mínimo
+      } //if (i == 0)
+    } //for (int i = 0; i < array.length; i++)
+
+    //¿por qué calculo así el menor? según se vayan introduciendo números el mínimo irá cambiando. El primer número generado cuando no se ha generado ningún otro es el primer mínimo,
+    //por eso lo declaro como tal cuando el contador (i) está a 0. Si el siguiente número generado es menor, el número mínimo cambiará, así hasta llegar al último número
+
+    return numMenor;
+  } //public static int[] generaArrayInt(int tamaño, int maximo, int minimo)
 }
