@@ -30,8 +30,9 @@ public class Tema08Ejercicio17AlbertoM {
     //Una vez obtenido el dígito se multiplica por dos elevado a posicion y se le suma a lo que ya hay en numeroDe. Si digitoBi es 0 no se le sumará nada
     //a numeroDe, por contra, si es 1, se le sumará la potencia de 2 correspondiente a la posición.
     while (numeroBi > 0) {
-      int digitoBi = (int)numeroBi % 10;
+      long digitoBi = numeroBi % 10;
       numeroDe = numeroDe + funciones.funcionesTema801.potencia(2, posicion) * digitoBi;
+      
 
       posicion++;
       numeroBi /= 10;
