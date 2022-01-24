@@ -32,7 +32,6 @@ public class Tema08Ejercicio17AlbertoM {
     while (numeroBi > 0) {
       long digitoBi = numeroBi % 10;
       numeroDe = numeroDe + funciones.funcionesTema801.potencia(2, posicion) * digitoBi;
-      
 
       posicion++;
       numeroBi /= 10;
