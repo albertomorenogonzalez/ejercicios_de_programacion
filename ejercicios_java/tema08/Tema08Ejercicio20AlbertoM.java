@@ -35,6 +35,8 @@ public class Tema08Ejercicio20AlbertoM {
     int[] array = funciones.funcionesTema802.generaArrayInt(tamañoArray, maximo, minimo); 
 
     //se muestra el array
+    System.out.println("Array generado - Array de " + tamañoArray + " números cuyo menor número posible puede ser el " + minimo + " y el máximo el " + maximo + ":\n");
+
     funciones.funcionesTema802.muestraArray(array, tamañoArray); 
   }
 }
