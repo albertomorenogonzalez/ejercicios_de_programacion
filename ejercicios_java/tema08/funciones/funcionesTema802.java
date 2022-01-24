@@ -1,4 +1,4 @@
-package funciones;
+package funciones; //se define el paquete de funciones
 
 /**
  * Funciones de los ejercicios del tema 8 (20-28)
@@ -20,6 +20,7 @@ public class funcionesTema802 {
    * @author Alberto Moreno Gonzalez
    */
   public static void muestraArray(int[] array, int tamaño) {
+    //la función mostrará en cada iteración la posición correspondiente a i (índice)
     for (int i = 0; i < tamaño; i++) {
       System.out.print(array[i] + " ");
     }
@@ -37,6 +38,7 @@ public class funcionesTema802 {
    * @author Alberto Moreno Gonzalez
    */
   public static void muestraArrayEnTabla(int[] array, int tamaño) {
+    //la función pinta el borde superior de la tabla
     for (int i = 0; i < tamaño; i++) {
       if (i == 0) {
         System.out.print("┌─────┬");
@@ -49,6 +51,7 @@ public class funcionesTema802 {
 
     System.out.println(" ");
 
+    //se muestra el índice que estará sobre el número de la posición del array correspondiente
     for (int j = 0; j < tamaño; j++) {
       System.out.printf("%-1s %2d  " ,"|" ,j);
     }
@@ -57,6 +60,7 @@ public class funcionesTema802 {
 
     System.out.println(" ");
 
+    //se pinta el borde medio de la tabla
     for (int k = 0; k < tamaño; k++) {
       if (k == 0) {
         System.out.print("├─────┼");
@@ -69,6 +73,7 @@ public class funcionesTema802 {
 
     System.out.println(" ");
 
+    //s muestran los valores del array en cada posición
     for (int l = 0; l < tamaño; l++) {
       System.out.printf("%-1s %3d " ,"|" ,array[l]);
     }
@@ -77,6 +82,7 @@ public class funcionesTema802 {
 
     System.out.println(" ");
 
+    //se pinta el borde inferior de la tabla
     for (int m = 0; m < tamaño; m++) {
       if (m == 0) {
         System.out.print("└─────┴");
@@ -101,8 +107,12 @@ public class funcionesTema802 {
    * @author Alberto Moreno Gonzalez
    */
   public static int[] generaArrayInt(int tamaño, int maximo, int minimo) {
+    //se define el array que se va a generar
     int[] array = new int[tamaño];
 
+    //en cada posición se asiga un valor aleatorio gracias al aumento en cada iteración de la variable i.
+    //el intervalo de los valores aleatorios se definirá multiplicando la función Math.random() por
+    //el mayor número del intervalo menos el mínimo, para que al sumarle el mínimo el valor máximo no cambie
     for (int i = 0; i < tamaño; i++) {
       array[i] = ((int)(Math.random() * (maximo - minimo)) + minimo);
     }
