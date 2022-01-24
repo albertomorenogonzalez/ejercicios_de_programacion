@@ -15,6 +15,7 @@ public class Tema08Ejercicio20AlbertoM {
     System.out.println("----------------------------------------------------------------------------------------------------");
     System.out.println(" ");
 
+    //se piden el tamaño del array, el valor máximo y el valor mínimo del intervalo
     System.out.println("Introduzca el tamaño del array: ");
     System.out.print("> ");
     int tamañoArray = Integer.parseInt(s.nextLine());
@@ -30,8 +31,10 @@ public class Tema08Ejercicio20AlbertoM {
     int maximo = Integer.parseInt(s.nextLine());
     System.out.println(" ");
 
-    int[] array = funciones.funcionesTema802.generaArrayInt(tamañoArray, maximo, minimo);
+    //se define el array
+    int[] array = funciones.funcionesTema802.generaArrayInt(tamañoArray, maximo, minimo); 
 
-    funciones.funcionesTema802.muestraArray(array, tamañoArray);
+    //se muestra el array
+    funciones.funcionesTema802.muestraArray(array, tamañoArray); 
   }
 }
