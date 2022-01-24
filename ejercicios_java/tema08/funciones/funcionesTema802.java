@@ -174,20 +174,75 @@ public class funcionesTema802 {
 
 
   /**
-   * La función devuelve la media del array que se pasa como parámetro.
+   * La función devuelve la media del arrayque se pasa como parámetro
    *
-   * @param array array del que se quiere ver cual es la media
-   * @return número máximo
+   * @param array array del que se quiere comprobar la media
+   * @return media
    * 
    * @author Alberto Moreno Gonzalez
    */
   public static long mediaArrayInt(int[] array) {
-    long sumatorio = 0;
+    long sumatorio = 0; //definimos e inicializamos la variable sumatorio donde iremos sumando cada valor del array
 
+    //en cada iteración se sumará el valor del array coorespondiente
     for (int i = 0; i < array.length; i++) {
       sumatorio = sumatorio + array[i];
     }
 
-    return sumatorio / array.length;
+    return sumatorio / array.length; //la función devolverá el sumatorio partido la longitud del array, es decir, la media
   } //public static long mediaArrayInt(int[] array)
+
+
+  /**
+   * La función dice si un número está o no dentro de un array
+   *
+   * @param array array de donde se quiere comprobar el número
+   * @return si el número está o no en el array
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static String estaEnArrayInt(int[] array, long numero) {
+    int i; //definimos el indice para usarlo fuera del bucle
+
+    //con este bucle comprobamos si el número se encuentra en el array
+    //si el número no se encuentra el en el array i será igual a 10
+    //si el número se encuentra en el array i será menor que 10
+    for (i = 0; ((i < array.length) && (numero != array[i])); i++) { }
+
+    //en cada caso se mostrará el mensaje correspondiente
+    if (i < array.length) {
+      System.out.println(numero + " se encuentra dentro del array");
+    } else {
+      System.out.println(numero + " no se encuentra dentro del array");
+    } //if (numero == array[i])
+
+    return "";
+  } //public static String estaEnArrayInt(int[] array, long numero)
+
+
+  /**
+   * La función dice si un número está o no dentro de un array
+   *
+   * @param array array de donde se quiere comprobar el número
+   * @return si el número está o no en el array
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static String estaEnArrayInt(int[] array, long numero) {
+    int i; //definimos el indice para usarlo fuera del bucle
+
+    //con este bucle comprobamos si el número se encuentra en el array
+    //si el número no se encuentra el en el array i será igual a 10
+    //si el número se encuentra en el array i será menor que 10
+    for (i = 0; ((i < array.length) && (numero != array[i])); i++) { }
+
+    //en cada caso se mostrará el mensaje correspondiente
+    if (i < array.length) {
+      System.out.println(numero + " se encuentra dentro del array");
+    } else {
+      System.out.println(numero + " no se encuentra dentro del array");
+    } //if (numero == array[i])
+
+    return "";
+  } //public static String estaEnArrayInt(int[] array, long numero)
 }
