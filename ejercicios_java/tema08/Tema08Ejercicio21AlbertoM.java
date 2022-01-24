@@ -40,6 +40,7 @@ public class Tema08Ejercicio21AlbertoM {
 
     System.out.println("\n ");
 
+    //se calcula y se muestra el valor mínimo del array
     System.out.println("El número menor es " + funciones.funcionesTema802.minimoArrayInt(array));
   }
 }
