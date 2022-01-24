@@ -225,7 +225,7 @@ public class funcionesTema802 {
    * en la que se encuentra
    *
    * @param array array de donde se quiere comprobar la posición del número
-   * @return pocición del número en el array
+   * @return posición del número en el array
    * 
    * @author Alberto Moreno Gonzalez
    */
@@ -247,4 +247,23 @@ public class funcionesTema802 {
 
     return "";
   } //public static String estaEnArrayInt(int[] array, long numero)
+
+
+  /**
+   * La función le da la vuelta a un array
+   *
+   * @param array array que se va a voltear
+   * @return array volteado
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static int[] volteaArrayInt(int[] array) {
+    int[] arrayVolteado = new int [array.length];
+
+    for (int i = 0; i < arrayVolteado.length; i++) {
+      arrayVolteado[i] = array[arrayVolteado.length - 1 - i];
+    }
+
+    return arrayVolteado;
+  } //public static int[] volteaArrayInt(int[] array)
 }
