@@ -40,7 +40,7 @@ public class Tema08Ejercicio24AlbertoM {
 
     System.out.println("\n ");
 
-  //se pide un número para  bsucarlo en el array
+    //se pide un número para  bsucarlo en el array
     System.out.println("Introduzca un número para buscarlo en el array: ");
     System.out.print("> ");
     long numeroAEncontrar = Long.parseLong(s.nextLine());
