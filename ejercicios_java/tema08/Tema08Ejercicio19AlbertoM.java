@@ -196,7 +196,7 @@ public class Tema08Ejercicio19AlbertoM {
       numeroBi /= 1000;
     } //while (numeroBi > 0)
 
-    //se devuelve el string numeroOc como una variable long
+    //se devuelve el string numeroOc como una variable long (así no saldrán ceros a la izquierda)
     return Long.valueOf(numeroOc); 
   } //public static long binarioAOctal(long numero)
 
@@ -327,7 +327,10 @@ public class Tema08Ejercicio19AlbertoM {
     } else {
       String numeroBi = ""; //se define el número binario como un string vacío
 
-      //
+      //mientras numeroOc sea mayor que 0 será dividido entre 10 en cada iteración. Sacando el resto de la divisón de numeroOc
+      //entre 10 tenemos cada digito del número, que pasaremos de forma independiente a binario. Guardaremos cada dígito como un string
+      //y si no tiene tres dígitos binarios se le añaden ceros hasta que el dígito en binario se componga de tres dígitos.
+      //estos tres dígitos se añadirán por la izquierda anumeroBi para formar el número en binario
       while (numeroOc > 0) {
         String digitoABi = String.valueOf(decimalABinario(numeroOc % 10));
 
@@ -342,7 +345,7 @@ public class Tema08Ejercicio19AlbertoM {
         numeroOc /= 10;
       } //while (numeroOc > 0)
 
-      return Long.valueOf(numeroBi);
+      return Long.valueOf(numeroBi); //se devuelve el número binario como long en vez de String (así no saldrán ceros a la izquierda)
     } //if (numeroOc == 0)
   } //public static long octalABinario(long numeroOc)
 
@@ -356,9 +359,9 @@ public class Tema08Ejercicio19AlbertoM {
    * @author Alberto Moreno Gonzalez
    */
   public static long octalADecimal(long numeroOc) {
-    long numeroBi = octalABinario(numeroOc);
+    long numeroBi = octalABinario(numeroOc); //se pasa el número octal a binario
 
-    return binarioADecimal(numeroBi);
+    return binarioADecimal(numeroBi); //se devuelve el número binario en decimal
   } //public static long octalADecimal(long numeroOc)
 
 
@@ -371,9 +374,9 @@ public class Tema08Ejercicio19AlbertoM {
    * @author Alberto Moreno Gonzalez
    */
   public static String octalAHexadecimal(long numeroOc) {
-    long numeroBi = octalABinario(numeroOc);
+    long numeroBi = octalABinario(numeroOc); //se pasa el número octal primero a binario
 
-    return binarioAHexadecimal(numeroBi);
+    return binarioAHexadecimal(numeroBi); //se pasa el número en binario a hexadecimal
   } //public static String octalAHexadecimal(long numeroOc)
 
 
@@ -386,12 +389,22 @@ public class Tema08Ejercicio19AlbertoM {
    * @author Alberto Moreno Gonzalez
    */
   public static long hexadecimalABinario(String numeroHex) {
+    //si numeroHex es igual a cero la función devolverá un 0, en caso contrario comenzará la conversión
     if (numeroHex.equals("0")) {
       return 0;
     } else {
-      String numeroBi = "";
-      String digitoABi = "";
+      String numeroBi = ""; //se define el número binario como vacío
+      String digitoABi = ""; //se define la función utilizada para pasar cada caracter hexadecimal a binario también como vacío
 
+      //con la función charAt() se comprueba cada caracter de la cadena String que forma el número hexadecimal
+      //el bucle durará lo que tarde la variable i en igualar la longitud del número introducido. En caso de que
+      //charAt(i) encuentre un número mayor que 9 la variable digitoABi obtendrá su valor correspondiente en decimal
+      //en caso contrario el dígito no cambiará. Ojo, es muy importante que tanto digitoABi como el caracter
+      //encontrado se definan como string (en el segundo caso usaremos String.valueOf()), porque si no los dígitos 
+      //menores de 10 se tomarán como su valor ASCII. El dígito obtenido en decimal se pasa a binario habiendolo pasado a
+      //long para volver a ser pasado de nuevo a String y guardado en la variable digitoBi. Si el valor de esta variable
+      //no llega a tener cuatro dígitos se añadirán los ceros necesarios hasta que el dígito en binario tenga cuatro dígitos.
+      //estos cuatro dígitos se añadirán a numeroBi por la izquierda
       for (int i = 0; i < numeroHex.length(); i++) {
         switch(numeroHex.charAt(i)) {
           case 'A':
@@ -429,7 +442,7 @@ public class Tema08Ejercicio19AlbertoM {
         numeroBi = numeroBi + digitoBi;
       } //for (int i = 0; i < numeroHex.length(); i++)
 
-      return Long.valueOf(numeroBi);
+      return Long.valueOf(numeroBi); //la función devuelve numeroBi como un long en vez de un String (así no saldrán ceros a la izquierda)
     } //if (numeroHex.equals("0"))
   } //public static long hexadecimalABinario(String numeroHex)
 
@@ -443,9 +456,9 @@ public class Tema08Ejercicio19AlbertoM {
    * @author Alberto Moreno Gonzalez
    */
   public static long hexadecimalADecimal(String numeroHex) {
-    long numeroBi = hexadecimalABinario(numeroHex);
+    long numeroBi = hexadecimalABinario(numeroHex); //primero se pasa el número hexadecimal a binario
 
-    return binarioADecimal(numeroBi);
+    return binarioADecimal(numeroBi); //luego la función devolverá el número binario como decimal
   } //public static long hexadecimalADecimal(String numeroHex)
 
 
@@ -458,8 +471,8 @@ public class Tema08Ejercicio19AlbertoM {
    * @author Alberto Moreno Gonzalez
    */
   public static long hexadecimalAOctal(String numeroHex) {
-    long numeroBi = hexadecimalABinario(numeroHex);
+    long numeroBi = hexadecimalABinario(numeroHex); //primero se pasa el número hexadecimal a binario
 
-    return binarioAOctal(numeroBi);
+    return binarioAOctal(numeroBi); //luego la función devolverá el número binario como un número octal
   } //public static long hexadecimalAOctal(String numeroHex)
 }
