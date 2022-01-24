@@ -171,4 +171,23 @@ public class funcionesTema802 {
 
     return numMayor;
   } //public static long maximoArrayInt(int[] array)
+
+
+  /**
+   * La función devuelve la media del array que se pasa como parámetro.
+   *
+   * @param array array del que se quiere ver cual es la media
+   * @return número máximo
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static long mediaArrayInt(int[] array) {
+    long sumatorio = 0;
+
+    for (int i = 0; i < array.length; i++) {
+      sumatorio = sumatorio + array[i];
+    }
+
+    return sumatorio / array.length;
+  } //public static long mediaArrayInt(int[] array)
 }
