@@ -258,12 +258,14 @@ public class funcionesTema802 {
    * @author Alberto Moreno Gonzalez
    */
   public static int[] volteaArrayInt(int[] array) {
-    int[] arrayVolteado = new int [array.length];
+    int[] arrayVolteado = new int [array.length]; //se define el array donde se va a guardar el array volteado
 
+    //para cada posición de arrayVolteado, se le asigna el valor del opuesto del array parámetro
+    //Ej.: en un array de 10 elementos, arrayVolteado[0] = array[arrayVolteado.lenght = 10, 10 - 1 - 0 = 9], arrayVolteado[1] = array[8 (i = 2)], ...
     for (int i = 0; i < arrayVolteado.length; i++) {
       arrayVolteado[i] = array[arrayVolteado.length - 1 - i];
     }
 
-    return arrayVolteado;
+    return arrayVolteado; //se devuelve el array volteado
   } //public static int[] volteaArrayInt(int[] array)
 }
