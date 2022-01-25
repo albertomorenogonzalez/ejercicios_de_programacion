@@ -2,7 +2,7 @@ import funciones.funcionesTema802; //importamos la biblioteca de funciones funci
 import java.util.Scanner; //importamos la clase Scanner
 
 /**
- * Programa que 
+ * Programa que  Le da la vuelta a un array.
  *
  * @author Alberto Moreno Gonzalez
  */
@@ -40,6 +40,7 @@ public class Tema08Ejercicio26AlbertoM {
 
     System.out.println("\n ");
 
+    //se  uestra el array volteado
     System.out.println("Array volteado:\n");
 
     funciones.funcionesTema802.muestraArray(funciones.funcionesTema802.volteaArrayInt(array), tamañoArray); 
