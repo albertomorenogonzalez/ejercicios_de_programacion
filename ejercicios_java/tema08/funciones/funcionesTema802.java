@@ -197,6 +197,7 @@ public class funcionesTema802 {
    * La función dice si un número está o no dentro de un array
    *
    * @param array array de donde se quiere comprobar el número
+   * @param numero número que se quiere comprobar si está en el array
    * @return si el número está o no en el array
    * 
    * @author Alberto Moreno Gonzalez
@@ -225,6 +226,7 @@ public class funcionesTema802 {
    * en la que se encuentra
    *
    * @param array array de donde se quiere comprobar la posición del número
+   * @param numero numero del que se quiere comprobar la posición
    * @return posición del número en el array
    * 
    * @author Alberto Moreno Gonzalez
@@ -267,5 +269,32 @@ public class funcionesTema802 {
     }
 
     return arrayVolteado; //se devuelve el array volteado
+  } //public static int[] volteaArrayInt(int[] array)
+
+
+  /**
+   * La función rota n posiciones a la derecha los números de un array.
+   *
+   * @param array array que se va a rotar
+   * @return array rotado
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static int[] rotaDerechaArrayInt(int[] array, int numPosiciones) {
+    int[] arrayRotado = new int [array.length]; //se define el array donde se va a guardar el array rotado
+
+    //si el índice es menor que el número de posiciones que se quiere mover cada numero
+    //se guardarán en el nuevo array las posiciones del antiguo posteriores a la posición 
+    //igual a numPosiciones. si el ínidce es igual o mayor que numPosiciones se guadará en el array
+    //las psoiciones del array antiguo anteriores  a la posición igual a numPosiciones
+    for (int i = 0; i < arrayRotado.length; i++) {
+      if (i < numPosiciones) {
+        arrayRotado[i] = array[(arrayRotado.length - numPosiciones) + i];
+      } else if (i >= numPosiciones) {
+        arrayRotado[i] = array[i - numPosiciones];
+      } //if (i < numPosiciones)
+    } //for (int i = 0; i < arrayRotado.length; i++)
+
+    return arrayRotado; 
   } //public static int[] volteaArrayInt(int[] array)
 }
