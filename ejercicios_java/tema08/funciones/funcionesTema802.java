@@ -296,5 +296,21 @@ public class funcionesTema802 {
     } //for (int i = 0; i < arrayRotado.length; i++)
 
     return arrayRotado; 
-  } //public static int[] volteaArrayInt(int[] array)
+  } //public static int[] rotaDerechaArrayInt(int[] array)
+
+
+  /**
+   * La función rota n posiciones a la izquierda los números de un array.
+   *
+   * @param array array que se va a rotar
+   * @return array rotado
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static int[] rotaIzquierdaArrayInt(int[] array, int numPosiciones) {
+    //por ejemplo, en un array de 10 elementos, si queremos rotarlos todos 3 posiciones a la 
+    //izquierda será lo mismo que rotarlas 7 posiciones a la derecha
+    numPosiciones = array.length - numPosiciones; 
+    return rotaDerechaArrayInt(array, numPosiciones); 
+  } //public static int[] rotaIzquierdaArrayInt(int[] array)
 }
