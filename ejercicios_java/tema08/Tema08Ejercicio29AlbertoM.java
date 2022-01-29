@@ -37,7 +37,7 @@ public class Tema08Ejercicio29AlbertoM {
     System.out.println(" ");
 
     //se define el array
-    int[][] array = funciones.funcionesTema803.generaArrayBiInt(filasArray, columnasArray, maximo, minimo); 
+    int[][] array = funciones.funcionesTema803.generaArrayBiInt(filasArray, columnasArray, maximo, minimo);
 
     //se muestra el array
     System.out.println("Array generado - Array de " + filasArray + " filas  y " + columnasArray + " columnas cuyo menor número posible puede ser el " + minimo + " y el máximo el " + maximo + ":\n");
