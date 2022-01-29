@@ -145,7 +145,7 @@ public class funcionesTema803 {
    * parámetro.
    *
    * @param array array del que se a sacar la fila
-   * @param numFila número de la fila fila que se quiere ver
+   * @param numFila número de la fila que se quiere ver
    * @return fila que se quiere ver
    * 
    * @author Alberto Moreno Gonzalez
@@ -160,4 +160,26 @@ public class funcionesTema803 {
       System.out.print(fila[i] + " ");
     }
   } //public static void filaDeArrayBiInt(int[][] array, int numFila)
+
+
+  /**
+   * La función devuelve la columna j-ésima del array que se pasa como
+   * parámetro.
+   *
+   * @param array array del que se a sacar la fila
+   * @param numFila número de la columna que se quiere ver
+   * @return columna que se quiere ver
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static void columnaDeArrayBiInt(int[][] array, int numColumna) {
+    //se define el array donde se va a guardar la columna
+    int[] columna = new int [array.length];
+
+    //se asigna cada valor de la columna al array y se muestra seguidamente
+    for (int i = 0; i < array.length; i++) {
+      columna[i] = array[i][numColumna];
+      System.out.print(columna[i] + " ");
+    }
+  } //public static void columnaDeArrayBiInt(int[][] array, int numFila)
 }
