@@ -1,4 +1,4 @@
-import funciones.funcionesTema802; //importamos la biblioteca de funciones funcionesTema801
+import funciones.funcionesTema802; //importamos la biblioteca de funciones funcionesTema802
 import java.util.Scanner; //importamos la clase Scanner
 
 /**
@@ -41,7 +41,7 @@ public class Tema08Ejercicio27AlbertoM {
     System.out.println("\n ");
 
     //se pregunta el número de posiciones a la derecha que quiere rotar el array
-    System.out.println("Introduzca el número de posiciones a al derecha que quiere que rote el array: ");
+    System.out.println("Introduzca el número de posiciones a la derecha que quiere que rote el array: ");
     System.out.print("> ");
     int posiciones = Integer.parseInt(s.nextLine());
     System.out.println(" ");

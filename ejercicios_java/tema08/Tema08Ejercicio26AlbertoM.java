@@ -1,4 +1,4 @@
-import funciones.funcionesTema802; //importamos la biblioteca de funciones funcionesTema801
+import funciones.funcionesTema802; //importamos la biblioteca de funciones funcionesTema802
 import java.util.Scanner; //importamos la clase Scanner
 
 /**
@@ -40,7 +40,7 @@ public class Tema08Ejercicio26AlbertoM {
 
     System.out.println("\n ");
 
-    //se  uestra el array volteado
+    //se muestra el array volteado
     System.out.println("Array volteado:\n");
 
     funciones.funcionesTema802.muestraArray(funciones.funcionesTema802.volteaArrayInt(array), tamañoArray); 

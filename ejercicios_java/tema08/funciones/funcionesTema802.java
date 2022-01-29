@@ -27,7 +27,7 @@ public class funcionesTema802 {
   } 
 
 
-    /**
+  /**
    * La función muestra un array dentro de una tabla
    * (Los números tendrán que ser como máximo de tres cifras)
    *

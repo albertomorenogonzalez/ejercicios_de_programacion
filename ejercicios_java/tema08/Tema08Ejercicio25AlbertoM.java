@@ -1,4 +1,4 @@
-import funciones.funcionesTema802; //importamos la biblioteca de funciones funcionesTema801
+import funciones.funcionesTema802; //importamos la biblioteca de funciones funcionesTema802
 import java.util.Scanner; //importamos la clase Scanner
 
 /**
@@ -41,7 +41,7 @@ public class Tema08Ejercicio25AlbertoM {
 
     System.out.println("\n ");
 
-    //se pide un número para  buscarlo en el array
+    //se pide un número para buscarlo en el array
     System.out.println("Introduzca un número para saber su posición en el array: ");
     System.out.print("> ");
     long numeroAEncontrar = Long.parseLong(s.nextLine());
