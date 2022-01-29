@@ -2,7 +2,7 @@ import funciones.funcionesTema803; //importamos la biblioteca de funciones funci
 import java.util.Scanner; //importamos la clase Scanner
 
 /**
- * Programa que enera un array de tamaño n x m con números
+ * Programa que genera un array de tamaño n x m con números
  * aleatorios cuyo intervalo (mínimo y máximo) se indica como parámetro.
  *
  * @author Alberto Moreno Gonzalez
