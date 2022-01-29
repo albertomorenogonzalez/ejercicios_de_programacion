@@ -49,10 +49,10 @@ public class Tema08Ejercicio31AlbertoM {
     //se pide la columna que se desea ver
     System.out.println("Introduzca el número de la columna que quiere mostrar: ");
     System.out.print("> ");
-    int numFila = Integer.parseInt(s.nextLine());
+    int numColumna = Integer.parseInt(s.nextLine());
     System.out.println(" ");
 
     //se muestra la columna
-    funciones.funcionesTema803.columnaDeArrayBiInt(array, numFila);
+    funciones.funcionesTema803.columnaDeArrayBiInt(array, numColumna);
   }
 }
