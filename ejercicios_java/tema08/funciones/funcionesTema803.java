@@ -116,7 +116,7 @@ public class funcionesTema803 {
    * @param array array que se quiere mostrar
    * @param maximo límite mayor del intervalo
    * @param minimo límite menor del intervalo
-   * @return array de tamaño n de números aleatorios entre minimo y maximo
+   * @return array de tamaño n x m de números aleatorios entre minimo y maximo
    * 
    * @author Alberto Moreno Gonzalez
    */
@@ -138,4 +138,26 @@ public class funcionesTema803 {
 
     return array;
   } //public static void generaArrayBiInt(int[][] array, int filas, int columnas)
+
+
+  /**
+   * La función devuelve la fila i-ésima del array que se pasa como
+   * parámetro.
+   *
+   * @param array array del que se a sacar la fila
+   * @param numFila número de la fila fila que se quiere ver
+   * @return fila que se quiere ver
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static void filaDeArrayBiInt(int[][] array, int numFila) {
+    //se define el array donde se va a guardar la fila
+    int[] fila = new int [array[0].length];
+
+    //se asigna cada valor de la fila al array y se muestra seguidamente
+    for (int i = 0; i < array[0].length; i++) {
+      fila[i] = array[numFila][i];
+      System.out.print(fila[i] + " ");
+    }
+  } //public static void filaDeArrayBiInt(int[][] array, int numFila)
 }
