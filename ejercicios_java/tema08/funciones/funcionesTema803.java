@@ -155,6 +155,7 @@ public class funcionesTema803 {
     int[] fila = new int [array[0].length];
 
     //se asigna cada valor de la fila al array y se muestra seguidamente
+    //con array[0].length calculamos el número de filas del array
     for (int i = 0; i < array[0].length; i++) {
       fila[i] = array[numFila][i];
       System.out.print(fila[i] + " ");
@@ -166,7 +167,7 @@ public class funcionesTema803 {
    * La función devuelve la columna j-ésima del array que se pasa como
    * parámetro.
    *
-   * @param array array del que se a sacar la fila
+   * @param array array del que se a sacar la columna
    * @param numFila número de la columna que se quiere ver
    * @return columna que se quiere ver
    * 
@@ -177,9 +178,52 @@ public class funcionesTema803 {
     int[] columna = new int [array.length];
 
     //se asigna cada valor de la columna al array y se muestra seguidamente
+    //con array.length calculamos el número de columnas del array
     for (int i = 0; i < array.length; i++) {
       columna[i] = array[i][numColumna];
       System.out.print(columna[i] + " ");
     }
   } //public static void columnaDeArrayBiInt(int[][] array, int numFila)
+
+
+  /**
+   * Devuelve la fila y la columna (en un array
+   * con dos elementos) de la primera ocurrencia de un número dentro de un
+   * array bidimensional. Si el número no se encuentra en el array, la función
+   * devuelve el array {-1, -1}.
+   *
+   * @param array array donde se va a comprobar el número
+   * @param numero número que se quiere comprobar si está en el array
+   * @return fila y columna del número consultado
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static String coordenadasEnArrayBiInt(int[][] array, int numero) {
+    int i = 0; //se define e inicializa la variable i usada como indice para las filas
+    int j = 0; //se define e inicializa la variable i usada como indice para las filas
+    int fila = -1; //se define la variable fila para guardar ahí la coordenada de la fila. La inicialiamos en -1 ya que ese es la coordenada que tiene que mostrar si no se ha encontrado el número 
+    int columna = -1; //se define la variable columna para guardar ahí la coordenada de la columna. La inicialiamos en -1 ya que ese es la coordenada que tiene que mostrar si no se ha encontrado el número
+    boolean encontrado = false; //variable booleana que utilizaremos para romper el bucle de la fila
+
+    //con el bucle de índice i vamos cambiando de fila comprobando si el número introducido se encuentra en cada fila
+    for (i = 0; (i < array.length) && (!encontrado); i++) {
+      //dentro de cada fila comprobaremos por columna (variable índice j) cada número
+      for (j = 0; ((j < array[0].length) && (numero != array[i][j])); j++) { }
+
+      //si el número se ha encontrado significa que j es menor que el número de columnas del array (array[0].length)
+      //si es asi la variable encontrado será verdadera, por lo que finalizaremos con el bucle de las filas
+      //en tal caso la varibale fila cogerá el valor de i e columna el de j
+      if (j < array[0].length) {
+        encontrado = true;
+
+        fila = i;
+        columna = j;
+      }
+    } 
+
+    //se mostrarán las coordenadas del número en un String. Si no sea ha encontrado el número las coordenadas serán [-1,-1]
+    System.out.println("Las coordenadas del número " + numero + " son [" + fila + "," + columna + "]");
+
+    return "";
+  } //public static String coordenadasEnArrayBiInt(int[][] array, int numero)
 }
