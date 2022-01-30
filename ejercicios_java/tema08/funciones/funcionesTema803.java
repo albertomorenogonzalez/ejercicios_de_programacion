@@ -286,15 +286,49 @@ public class funcionesTema803 {
    * mientras que la cadena “neso” indica que se elige la diagonal que va del
    * noreste hacia el suroeste.
    *
-   * @param array array donde se va a comprobar el número
-   * @param numero número que se quiere comprobar si es punto de silla
-   * @return texto diciendo si el número es o no punto de silla
+   * @param array array bidimensional de donde se va a sacar la diagonal
+   * @param fila fila de un número presente en alguna de las diagonales
+   * @param columna columna del mismo número presente en alguna de la diagonales
+   * @param direccion "nose" o "neso", nombra las dos diagonales para mostrarla 
+   * @return una diagonal del array
    * 
    * @author Alberto Moreno Gonzalez
    */
-  public static int[] diagonal(int[][] array, int numero) {
-    
+  public static int[] diagonal(int[][] array, int fila, int columna, String direccion) {
+    int[] diagonalAux = new int [array.length];
+    int k = 0;
 
-    return ;
-  } //public static String coordenadasEnArrayBiInt(int[][] array, int numero)
+    switch (direccion) {
+      case "nose":
+        for (int i = columna; i < array[0].length; i++) {
+          for (int j = 0; j < array.length; j++) {
+            if (i - fila == j - columna) {
+              diagonalAux[k] = array[i][j];
+              k++;
+            }
+          } //for (int j = 0; j < array.length; j++)
+        } //for (int i = 0; i < array[0].length; i++)
+        break;
+      case "neso":
+        for (int i = 0; i < array[0].length; i++) {
+          for (int j = 0; j < array.length ; j++) {
+            if (i + j == fila + columna) {
+              diagonalAux[k] = array[i][j];
+              k++;
+            }
+          } //for (int j = 0; j < array.length; j++)
+        } //for (int i = 0; i < array[0].length; i++)
+        break;
+      default:
+
+    } //switch (direccion)
+
+    int[] diagonal = new int [k];
+
+    for (int i = 0; i < k; i++) {
+      diagonal[i] = diagonalAux[i];
+    }
+
+    return diagonal;
+  } //public static int[] diagonal(int[][] array, int fila, int columna, String direccion)
 }
