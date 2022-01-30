@@ -1,5 +1,4 @@
 import funciones.funcionesTema803; //importamos la biblioteca de funciones funcionesTema803
-import funciones.funcionesTema802; //importamos la biblioteca de funciones funcionesTema802
 import java.util.Scanner; //importamos la clase Scanner
 
 /**
