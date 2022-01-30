@@ -274,4 +274,27 @@ public class funcionesTema803 {
 
     return "";
   } //public static String coordenadasEnArrayBiInt(int[][] array, int numero)
+
+
+  /**
+   * La función devuelve un array que contiene una de las diagonales del array
+   * bidimensional que se pasa como parámetro. Se pasan como parámetros
+   * fila, columna y dirección. La fila y la columna determinan el número que
+   * marcará las dos posibles diagonales dentro del array. La dirección es
+   * una cadena de caracteres que puede ser “nose” o “neso”. La cadena
+   * “nose” indica que se elige la diagonal que va del noroeste hacia el sureste,
+   * mientras que la cadena “neso” indica que se elige la diagonal que va del
+   * noreste hacia el suroeste.
+   *
+   * @param array array donde se va a comprobar el número
+   * @param numero número que se quiere comprobar si es punto de silla
+   * @return texto diciendo si el número es o no punto de silla
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static int[] diagonal(int[][] array, int numero) {
+    
+
+    return ;
+  } //public static String coordenadasEnArrayBiInt(int[][] array, int numero)
 }

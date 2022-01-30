@@ -181,7 +181,7 @@ public class funcionesTema802 {
    * 
    * @author Alberto Moreno Gonzalez
    */
-  public static long mediaArrayInt(int[] array) {
+  public static double mediaArrayInt(int[] array) {
     long sumatorio = 0; //definimos e inicializamos la variable sumatorio donde iremos sumando cada valor del array
 
     //en cada iteración se sumará el valor del array coorespondiente
@@ -189,7 +189,7 @@ public class funcionesTema802 {
       sumatorio = sumatorio + array[i];
     }
 
-    return sumatorio / array.length; //la función devolverá el sumatorio partido la longitud del array, es decir, la media
+    return ((double)sumatorio / array.length); //la función devolverá el sumatorio partido la longitud del array, es decir, la media
   } //public static long mediaArrayInt(int[] array)
 
 
