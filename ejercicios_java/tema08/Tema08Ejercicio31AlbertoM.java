@@ -1,4 +1,5 @@
 import funciones.funcionesTema803; //importamos la biblioteca de funciones funcionesTema803
+import funciones.funcionesTema802; //importamos la biblioteca de funciones funcionesTema802
 import java.util.Scanner; //importamos la clase Scanner
 
 /**
@@ -53,6 +54,6 @@ public class Tema08Ejercicio31AlbertoM {
     System.out.println(" ");
 
     //se muestra la columna
-    funciones.funcionesTema803.columnaDeArrayBiInt(array, numColumna);
+    funciones.funcionesTema802.muestraArray(funcionesTema803.columnaDeArrayBiInt(array, numColumna), array.length);
   }
 }

@@ -57,6 +57,6 @@ public class Tema08Ejercicio32AlbertoM {
     System.out.print("Las coordenadas del número " + numero + " son ");
 
     //se muestra la coordenada
-    funciones.funcionesTema803.coordenadasEnArrayBiInt(array, numero);
+    System.out.println(funciones.funcionesTema803.coordenadasEnArrayBiInt(array, numero));
   }
 }
