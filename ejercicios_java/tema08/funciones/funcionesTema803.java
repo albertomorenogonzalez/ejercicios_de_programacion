@@ -1,4 +1,5 @@
 package funciones; //se define el paquete de funciones
+import funciones.funcionesTema802; //importamos el paquete de funciones de arrays funcionesTema802
 
 /**
  * Funciones de los ejercicios del tema 8 (29-34)
@@ -187,7 +188,7 @@ public class funcionesTema803 {
 
 
   /**
-   * Devuelve la fila y la columna (en un array
+   * La función devuelve la fila y la columna (en un array
    * con dos elementos) de la primera ocurrencia de un número dentro de un
    * array bidimensional. Si el número no se encuentra en el array, la función
    * devuelve el array {-1, -1}.
@@ -212,18 +213,34 @@ public class funcionesTema803 {
 
       //si el número se ha encontrado significa que j es menor que el número de columnas del array (array[0].length)
       //si es asi la variable encontrado será verdadera, por lo que finalizaremos con el bucle de las filas
-      //en tal caso la varibale fila cogerá el valor de i e columna el de j
+      //en tal caso la variable fila cogerá el valor de i e columna el de j
       if (j < array[0].length) {
         encontrado = true;
 
         fila = i;
         columna = j;
-      }
-    } 
+      } //if (j < array[0].length)
+    } //for (i = 0; (i < array.length) && (!encontrado); i++)
 
     //se mostrarán las coordenadas del número en un String. Si no sea ha encontrado el número las coordenadas serán [-1,-1]
-    System.out.println("Las coordenadas del número " + numero + " son [" + fila + "," + columna + "]");
+    System.out.println("[" + fila + "," + columna + "]");
 
+    return "";
+  } //public static String coordenadasEnArrayBiInt(int[][] array, int numero)
+
+
+  /**
+   * La función dice si un número es o no punto de silla, es decir,
+   * mínimo en su fila y máximo en su columna.
+   *
+   * @param array array donde se va a comprobar el número
+   * @param numero número que se quiere comprobar si ees punto de silla
+   * @return texto diciendo si el número es o no punto de silla
+   * 
+   * @author Alberto Moreno Gonzalez
+   */
+  public static String esPuntoDeSilla(int[][] array, int numero) {
+    
     return "";
   } //public static String coordenadasEnArrayBiInt(int[][] array, int numero)
 }
