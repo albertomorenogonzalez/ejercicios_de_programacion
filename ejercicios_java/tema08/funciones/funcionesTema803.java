@@ -4,7 +4,7 @@ import funciones.funcionesTema802; //importamos el paquete de funciones de array
 /**
  * Funciones de los ejercicios del tema 8 (29-34)
  *
- * eca de funciones para arrays bidimensionales (de dos dimensiones) 
+ * Crea un biblioteca de funciones para arrays bidimensionales (de dos dimensiones) 
  * de números enteros que contenga las siguientes funciones:
  * 
  * @author Alberto Moreno Gonzalez
@@ -75,7 +75,7 @@ public class funcionesTema803 {
         System.out.printf("%-1s %3d " ,"|" ,array[i][j]);
       }
 
-      System.out.print("|"); //se meustra el borde derecho de cada celda
+      System.out.print("|"); //se muestra el borde derecho de cada celda
 
       System.out.println(" ");
 
@@ -151,17 +151,18 @@ public class funcionesTema803 {
    * 
    * @author Alberto Moreno Gonzalez
    */
-  public static void filaDeArrayBiInt(int[][] array, int numFila) {
+  public static int[] filaDeArrayBiInt(int[][] array, int numFila) {
     //se define el array donde se va a guardar la fila
     int[] fila = new int [array[0].length];
 
-    //se asigna cada valor de la fila al array y se muestra seguidamente
+    //se asigna cada valor de la fila al array
     //con array[0].length calculamos el número de filas del array
     for (int i = 0; i < array[0].length; i++) {
       fila[i] = array[numFila][i];
-      System.out.print(fila[i] + " ");
     }
-  } //public static void filaDeArrayBiInt(int[][] array, int numFila)
+
+    return fila;
+  } //public static int[] filaDeArrayBiInt(int[][] array, int numFila)
 
 
   /**
@@ -174,17 +175,18 @@ public class funcionesTema803 {
    * 
    * @author Alberto Moreno Gonzalez
    */
-  public static void columnaDeArrayBiInt(int[][] array, int numColumna) {
+  public static int[] columnaDeArrayBiInt(int[][] array, int numColumna) {
     //se define el array donde se va a guardar la columna
     int[] columna = new int [array.length];
 
-    //se asigna cada valor de la columna al array y se muestra seguidamente
+    //se asigna cada valor de la columna al array
     //con array.length calculamos el número de columnas del array
     for (int i = 0; i < array.length; i++) {
       columna[i] = array[i][numColumna];
-      System.out.print(columna[i] + " ");
     }
-  } //public static void columnaDeArrayBiInt(int[][] array, int numFila)
+
+    return columna;
+  } //public static int[] columnaDeArrayBiInt(int[][] array, int numFila)
 
 
   /**
@@ -222,10 +224,10 @@ public class funcionesTema803 {
       } //if (j < array[0].length)
     } //for (i = 0; (i < array.length) && (!encontrado); i++)
 
-    //se mostrarán las coordenadas del número en un String. Si no sea ha encontrado el número las coordenadas serán [-1,-1]
-    System.out.println("[" + fila + "," + columna + "]");
+    //se guardarán las coordenadas del número en un String. Si no sea ha encontrado el número las coordenadas serán [-1,-1]
+    String coordenadas = ("[" + fila + "," + columna + "]");
 
-    return "";
+    return coordenadas;
   } //public static String coordenadasEnArrayBiInt(int[][] array, int numero)
 
 
@@ -234,13 +236,42 @@ public class funcionesTema803 {
    * mínimo en su fila y máximo en su columna.
    *
    * @param array array donde se va a comprobar el número
-   * @param numero número que se quiere comprobar si ees punto de silla
+   * @param numero número que se quiere comprobar si es punto de silla
    * @return texto diciendo si el número es o no punto de silla
    * 
    * @author Alberto Moreno Gonzalez
    */
   public static String esPuntoDeSilla(int[][] array, int numero) {
+    String coordenadasNumero = funciones.funcionesTema803.coordenadasEnArrayBiInt(array, numero); //en este String guardaremos las coordenadas del número
+    int numFila = 0; //inicializamos la variable donde guardaremos el número de la fila del número introducido
+    int numColumna = 0; //inicializamos la variable donde guardaremos el número de la columna del número introducido
+
+    //si las coordenadas del número son las [-1,-1] significa que el número no se encuentra en el array, por lo que la función lo dirá
+    switch (coordenadasNumero) {
+      case "[-1,-1]":
+        System.out.println("El número no se encuentra en el array");
+        break;
+      //si el número se encuentra en el array, el valor de la fila se guardará en numFila y el de la columna en numColumna. El valor de la fila es el segundo 
+      //caracter del coordenadas número (.charAt(1)) y el cuarto caracter es el valor de la columna (.charAt(3)) primero se asa a String para que la función
+      //no coja el valor en ASCII y luego se pasa a int para guardarlo correctamente en numFila y numColumna. La fila y la columna se guardan cada una 
+      //en un array unidimensional gracias a fila/columnaDeArrayBiInt. Gracias a las funciones de funcionesTema802 minimoArayInt y maximoArrayInt comporbaremos
+      //si el número consultado es el mínimo de su fila y el máximo de su columna. Seguidamente la función mostrará el texto correspondiente. 
+      default: 
+        for (int i = 0; i < coordenadasNumero.length(); i++) {
+          numFila = Integer.valueOf(String.valueOf(coordenadasNumero.charAt(1)));
+          numColumna = Integer.valueOf(String.valueOf(coordenadasNumero.charAt(3)));
+        }
+  
+        int[] fila = funciones.funcionesTema803.filaDeArrayBiInt(array, numFila);
+        int[] columna = funciones.funcionesTema803.columnaDeArrayBiInt(array, numColumna);
     
+        if ((numero == funciones.funcionesTema802.minimoArrayInt(fila)) && (numero == funciones.funcionesTema802.maximoArrayInt(columna))) {
+          System.out.println("El número es punto de silla");
+        } else {
+          System.out.println("El número no es punto de silla");
+        } //if ((numero == funciones.funcionesTema802.minimoArrayInt(fila)) && (numero == funciones.funcionesTema802.maximoArrayInt(columna)))
+    } //switch (coordenadasNumero)
+
     return "";
   } //public static String coordenadasEnArrayBiInt(int[][] array, int numero)
 }
