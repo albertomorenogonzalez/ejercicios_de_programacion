@@ -85,7 +85,6 @@ public class Tema08Ejercicio36AlbertoM {
       return arrayPrimos;
     } else {
       return arraySiNoHayPrimos;
-    }
-    
+    } //if (j > 0)
   } //public static int[] filtraPrimos(int x[])
 }
