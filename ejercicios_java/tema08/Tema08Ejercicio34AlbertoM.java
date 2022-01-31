@@ -3,8 +3,14 @@ import funciones.funcionesTema802; //importamos la biblioteca de funciones funci
 import java.util.Scanner; //importamos la clase Scanner
 
 /**
- * Dice si un número es o no punto de silla, es decir,
- * mínimo en su fila y máximo en su columna
+ * Programa que devuelve un array que contiene una de las diagonales del array
+ * bidimensional que se pasa como parámetro. Se pasan como parámetros
+ * fila, columna y dirección. La fila y la columna determinan el número que
+ * marcará las dos posibles diagonales dentro del array. La dirección es
+ * una cadena de caracteres que puede ser “nose” o “neso”. La cadena
+ * “nose” indica que se elige la diagonal que va del noroeste hacia el sureste,
+ * mientras que la cadena “neso” indica que se elige la diagonal que va del
+ * noreste hacia el suroeste.
  *
  * @author Alberto Moreno Gonzalez
  */
@@ -12,8 +18,8 @@ public class Tema08Ejercicio34AlbertoM {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in); //declaramos la variable para usar la clase Scanner
 
-    System.out.println("PROGRAMA QUE DICE SI UN NÚMERO ES O NO PUNTO DE SILLA");
-    System.out.println("------------------------------------------------------");
+    System.out.println("PROGRAMA QUE DEVUELVE UNA DIAGONAL DE UN ARRAY BIDIMENSIONAL");
+    System.out.println("-------------------------------------------------------------");
     System.out.println(" ");
 
     //se piden las filas y las columnas del array, el valor máximo y el valor mínimo del intervalo
