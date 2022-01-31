@@ -1,4 +1,4 @@
-# Ejercicicos de programación 1ºDAM
+# Ejercicicos de programación 1º DAM
 Ejercicios de la asignatura de programación de 1º DAM del IESCampanillas
 
 Libro utilizado: Aprende Java con ejercicios, de nuestro profesor Luis José Sánchez González
