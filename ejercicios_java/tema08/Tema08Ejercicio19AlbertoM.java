@@ -340,7 +340,7 @@ public class Tema08Ejercicio19AlbertoM {
           digitoABi = "0" + digitoABi;
         } //if (funciones.funcionesTema801.digitos(Long.valueOf(digitoABi)) == 1)
 
-        numeroBi = numeroBi + digitoABi;
+        numeroBi = digitoABi + numeroBi;
 
         numeroOc /= 10;
       } //while (numeroOc > 0)
