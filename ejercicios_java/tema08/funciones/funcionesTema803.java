@@ -297,6 +297,8 @@ public class funcionesTema803 {
   public static int[] diagonal(int[][] array, int fila, int columna, String direccion) {
     //declaramos un array auxiliar de tamaño número de columnas del array para guardar ahí los números de la diagonal mientras no sepamos su longitud
     int[] diagonalAux = new int [array.length]; 
+    int i; //definimos el índice i para usarlo en los bucles de la función que recorren filas
+    int j; //definimos el índice j para usarlo en los bucles de la función que recorren columnas
     int k = 0; //declaramos e inicializamos un índice k que va ir aumentando cada vez que un número sea guardado en el array
 
     //según la dirección indicada, la fórmula para encontrar los números de la diagonal con el número de fila y columna indicados
@@ -306,8 +308,8 @@ public class funcionesTema803 {
     //ese bucle otro que usa el índice j para comprobar las columnas.
     switch (direccion) {
       case "nose":
-        for (int i = 0; i < array[0].length; i++) {
-          for (int j = 0; j < array.length; j++) {
+        for (i = 0; i < array[0].length; i++) {
+          for (j = 0; j < array.length; j++) {
             if (i - fila == j - columna) {
               diagonalAux[k] = array[i][j];
               k++;
@@ -316,8 +318,8 @@ public class funcionesTema803 {
         } //for (int i = 0; i < array[0].length; i++)
         break;
       case "neso":
-        for (int i = 0; i < array[0].length; i++) {
-          for (int j = 0; j < array.length ; j++) {
+        for (i = 0; i < array[0].length; i++) {
+          for (j = 0; j < array.length ; j++) {
             if (i + j == fila + columna) {
               diagonalAux[k] = array[i][j];
               k++;
@@ -332,7 +334,7 @@ public class funcionesTema803 {
     int[] diagonal = new int [k]; //se declara el array unidimensional para guadar la diagonal completa con su tamaño real (k)
 
     //hasta llegar a k, se guardará en el array cada posición de diagonalAux correspondiente
-    for (int i = 0; i < k; i++) {
+    for (i = 0; i < k; i++) {
       diagonal[i] = diagonalAux[i];
     }
 
