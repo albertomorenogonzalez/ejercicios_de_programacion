@@ -69,42 +69,7 @@ public class Tema08Ejercicio34AlbertoM {
     String direccion = s.nextLine().toLowerCase();
     System.out.println(" ");
 
-    int[] diagonalAux = new int [array.length];
-    int k = 0;
-
-    switch (direccion) {
-      case "nose":
-        for (int i = columna; i < array[0].length; i++) {
-          for (int j = 0; j < array.length; j++) {
-            if (i - fila == j - columna) {
-              diagonalAux[k] = array[i][j];
-              k++;
-            }
-          } //for (int j = 0; j < array.length; j++)
-        } //for (int i = 0; i < array[0].length; i++)
-        break;
-      case "neso":
-        for (int i = 0; i < array[0].length; i++) {
-          for (int j = 0; j < array.length ; j++) {
-            if (i + j == fila + columna) {
-              diagonalAux[k] = array[i][j];
-              k++;
-            }
-          } //for (int j = 0; j < array.length; j++)
-        } //for (int i = 0; i < array[0].length; i++)
-        break;
-      default:
-
-    } //switch (direccion)
-
-    System.out.println(k);
-
-    int[] diagonal = new int [k];
-
-    for (int i = 0; i < k; i++) {
-      diagonal[i] = diagonalAux[i];
-    }
-
-    //funciones.funcionesTema802.muestraArray(funciones.funcionesTema803.diagonal(array, fila, columna, direccion), funciones.funcionesTema803.diagonal(array, fila, columna, direccion).length);
+    //se muestra la diagonal
+    funciones.funcionesTema802.muestraArray(funciones.funcionesTema803.diagonal(array, fila, columna, direccion), funciones.funcionesTema803.diagonal(array, fila, columna, direccion).length);
   }
 }
