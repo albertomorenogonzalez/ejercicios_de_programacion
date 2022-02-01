@@ -38,11 +38,14 @@ public class Tema08Ejercicio37AlbertoM {
    * @author Alberto Moreno Gonzalez
    */
   public static String convierteEnMorse(int n) {
-    String numeroMorse = ""; //se declara la variable String numeroPalotes para guardar ahí la cadena de caracteres resultante
-    String digitoMorse = "";
+    String numeroMorse = ""; //se declara la variable String numeroMorse para guardar ahí la cadena de caracteres resultante
+    String digitoMorse = ""; //declaramos también la variable String digitoMorse para asignar a cada dígito su valor en morse, luego se une a numeroMorse
     int numeroVolteado = funciones.funcionesTema801.voltea(n); //se voltea el número introducido para empezar a operar sobre él desde la izquierda
     int digito = 0; //inicializamos la variable dígito
 
+    //numeroVolteado se irá dividiendo entre diez en cada iteración hasta que llegue a cero. El resto de cada división corresponde a un dígito del número introducido.
+    //cada dígito corresponde a un valor en morse que se guarda en digitoMorse para posteriormente añadirselo (por la derecha) a numeroMorse,
+    //así hasta hacerlo con todos los dígitos del número.
     while (numeroVolteado > 0) {
       digito = numeroVolteado % 10;
 
