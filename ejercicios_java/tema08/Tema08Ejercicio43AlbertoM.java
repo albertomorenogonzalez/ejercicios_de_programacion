@@ -30,7 +30,7 @@ public class Tema08Ejercicio43AlbertoM {
       System.out.println(linea('*', numCaracteresLinea));
 
       numCaracteresLinea--;
-    }
+    } //for (int i = 0; i < altura; i++)
   }
 
   /**
