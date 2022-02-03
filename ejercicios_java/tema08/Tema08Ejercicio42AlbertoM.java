@@ -33,7 +33,7 @@ public class Tema08Ejercicio42AlbertoM {
       
 
       numCaracteresLinea--;
-    }
+    } //for (int i = 0; i < altura; i++)
   }
 
   /**
