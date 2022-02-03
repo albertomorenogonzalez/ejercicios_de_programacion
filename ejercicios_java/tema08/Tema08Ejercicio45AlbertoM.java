@@ -62,5 +62,5 @@ public class Tema08Ejercicio45AlbertoM {
     } //for (int i = 0; i < repeticiones; i++)
 
     return linea;
-  } //public static String linea (char caracter, int repeticiones)
+  } //public static String linea (char caracter, int repeticiones) 
 }
