@@ -25,7 +25,7 @@ public class Tema08Ejercicio37AlbertoM {
     int numero = Integer.parseInt(s.nextLine());
     System.out.println(" ");
 
-    System.out.println(numero + "en el sistema de palotes es " + convierteEnMorse(numero));
+    System.out.println(numero + "en  morse es " + convierteEnMorse(numero));
   }
 
   /**
