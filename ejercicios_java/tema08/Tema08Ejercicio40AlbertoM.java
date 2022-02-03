@@ -58,9 +58,14 @@ public class Tema08Ejercicio40AlbertoM {
    */
   public static  int[] filtraCon7(int x[]) {
     int[] arrayCon7Aux = new int [x.length]; //definimos un array de longitud array parámetro donde guardaremos todos los números con 7 del array
-    int i;
-    int k = 0;
+    int i; //definimos el índice i para usarlo en los bucles for
+    int k = 0; //definimos e inicializamos a 0 la variable k, que aumentará cada vez que e guarde un número capicúa en el array
 
+    //se irá comprobando cada valor del array gracias al bucle for. Dentro de este bucle, para cada valor del array declaramos
+    //una variable booleana denominada encontrada y declarada como falsa. Seguidamente tendremos un bucle anidado de indice j
+    //donde recorreremos cada dígito del valor. Si se encuentra un siete el número se guardará en arrayCon7Aux,
+    //k aumentará y encontrado se volverá veradero y el bucle de índice j parará, y se pasará al siguiente valor del array.
+    //Si no se encuentra un 7 simplemente se pasará al siguiente valor del array, sin aumentar k ni guadarse el valor en el array arrayCon7Aux
     for (i = 0; i < x.length; i++) {
       boolean encontrado = false;
       for (int j = 0; (j < funciones.funcionesTema801.digitos(x[i]) && (!encontrado)); j++) {
