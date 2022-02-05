@@ -20,20 +20,27 @@ public class Tema08Ejercicio45AlbertoM {
     int altura = Integer.parseInt(s.nextLine());
     System.out.println(" ");
 
-    int numCaracteresLinea = altura; //declaramos el número de caracteres de la primera línea que es igual a la altura
+    int numCaracteresValle = altura * 2 - 3; //utilizaremos esta variable para determinar los espacios que conforman el valle
 
-    //este bucle pintará cada línea del valle hasta que i sea igual a la altura
-    //el número de caracteres de la línea disminuirá en uno en cada iteración
+    //el bucle imprimirá primero una línea de asteriscos, luego una de espacios y después otra línea de asteriscos en cada
+    //iteración. El tamaño de las líneas de de asteriscos es igual a i + 1, excepto la segunda línea de asteriscos que es igual
+    //a i porque si no sobraría un asterisco (el caracter extremo derecho de la primera línea de asteriscos "se tiene que fusionar"
+    //con el caracter extremo izquierda de la segunda). En la última linea numCaracteresValle es igual a 0 y por tanto no se 
+    //imprimen espacios, numCaracteresValle disminuye en 2 en cada iteración
     for (int i = 0; i < altura; i++) {
-      if (i == 0) {
-        System.out.println(linea('*', '*', numCaracteresLinea));
+      System.out.print(linea('*', '*', i + 1));
+      System.out.print(linea(' ', ' ', numCaracteresValle));
+
+      if (i == altura - 1) {
+        System.out.println(linea('*', '*', i));
       } else {
-        System.out.println(linea('*', ' ', numCaracteresLinea));
-      } //if (i == 0)
-      
-      numCaracteresLinea--;
+        System.out.println(linea('*', '*', i + 1));
+      }
+
+      numCaracteresValle-=2;
     } //for (int i = 0; i < altura; i++) 
   }
+
 
   /**
    * La función pinta una línea de longitud determinada.
