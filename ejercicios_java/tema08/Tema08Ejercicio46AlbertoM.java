@@ -2,9 +2,8 @@ import java.util.Scanner; //importamos la clase Scanner
 
 /**
  * Realiza un programa que pinte un valle tal como se muestra en los ejemplos. El
-usuario debe introducir la altura de la figura. Podemos suponer que el usuario
-introduce una altura mayor o igual a 3.
-
+ * usuario debe introducir la altura de la figura. Podemos suponer que el usuario
+ * introduce una altura mayor o igual a 3.
  *
  * @author Alberto Moreno Gonzalez
  */
