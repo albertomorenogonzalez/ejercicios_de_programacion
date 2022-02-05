@@ -33,7 +33,7 @@ public class Tema08Ejercicio36AlbertoM {
 
     System.out.println("Array:\n");
 
-    int[] array = funciones.funcionesTema802.generaArrayInt(10, 0, 999);
+    int[] array = funciones.funcionesTema802.generaArrayInt(10, 999, 0);
 
     funciones.funcionesTema802.muestraArrayEnTabla(array, array.length);
 
