@@ -11,7 +11,8 @@ import funciones.funcionesTema802; //importamos la biblioteca de funciones funci
  * @author Alberto Moreno Gonzalez
  */
 public class Tema08Ejercicio51AlbertoM { 
-  public static void main(String[] args) {System.out.println("PROGRAMA QUE INDICA SI LOS DIEZ NÚEROS DE UN ARRAY GENERADO SON PRIMOS O CAPICÚAS");
+  public static void main(String[] args) {
+    System.out.println("PROGRAMA QUE INDICA SI LOS DIEZ NÚEROS DE UN ARRAY GENERADO SON PRIMOS O CAPICÚAS");
     System.out.println("----------------------------------------------------------------------------------");
     System.out.println(" ");
 

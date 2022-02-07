@@ -11,7 +11,8 @@ import funciones.funcionesTema802; //importamos la biblioteca de funciones funci
  * @author Alberto Moreno Gonzalez
  */
 public class Tema08Ejercicio47AlbertoM { 
-  public static void main(String[] args) {System.out.println("PROGRAMA QUE CONVIERTE UN ARRAY EN UN STRING");
+  public static void main(String[] args) {
+    System.out.println("PROGRAMA QUE CONVIERTE UN ARRAY EN UN STRING");
     System.out.println("---------------------------------------------");
     System.out.println(" ");
 

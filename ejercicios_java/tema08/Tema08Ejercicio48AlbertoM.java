@@ -10,7 +10,8 @@ import funciones.funcionesTema802; //importamos la biblioteca de funciones funci
  * @author Alberto Moreno Gonzalez
  */
 public class Tema08Ejercicio48AlbertoM { 
-  public static void main(String[] args) {System.out.println("PROGRAMA QUE CONCATENA DOS ARRAYS");
+  public static void main(String[] args) {
+    System.out.println("PROGRAMA QUE CONCATENA DOS ARRAYS");
     System.out.println("----------------------------------");
     System.out.println(" ");
 

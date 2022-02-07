@@ -1,6 +1,5 @@
 import funciones.funcionesTema801; //importamos la biblioteca de funciones funcionesTema801 para usar una de sus funciones
 import funciones.funcionesTema802; //importamos la biblioteca de funciones funcionesTema802 para usar una de sus funciones
-import java.util.Scanner; //importamos la clase Scanner
 
 /**
  * Crea la función de manejo de arrays que tenga la siguiente cabecera y que haga
@@ -23,8 +22,6 @@ import java.util.Scanner; //importamos la clase Scanner
  */
 public class Tema08Ejercicio38AlbertoM { 
   public static void main(String[] args) {
-    Scanner s = new Scanner(System.in); //declaramos la variable para usar la clase Scanner
-
     System.out.println("PROGRAMA QUE DEVUELVE UN ARRAY CON TODOS LOS NÚMEROS CAPICÚAS DE OTRO ARRAY");
     System.out.println("----------------------------------------------------------------------------");
     System.out.println(" ");
