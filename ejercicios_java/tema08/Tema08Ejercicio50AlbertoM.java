@@ -51,9 +51,12 @@ public class Tema08Ejercicio50AlbertoM {
    */
   public static int[] mezcla(int[] a, int[] b) {
     int[] arrayMez = new int [a.length + b.length]; //se declara el array donde se va a guardar la mezcla de ambos arrays parámetro
-    int j = 0;
-    int k = 0;
+    int j = 0; //indice que usaremos para asignar los valores del array a arrayMez
+    int k = 0; //indice que usaremos para asignar los valores del array b arrayMez
 
+    //cuando i sea par (siempre y cuando queden valores en el array a - i menor que el doble de la longitud de a) se asignará un valor de a a arrayMez
+    //cuando i sea impar (siempre y cuando queden valores en el array b) se asignará un valor de b a arrayMez
+    //cuando no queden valores en un array pero sí en otro se terminarán de asignar los del otro
     for (int i = 0; i < arrayMez.length; i++) {
       if (((i % 2 == 0) && (i < a.length * 2)) || (i > b.length * 2)) {
         arrayMez[i] = a[j];
