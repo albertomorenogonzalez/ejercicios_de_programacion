@@ -31,7 +31,13 @@ public class Tema08Ejercicio54AlbertoM {
     int digitoNum = Integer.parseInt(s.nextLine());
     System.out.println(" ");
 
-    System.out.println("El " + digitoNum + " aparece " + ocurrencias(digitoNum, numero) + " veces.\n");
+    System.out.print("El " + digitoNum + " aparece " + ocurrencias(digitoNum, numero));
+
+    if (ocurrencias(digitoNum, numero) == 1) {
+      System.out.println(" vez\n");
+    } else {
+      System.out.println(" veces\n");
+    } //if (ocurrencias(digitoNum, numero) == 1)
 
     System.out.println("Array:\n");
 
@@ -46,7 +52,13 @@ public class Tema08Ejercicio54AlbertoM {
     int digitoArray = Integer.parseInt(s.nextLine());
     System.out.println(" ");
 
-    System.out.println("El " + digitoArray + " aparece " + ocurrencias(digitoArray, array) + " veces.");
+    System.out.print("El " + digitoArray + " aparece " + ocurrencias(digitoArray, array));
+
+    if (ocurrencias(digitoArray, array) == 1) {
+      System.out.println(" vez\n");
+    } else {
+      System.out.println(" veces\n");
+    } //if (ocurrencias(digitoArray, array) == 1)
   }
 
 
@@ -61,6 +73,9 @@ public class Tema08Ejercicio54AlbertoM {
    * @author Alberto Moreno Gonzalez
    */
   public static int ocurrencias(int digito, int n) {
+    //la variable ocurrencias es un contador de las veces que aparece un dígito dentro de un número
+    //tenemos un bucle for each que dará tantas iteraciones como dígitos tenga el número donde se quiere comprobar
+    //en cada iteración se comprobará si un dígito es el número introducido. Si es así, ocurrencias sumará uno 
     int ocurrencias = 0; 
 
     for (int i = 0; i < funciones.funcionesTema801.digitos(n); i++) {
@@ -86,6 +101,9 @@ public class Tema08Ejercicio54AlbertoM {
   public static int ocurrencias(int digito, int[] a) {
     int ocurrencias = 0;
 
+    //se usará la función ocurrencias para calcular las ocurrencias cada valor del array
+    //una vez encontrado el número, se sumará a la variable ocurrencias y se pasará
+    //a comprobar als ocurrencias del siguiente valor, así hasta recorrer todo el array.
     for (int i = 0; i < a.length; i++) {
       ocurrencias = ocurrencias + ocurrencias(digito, a[i]);
     } 
