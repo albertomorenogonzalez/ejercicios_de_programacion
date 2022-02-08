@@ -9,8 +9,17 @@
  * @author Alberto Moreno Gonzalez
  */
 public abstract class Vehiculo {
-  private int vehiculosCreados = 0;
-  private int kilometrosTotales = 0;
+  private int vehiculosCreados;
+  private int kilometrosTotales;
+
+  public Vehiculo(int vehiculosCreados, int kilometrosTotales) {
+    this.vehiculosCreados = vehiculosCreados;
+    this.kilometrosTotales = kilometrosTotales;
+  }
+
+  public int sumaKilometrosTotales(int km) {
+    return this.kilometrosTotales = this.kilometrosTotales + km;
+  }
 
   public int getVehiculosCreados() {
     return vehiculosCreados;
@@ -25,6 +34,6 @@ public abstract class Vehiculo {
   }
 
   public void setKilometrosTotales(int kilometrosTotales) {
-    this.kilometrosTotales = this.kilometrosTotales + kilometrosTotales;
+    this.kilometrosTotales = kilometrosTotales;
   }
 }

@@ -18,6 +18,8 @@ public class Vehiculos {
     System.out.println("----------");
 
     int opcion = 0;
+    int kMTCoche = 0;
+    int kmTBicicleta = 0;
 
     while (opcion != 9) {
       Bicicleta bicicleta1 = new Bicicleta();
@@ -42,8 +44,9 @@ public class Vehiculos {
         case 1:
           int kMBici = (int)(Math.random() * 10);
           bicicleta1.andaBicicleta(kMBici);
-          bicicleta1.setKilometrosRecorridosBicicleta(kMBici);
-          bicicleta1.setKilometrosTotales(kMBici);
+          System.out.println(" ");
+          bicicleta1.sumaKilometrosBicicleta(kMBici);
+          bicicleta1.sumaKilometrosTotales(kMBici);
           break;
         case 2:
           bicicleta1.caballito();
@@ -51,23 +54,24 @@ public class Vehiculos {
         case 3:
           int kMCoche = (int)(Math.random() * 10);
           coche1.andaCoche(kMCoche);
-          coche1.setKilometrosRecorridosCoche(kMCoche);
-          coche1.setKilometrosTotales(kMCoche);
+          System.out.println(" ");
+          coche1.sumaKilometrosCoche(kMCoche);
+          coche1.sumaKilometrosTotales(kMCoche);
           break;
         case 4:
           coche1.quemaRueda();
           break;
         case 5:
-          System.out.println(bicicleta1.getKilometrosRecorridosBicicleta());
+          System.out.println("Ha recorrido con su bicicleta en total " + bicicleta1.getKilometrosRecorridosBicicleta() + " km");
           break;
         case 6:
-          System.out.println(coche1.getKilometrosRecorridosCoche());
+          System.out.println("Ha recorrido con su coche en total " + coche1.getKilometrosRecorridosCoche() + " km");
           break;
         case 7:
-          System.out.println(coche1.getKilometrosTotales());
+          System.out.println("Ha recorrido en total " + coche1.getKilometrosTotales() + " km");
           break;
         case 8:
-          System.out.println(coche1.getVehiculosCreados());
+          System.out.println("Hay " + coche1.getVehiculosCreados() + " vehículos creados" );
           break;
         default:
         

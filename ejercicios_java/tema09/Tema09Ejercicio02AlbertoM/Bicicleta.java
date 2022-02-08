@@ -11,6 +11,10 @@
 public class Bicicleta extends Vehiculo {
   private int kilometrosRecorridosBicicleta;
 
+  public Bicicleta(int kilometrosRecorridosBicicleta) {
+    this.kilometrosRecorridosBicicleta = kilometrosRecorridosBicicleta;
+  }
+
   public void caballito() {
     System.out.println("*hace el caballito con la bicicleta");
   }
@@ -20,12 +24,16 @@ public class Bicicleta extends Vehiculo {
   }
 
   public void setKilometrosRecorridosBicicleta(int kilometrosRecorridosBicicleta) {
-    this.kilometrosRecorridosBicicleta = this.kilometrosRecorridosBicicleta + kilometrosRecorridosBicicleta;
+    this.kilometrosRecorridosBicicleta = kilometrosRecorridosBicicleta;
   }
 
   public void andaBicicleta(int km) {
     System.out.println("*se monta en la bicicleta y anda...");
 
     System.out.println("Ha recorrido " + km + " kilómetros.");
+  }
+
+  public int sumaKilometrosBicicleta(int km) {
+    return this.kilometrosRecorridosBicicleta = this.kilometrosRecorridosBicicleta + km;
   }
 }
