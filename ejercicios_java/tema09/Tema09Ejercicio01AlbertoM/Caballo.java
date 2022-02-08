@@ -5,11 +5,11 @@
  * @author Alberto Moreno Gonzalez
  */
 public class Caballo { 
-  String nombre;
-  double tamanio;
-  String sexo;
-  int edad;
-  String raza;
+  private String nombre;
+  private double tamanio;
+  private String sexo;
+  private int edad;
+  private String raza;
 
   public Caballo (String nombre, double tamanio, String sexo, int edad, String raza) {
     this.nombre = nombre;
