@@ -18,11 +18,9 @@ public class Ex14amg0201 {
     System.out.println("--------------------------------------------------------");
     System.out.println(" ");
 
-    int eslora = 0;
-
     System.out.println("Introduzca la eslora del barco (núm. entero mayor o igual a 3): ");
     System.out.print("> ");
-    eslora = Integer.parseInt(System.console().readLine());
+    int eslora = Integer.parseInt(System.console().readLine());
     System.out.println(" ");
 
     int linea = 1;
@@ -41,7 +39,7 @@ public class Ex14amg0201 {
         }
         
         int posicionSaco = posicionZorro;
-        while (posicionSaco == posicionZorro) {
+        while ((posicionSaco == posicionZorro) || (posicionSaco == posicionComerciante)) {
           posicionSaco = ((int)(Math.random() * eslora));
         }
 
