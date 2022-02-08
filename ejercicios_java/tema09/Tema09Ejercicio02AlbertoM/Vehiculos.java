@@ -19,12 +19,15 @@ public class Vehiculos {
 
     int opcion = 0;
     int kMTCoche = 0;
-    int kmTBicicleta = 0;
+    int kMTBicicleta = 0;
+    int kMTotales = 0;
+    int vehiculosCreados = 0;
 
     while (opcion != 9) {
-      Bicicleta bicicleta1 = new Bicicleta();
-      Coche coche1 = new Coche();
-      coche1.setVehiculosCreados(2);
+      vehiculosCreados++;
+      Bicicleta bicicleta1 = new Bicicleta(vehiculosCreados, kMTotales, kMTBicicleta);
+      vehiculosCreados++;
+      Coche coche1 = new Coche(vehiculosCreados, kMTotales, kMTCoche );
 
       System.out.println("Elige una opción (1-8):");
       System.out.println("1. Anda con la bicicleta");
@@ -45,8 +48,8 @@ public class Vehiculos {
           int kMBici = (int)(Math.random() * 10);
           bicicleta1.andaBicicleta(kMBici);
           System.out.println(" ");
-          bicicleta1.sumaKilometrosBicicleta(kMBici);
-          bicicleta1.sumaKilometrosTotales(kMBici);
+          kMTBicicleta = bicicleta1.sumaKilometrosBicicleta(kMBici);
+          kMTotales = bicicleta1.sumaKilometrosTotales(kMBici);
           break;
         case 2:
           bicicleta1.caballito();
@@ -55,8 +58,8 @@ public class Vehiculos {
           int kMCoche = (int)(Math.random() * 10);
           coche1.andaCoche(kMCoche);
           System.out.println(" ");
-          coche1.sumaKilometrosCoche(kMCoche);
-          coche1.sumaKilometrosTotales(kMCoche);
+          kMTCoche = coche1.sumaKilometrosCoche(kMCoche);
+          kMTotales = coche1.sumaKilometrosTotales(kMCoche);
           break;
         case 4:
           coche1.quemaRueda();
@@ -71,7 +74,7 @@ public class Vehiculos {
           System.out.println("Ha recorrido en total " + coche1.getKilometrosTotales() + " km");
           break;
         case 8:
-          System.out.println("Hay " + coche1.getVehiculosCreados() + " vehículos creados" );
+          System.out.println("Hay " + coche1.getVehiculosCreados() +" vehículos creados" );
           break;
         default:
         

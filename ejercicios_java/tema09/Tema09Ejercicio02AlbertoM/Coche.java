@@ -11,7 +11,8 @@
 public class Coche extends Vehiculo {
   private int kilometrosRecorridosCoche;
 
-  public Coche(int kilometrosRecorridosCoche) {
+  public Coche(int vehiculosCreados, int kilometrosTotales, int kilometrosRecorridosCoche) {
+    super(vehiculosCreados, kilometrosTotales);
     this.kilometrosRecorridosCoche = kilometrosRecorridosCoche;
   }
 
@@ -34,6 +35,6 @@ public class Coche extends Vehiculo {
   }
 
   public int sumaKilometrosCoche(int km) {
-    return this.kilometrosRecorridosCoche = this.kilometrosRecorridosCoche + km;
+    return this.kilometrosRecorridosCoche += km;
   }
 }

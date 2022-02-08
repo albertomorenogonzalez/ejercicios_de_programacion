@@ -18,7 +18,11 @@ public abstract class Vehiculo {
   }
 
   public int sumaKilometrosTotales(int km) {
-    return this.kilometrosTotales = this.kilometrosTotales + km;
+    return this.kilometrosTotales += km;
+  }
+
+  public int sumaVehiculosCreados(int vehiculo) {
+    return this.vehiculosCreados += vehiculo;
   }
 
   public int getVehiculosCreados() {
