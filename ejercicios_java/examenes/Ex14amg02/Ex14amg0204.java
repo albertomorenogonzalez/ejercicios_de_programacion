@@ -28,13 +28,14 @@ public class Ex14amg0204 {
 
     int numPostre = 1;
     if (numPlatoPpal == 0) {
-      while (numPostre == 0) {
+      while (numPostre == numPlatoPpal) {
         numPostre = ((int)(Math.random() * 3));
       }
-    } else {
-      numPostre = ((int)(Math.random() * 3));
-      String[] postre = {"arroz con leche", "natillas", "tarta de chocolate"};
-      System.out.println("Postre: " + postre[numPostre]);
-    } // if
+    } 
+
+    numPostre = ((int)(Math.random() * 3));
+    String[] postre = {"arroz con leche", "natillas", "tarta de chocolate"};
+    System.out.println("Postre: " + postre[numPostre]);
+    
   }
 }
