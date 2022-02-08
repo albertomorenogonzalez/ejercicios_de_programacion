@@ -29,7 +29,7 @@ public class Vehiculos {
       vehiculosCreados++;
       Coche coche1 = new Coche(vehiculosCreados, kMTotales, kMTCoche );
 
-      System.out.println("Elige una opción (1-8):");
+      System.out.println("Elige una opción (1-9):");
       System.out.println("1. Anda con la bicicleta");
       System.out.println("2. Haz el caballito con la bicicleta");
       System.out.println("3. Anda con el coche");
