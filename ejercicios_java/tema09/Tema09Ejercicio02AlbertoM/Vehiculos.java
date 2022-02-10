@@ -17,18 +17,14 @@ public class Vehiculos {
     System.out.println("VEHÍCULOS");
     System.out.println("----------");
 
+    Bicicleta bicicleta1 = new Bicicleta();
+    bicicleta1.sumaVehiculosCreados(1);
+    Coche coche1 = new Coche();
+    coche1.sumaVehiculosCreados(1);
+
     int opcion = 0;
-    int kMTCoche = 0;
-    int kMTBicicleta = 0;
-    int kMTotales = 0;
-    int vehiculosCreados = 0;
 
     while (opcion != 9) {
-      vehiculosCreados++;
-      Bicicleta bicicleta1 = new Bicicleta(vehiculosCreados, kMTotales, kMTBicicleta);
-      vehiculosCreados++;
-      Coche coche1 = new Coche(vehiculosCreados, kMTotales, kMTCoche );
-
       System.out.println("Elige una opción (1-9):");
       System.out.println("1. Anda con la bicicleta");
       System.out.println("2. Haz el caballito con la bicicleta");
@@ -48,8 +44,8 @@ public class Vehiculos {
           int kMBici = (int)(Math.random() * 10);
           bicicleta1.andaBicicleta(kMBici);
           System.out.println(" ");
-          kMTBicicleta = bicicleta1.sumaKilometrosBicicleta(kMBici);
-          kMTotales = bicicleta1.sumaKilometrosTotales(kMBici);
+          bicicleta1.sumaKilometrosBicicleta(kMBici);
+          bicicleta1.sumaKilometrosTotales(kMBici);
           break;
         case 2:
           bicicleta1.caballito();
@@ -58,8 +54,8 @@ public class Vehiculos {
           int kMCoche = (int)(Math.random() * 10);
           coche1.andaCoche(kMCoche);
           System.out.println(" ");
-          kMTCoche = coche1.sumaKilometrosCoche(kMCoche);
-          kMTotales = coche1.sumaKilometrosTotales(kMCoche);
+          coche1.sumaKilometrosCoche(kMCoche);
+          coche1.sumaKilometrosTotales(kMCoche);
           break;
         case 4:
           coche1.quemaRueda();
@@ -71,10 +67,10 @@ public class Vehiculos {
           System.out.println("Ha recorrido con su coche en total " + coche1.getKilometrosRecorridosCoche() + " km");
           break;
         case 7:
-          System.out.println("Ha recorrido en total " + coche1.getKilometrosTotales() + " km");
+          System.out.println("Ha recorrido en total " + Vehiculo.getKilometrosTotales() + " km");
           break;
         case 8:
-          System.out.println("Hay " + coche1.getVehiculosCreados() +" vehículos creados" );
+          System.out.println("Hay " + Vehiculo.getVehiculosCreados() +" vehículos creados" );
           break;
         default:
         

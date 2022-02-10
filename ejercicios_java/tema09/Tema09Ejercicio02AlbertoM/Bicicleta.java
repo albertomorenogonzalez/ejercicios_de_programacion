@@ -9,18 +9,17 @@
  * @author Alberto Moreno Gonzalez
  */
 public class Bicicleta extends Vehiculo {
-  private int kilometrosRecorridosBicicleta;
+  private static int kilometrosRecorridosBicicleta;
 
-  public Bicicleta(int vehiculosCreados, int kilometrosTotales, int kilometrosRecorridosBicicleta) {
-    super(vehiculosCreados, kilometrosTotales);
-    this.kilometrosRecorridosBicicleta = kilometrosRecorridosBicicleta;
+  public Bicicleta() {
+    super();
   }
 
   public void caballito() {
     System.out.println("*hace el caballito con la bicicleta");
   }
 
-  public int getKilometrosRecorridosBicicleta() {
+  public static int getKilometrosRecorridosBicicleta() {
     return kilometrosRecorridosBicicleta;
   }
 
@@ -35,6 +34,8 @@ public class Bicicleta extends Vehiculo {
   }
 
   public int sumaKilometrosBicicleta(int km) {
-    return this.kilometrosRecorridosBicicleta += km;
+    kilometrosRecorridosBicicleta = kilometrosRecorridosBicicleta += km;
+
+    return kilometrosRecorridosBicicleta;
   }
 }
