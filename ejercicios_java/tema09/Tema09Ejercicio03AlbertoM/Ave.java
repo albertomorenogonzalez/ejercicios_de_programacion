@@ -10,14 +10,20 @@ public class Ave extends Animal{
   private String tipo;
   private double envergadura;
 
+  public Ave(String nombre, String sexo, String color, String alimentacion, int tamanio, int edad, String tipo, double envergadura) {
+    super(nombre, sexo, color, alimentacion, tamanio, edad);
+    this.tipo = tipo;
+    this.envergadura = envergadura;
+  }
+
   public String volar() {
-    String volando = this.nombre + " está volando";
+    String volando = this.getNombre() + " está volando";
 
     return volando;
   }
 
   public int longitudAla(int envergadura) {
-    return envergadura / 2;
+    return envergadura / 2 - 10;
   }
 
   public boolean puedeVolar(String ave) {
@@ -26,11 +32,6 @@ public class Ave extends Animal{
     } else {
       return true;
     }
-  }
-
-  public Ave(String tipo, double envergadura) {
-    this.tipo = tipo;
-    this.envergadura = envergadura;
   }
 
   public String getTipo() {
@@ -48,6 +49,4 @@ public class Ave extends Animal{
   public void setEnvergadura(double envergadura) {
     this.envergadura = envergadura;
   }
-
-  
 }

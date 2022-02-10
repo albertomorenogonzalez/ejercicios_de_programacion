@@ -12,8 +12,64 @@ public abstract class Animal {
   private String color;
   private String alimentacion;
   private int tamanio;
-  private String color;
   private int edad;
+
+  public Animal(String nombre, String sexo, String color, String alimentacion, int tamanio, int edad) {
+    this.nombre = nombre;
+    this.sexo = sexo;
+    this.color = color;
+    this.alimentacion = alimentacion;
+    this.tamanio = tamanio;
+    this.edad = edad;
+  }
+
+  public String getNombre() {
+    return nombre;
+  }
+
+  public void setNombre(String nombre) {
+    this.nombre = nombre;
+  }
+
+  public String getSexo() {
+    return sexo;
+  }
+
+  public void setSexo(String sexo) {
+    this.sexo = sexo;
+  }
+
+  public String getColor() {
+    return color;
+  }
+
+  public void setColor(String color) {
+    this.color = color;
+  }
+
+  public String getAlimentacion() {
+    return alimentacion;
+  }
+
+  public void setAlimentacion(String alimentacion) {
+    this.alimentacion = alimentacion;
+  }
+
+  public int getTamanio() {
+    return tamanio;
+  }
+
+  public void setTamanio(int tamanio) {
+    this.tamanio = tamanio;
+  }
+
+  public int getEdad() {
+    return edad;
+  }
+
+  public void setEdad(int edad) {
+    this.edad = edad;
+  }
 
   public String comer() {
     String comiendo = this.nombre + " está comiendo";

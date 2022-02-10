@@ -9,5 +9,36 @@
 public class Canario extends Ave {
   private boolean canta;
 
-  
+  public Canario(String nombre, String sexo, String color, String alimentacion, int tamanio, int edad, String tipo, double envergadura, boolean canta) {
+    super(nombre, sexo, color, alimentacion, tamanio, edad, tipo, envergadura);
+    this.canta = canta;
+  }
+
+  public boolean isCanta() {
+    return canta;
+  }
+
+  public void setCanta(boolean canta) {
+    this.canta = canta;
+  }
+
+  public String canta() {
+    if (this.canta = true) {
+      return "¡" + this.getNombre() + " está cantando!";
+    } else {
+      return this.getNombre() + " no puede cantar...";
+    }
+  }
+
+  @Override
+  public int longitudAla(int envergadura) {
+    return envergadura / 2 - 3;
+  }
+
+  @Override
+  public String comer() {
+    String comiendo = getNombre() + " está comiendo alpiste";
+
+    return comiendo;
+  }
 }

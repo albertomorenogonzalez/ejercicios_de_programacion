@@ -9,4 +9,36 @@
 public class Mamifero extends Animal {
   private String entorno = "terrestre";
   private String salvajeODomestico;
+
+  public Mamifero(String nombre, String sexo, String color, String alimentacion, int tamanio, int edad, String entorno, String salvajeODomestico) {
+    super(nombre, sexo, color, alimentacion, tamanio, edad);
+    this.entorno = entorno;
+    this.salvajeODomestico = salvajeODomestico;
+  }
+
+  public String getEntorno() {
+    return entorno;
+  }
+
+  public void setEntorno(String entorno) {
+    this.entorno = entorno;
+  }
+
+  public String getSalvajeODomestico() {
+    return salvajeODomestico;
+  }
+
+  public void setSalvajeODomestico(String salvajeODomestico) {
+    this.salvajeODomestico = salvajeODomestico;
+  }
+
+  public boolean esCetáceo(String entorno) {
+    if (entorno.toLowerCase().equals("cetáceo")) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  
 }

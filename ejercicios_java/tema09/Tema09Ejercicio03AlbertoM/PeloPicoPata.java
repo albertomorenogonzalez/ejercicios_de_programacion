@@ -12,6 +12,6 @@ public class PeloPicoPata {
     System.out.println("-----------------");
     System.out.println(" ");
 
-    
+    Ave ave1 = new Ave ("Braviary", "Macho", "Shiny", "Carnívoro", 2, 2, "Rapaz", 200);
   }
 }
