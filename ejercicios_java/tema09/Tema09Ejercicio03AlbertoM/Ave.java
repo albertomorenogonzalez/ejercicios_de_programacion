@@ -22,8 +22,8 @@ public class Ave extends Animal{
     return volando;
   }
 
-  public int longitudAla(int envergadura) {
-    return envergadura / 2 - 10;
+  public double longitudAla(double d) {
+    return d / 2 - 10;
   }
 
   public boolean puedeVolar(String ave) {

@@ -40,5 +40,15 @@ public class Mamifero extends Animal {
     }
   }
 
-  
+  public String amamantar() {
+    String amamantando = this.getNombre() + " está amamantando a sus crías";
+
+    return amamantando;
+  }
+
+  public String emitirSonido() {
+    String sonido = this.getNombre() + " está gritando";
+
+    return sonido;
+  }
 }

@@ -31,8 +31,8 @@ public class Canario extends Ave {
   }
 
   @Override
-  public int longitudAla(int envergadura) {
-    return envergadura / 2 - 3;
+  public double longitudAla(double envergadura) {
+    return (int) (envergadura / 2 - 3);
   }
 
   @Override
