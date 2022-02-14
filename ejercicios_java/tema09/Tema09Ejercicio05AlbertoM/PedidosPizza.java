@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /**
  * Crea la clase Pizza con los atributos y métodos necesarios. Sobre cada pizza
  * se necesita saber el tamaño - mediana o familiar - el tipo - margarita, cuatro
