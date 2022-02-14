@@ -107,22 +107,28 @@ public class EjercicioAmpliacion2 {
    * @author Alberto Moreno Gonzalez
    */
   public static boolean tieneBordeHomogeneo(int[ ][ ] a) {
-    int[] borde = corteza(a);
-    boolean homogeneo = true;
+    int[] borde = corteza(a); //guardamos la corteza en una array con la función corteza
+    boolean homogeneo = true; //declaramos la variable booleana homogeneo para salir de los bucles
 
+    //con el bucle for de índice i iremos recorriendo el array del borde.
+    //por cada valor tendremo un bucle de índice j que comparará ese valor del bucle i
+    //con el resto de valores del array. Una vez que se encuentre un número distinto al
+    //del bucle i homogeneo será falsa, el bucle terminará y la función devolverá falso.
+    //En caso de que el borde esté compuesto del mismo número en cada valor el bucle 
+    //no terminará y homogeneo será verdadero, por lo que la función devolverá verdadero.
     for (int i = 0; ((i < borde.length) && (homogeneo)); i++) {
       for (int j = 0; ((j < borde.length) && (homogeneo)); j++) {
         if (borde[j] != borde[i]) {
           homogeneo = false;
         } 
-      }
-    }
+      } //for (int j = 0; ((j < borde.length) && (homogeneo)); j++)
+    } //for (int i = 0; ((i < borde.length) && (homogeneo)); i++)
 
     if (!homogeneo) {
       return false;
     } else {
       return true;
-    }
+    } //if (!homogeneo)
 
   } //public static boolean tieneBordeHomogeneo(int[ ][ ] a)
 }
