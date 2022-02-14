@@ -70,7 +70,7 @@ public class Pizza {
   }
 
   public void sirve() {
-    if (this.isServida() == false) {
+    if (!this.isServida()) {
       this.setEstado("servida");
       Pizza.totalServidas++;
       this.setServida(true);
